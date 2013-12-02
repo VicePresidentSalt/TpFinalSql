@@ -30,6 +30,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             try
             {
+                Cursor = Cursors.WaitCursor;
                 string Dsource = "(DESCRIPTION="
                + "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)"
                + "(HOST=205.237.244.251)(PORT=1521)))"
@@ -41,25 +42,42 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                 conn.Open();
 
-                if (conn.State.ToString() == "Open")
-                {
+                 if(conn.State.ToString() == "Open")
+                 {
+                     Cursor = Cursors.Default;
+                     FormDivision fd = new FormDivision();
+                     fd.conn = conn;
 
+                     this.Hide();
+                     fd.callBackForm = this;
+                     fd.Show();
 
-                }
+                 }
+
             }
             catch(OracleException ex)
             {
                 if (ex.Number == 1017)
                 {
-                    LB_Username.BackColor = Color.Red;
-                    LB_MDP.BackColor = Color.Red;
+                    Cursor = Cursors.Default;
+                    LB_Username.ForeColor = Color.Red;
+                    LB_MDP.ForeColor = Color.Red;
                     TB_Password.Clear();
                     TB_Password.Focus();
                 }
                 else
                 {
+                    Cursor = Cursors.Default;
                     MessageBox.Show(ex.Message.ToString());
                 }
+            }
+        }
+
+        private void TB_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BTN_Connect_Click(sender, e);
             }
         }
     }

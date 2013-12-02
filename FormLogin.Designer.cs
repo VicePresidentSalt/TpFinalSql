@@ -94,6 +94,7 @@
             this.TB_Password.TabIndex = 5;
             this.TB_Password.Text = "oracle1";
             this.TB_Password.UseSystemPasswordChar = true;
+            this.TB_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Password_KeyDown);
             // 
             // LB_MDP
             // 
@@ -109,6 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 133);
+            this.ControlBox = false;
             this.Controls.Add(this.TB_Password);
             this.Controls.Add(this.LB_MDP);
             this.Controls.Add(this.TB_Username);
@@ -116,6 +118,7 @@
             this.Controls.Add(this.PB_Login);
             this.Controls.Add(this.BTN_Quitter);
             this.Controls.Add(this.BTN_Connect);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Login";
             this.Text = "Connexion à Hockey Plus";
             ((System.ComponentModel.ISupportInitialize)(this.PB_Login)).EndInit();
