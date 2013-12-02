@@ -43,5 +43,27 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             this.Close();
             callBackForm.Show();
         }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+            FormDivision_Ajouter Ajouter = new FormDivision_Ajouter();
+            if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            { 
+                
+            }
+          
+
+               
+        }
+
+        private void BTN_Modifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Delete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

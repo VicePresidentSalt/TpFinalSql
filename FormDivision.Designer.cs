@@ -139,6 +139,7 @@
             this.BTN_Ajouter.TabIndex = 2;
             this.BTN_Ajouter.Text = "Ajouter";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // BTN_Modifier
             // 
@@ -148,6 +149,7 @@
             this.BTN_Modifier.TabIndex = 3;
             this.BTN_Modifier.Text = "Modifier";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
+            this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // BTN_Delete
             // 
@@ -157,6 +159,7 @@
             this.BTN_Delete.TabIndex = 4;
             this.BTN_Delete.Text = "Supprimer";
             this.BTN_Delete.UseVisualStyleBackColor = true;
+            this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
             // BTN_Deconnexion
             // 

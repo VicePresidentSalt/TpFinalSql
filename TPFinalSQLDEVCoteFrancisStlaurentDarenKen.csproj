@@ -59,6 +59,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Division.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormDivision_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDivision_Ajouter.Designer.cs">
+      <DependentUpon>FormDivision_Ajouter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDivision_Ajouter.resx">
+      <DependentUpon>FormDivision_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
