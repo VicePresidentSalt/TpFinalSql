@@ -56,10 +56,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OracleParameter OraParamDateCreation = new OracleParameter(":DateCreation", OracleDbType.Date);
 
                     OraParaNomDiv.Value = Ajouter.nomDivision;
-                    OraParamDateCreation.Value = Ajouter.dateCreation;
+                    OraParamDateCreation.Value = DateTime.Parse(Ajouter.dateCreation);
 
                     OracleCommand oraAjout = new OracleCommand(sqlAjout, conn);
-                
+
+                    oraAjout.Parameters.Add(OraParaNomDiv);
+                    oraAjout.Parameters.Add(OraParamDateCreation);
+
+                    oraAjout.ExecuteNonQuery();
+
+                    //DGV_Disivon.DataSource = dIVISIONSBindingSource;
+                    //dIVISIONSBindingSource.ResetBindings(true);
+                    DGV_Disivon.DataSource = dIVISIONSBindingSource;
                 }
 
                 catch (Exception ex)
@@ -72,8 +80,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
             FormDivision_Ajouter Modifier = new FormDivision_Ajouter();
-            Modifier.nomDivision = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            Modifier.dateCreation = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            Modifier.nomDivision = DGV_Disivon.SelectedRows[0].Cells[0].Value.ToString();
+            Modifier.dateCreation = DGV_Disivon.SelectedRows[0].Cells[1].Value.ToString();
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 try
@@ -89,7 +97,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     paramNomDivision.Value = Modifier.nomDivision;
                     paramDateCreation.Value = DateTime.Parse(Modifier.dateCreation);
-                    paramNomDivision2.Value = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                    paramNomDivision2.Value = DGV_Disivon.SelectedRows[0].Cells[0].Value.ToString();
 
 
                     oraUpdate.Parameters.Add(paramNomDivision);
@@ -98,7 +106,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     oraUpdate.ExecuteNonQuery();
 
-                    dataGridView1.Refresh();
+                    dIVISIONSTableAdapter.Update(dS_Division);
+                    
                 }
                 catch (Exception ex)
                 {
