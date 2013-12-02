@@ -13,7 +13,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 {
     public partial class Login : Form
     {
-        private OracleConnection conn = new OracleConnection();
+        private OracleConnection conn;
 
         public Login()
         {
@@ -38,6 +38,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                 String ChaineConnexion = "Data Source=" + Dsource
                 + ";User Id=" + TB_Username.Text + " ; Password =" + TB_Password.Text;
+                conn = new OracleConnection();
                 conn.ConnectionString = ChaineConnexion;
 
                 conn.Open();

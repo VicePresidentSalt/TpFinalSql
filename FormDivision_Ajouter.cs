@@ -11,6 +11,28 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 {
     public partial class FormDivision_Ajouter : Form
     {
+        public string nomDivision
+        {
+            get
+            {
+                return TB_NomDivision.Text;
+            }
+            set
+            {
+                TB_NomDivision.Text = value;
+            }
+        }
+        public string dateCreation
+        {
+            get 
+            {
+                return TB_DateCreation.Text;
+            }
+            set
+            {
+                TB_DateCreation.Text = value;
+            }
+        }
         public FormDivision_Ajouter()
         {
             InitializeComponent();

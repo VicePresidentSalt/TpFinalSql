@@ -60,6 +60,7 @@
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
             this.TB_NomDivision.TabIndex = 2;
+            
             // 
             // TB_DateCreation
             // 
@@ -67,6 +68,7 @@
             this.TB_DateCreation.Name = "TB_DateCreation";
             this.TB_DateCreation.Size = new System.Drawing.Size(129, 20);
             this.TB_DateCreation.TabIndex = 3;
+            
             // 
             // button1
             // 

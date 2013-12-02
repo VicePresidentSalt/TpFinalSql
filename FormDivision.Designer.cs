@@ -34,8 +34,6 @@
             this.dS_Division = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_Division();
             this.dIVISIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dIVISIONSTableAdapter = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_DivisionTableAdapters.DIVISIONSTableAdapter();
-            this.nOMDIVISIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATECREATIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TSMI_Division = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +43,8 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
+            this.nOMDIVISIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATECREATIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Division)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dIVISIONSBindingSource)).BeginInit();
@@ -61,6 +61,7 @@
             this.dataGridView1.DataSource = this.dIVISIONSBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(245, 126);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -77,18 +78,6 @@
             // dIVISIONSTableAdapter
             // 
             this.dIVISIONSTableAdapter.ClearBeforeFill = true;
-            // 
-            // nOMDIVISIONDataGridViewTextBoxColumn
-            // 
-            this.nOMDIVISIONDataGridViewTextBoxColumn.DataPropertyName = "NOMDIVISION";
-            this.nOMDIVISIONDataGridViewTextBoxColumn.HeaderText = "NOMDIVISION";
-            this.nOMDIVISIONDataGridViewTextBoxColumn.Name = "nOMDIVISIONDataGridViewTextBoxColumn";
-            // 
-            // dATECREATIONDataGridViewTextBoxColumn
-            // 
-            this.dATECREATIONDataGridViewTextBoxColumn.DataPropertyName = "DATECREATION";
-            this.dATECREATIONDataGridViewTextBoxColumn.HeaderText = "DATECREATION";
-            this.dATECREATIONDataGridViewTextBoxColumn.Name = "dATECREATIONDataGridViewTextBoxColumn";
             // 
             // menuStrip1
             // 
@@ -171,6 +160,18 @@
             this.BTN_Deconnexion.UseVisualStyleBackColor = true;
             this.BTN_Deconnexion.Click += new System.EventHandler(this.BTN_Deconnexion_Click);
             // 
+            // nOMDIVISIONDataGridViewTextBoxColumn
+            // 
+            this.nOMDIVISIONDataGridViewTextBoxColumn.DataPropertyName = "NOMDIVISION";
+            this.nOMDIVISIONDataGridViewTextBoxColumn.HeaderText = "NOMDIVISION";
+            this.nOMDIVISIONDataGridViewTextBoxColumn.Name = "nOMDIVISIONDataGridViewTextBoxColumn";
+            // 
+            // dATECREATIONDataGridViewTextBoxColumn
+            // 
+            this.dATECREATIONDataGridViewTextBoxColumn.DataPropertyName = "DATECREATION";
+            this.dATECREATIONDataGridViewTextBoxColumn.HeaderText = "DATECREATION";
+            this.dATECREATIONDataGridViewTextBoxColumn.Name = "dATECREATIONDataGridViewTextBoxColumn";
+            // 
             // FormDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,8 +205,6 @@
         private DS_Division dS_Division;
         private System.Windows.Forms.BindingSource dIVISIONSBindingSource;
         private DS_DivisionTableAdapters.DIVISIONSTableAdapter dIVISIONSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nOMDIVISIONDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATECREATIONDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Division;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
@@ -215,5 +214,7 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.Button BTN_Deconnexion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMDIVISIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATECREATIONDataGridViewTextBoxColumn;
     }
 }
