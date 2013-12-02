@@ -28,7 +28,23 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Connect_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string Dsource = "(DESCRIPTION="
+               + "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)"
+               + "(HOST=205.237.244.251)(PORT=1521)))"
+               + "(CONNECT_DATA=(SERVICE_NAME=ORCL)))";
 
+                String ChaineConnexion = "Data Source=" + Dsource
+                + ";User Id=" + TB_Username.Text + " ; Password =" + TB_Password.Text;
+                conn.ConnectionString = ChaineConnexion;
+
+                conn.Open();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }
