@@ -40,6 +40,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 conn.ConnectionString = ChaineConnexion;
 
                 conn.Open();
+
+                 MessageBox.Show(conn.State.ToString());
             }
             catch(Exception ex)
             {
