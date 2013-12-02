@@ -110,7 +110,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 133);
-            this.ControlBox = false;
             this.Controls.Add(this.TB_Password);
             this.Controls.Add(this.LB_MDP);
             this.Controls.Add(this.TB_Username);
@@ -118,8 +117,11 @@
             this.Controls.Add(this.PB_Login);
             this.Controls.Add(this.BTN_Quitter);
             this.Controls.Add(this.BTN_Connect);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Text = "Connexion à Hockey Plus";
             ((System.ComponentModel.ISupportInitialize)(this.PB_Login)).EndInit();
