@@ -22,6 +22,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Quitter_Click(object sender, EventArgs e)
         {
+            conn.Close();
             this.Close();
         }
 
