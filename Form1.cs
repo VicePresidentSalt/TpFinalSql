@@ -41,11 +41,25 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                 conn.Open();
 
-                 MessageBox.Show(conn.State.ToString());
+                if (conn.State.ToString() == "Open")
+                {
+
+
+                }
             }
-            catch(Exception ex)
+            catch(OracleException ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                if (ex.Number == 1017)
+                {
+                    LB_Username.BackColor = Color.Red;
+                    LB_MDP.BackColor = Color.Red;
+                    TB_Password.Clear();
+                    TB_Password.Focus();
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
         }
     }
