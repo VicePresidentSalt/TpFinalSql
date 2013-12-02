@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TB_NomDivision = new System.Windows.Forms.TextBox();
+            this.TB_DateCreation = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -54,19 +54,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Date de création";
             // 
-            // textBox1
+            // TB_NomDivision
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 2;
+            this.TB_NomDivision.Location = new System.Drawing.Point(106, 10);
+            this.TB_NomDivision.Name = "TB_NomDivision";
+            this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
+            this.TB_NomDivision.TabIndex = 2;
             // 
-            // textBox2
+            // TB_DateCreation
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 3;
+            this.TB_DateCreation.Location = new System.Drawing.Point(106, 41);
+            this.TB_DateCreation.Name = "TB_DateCreation";
+            this.TB_DateCreation.Size = new System.Drawing.Size(129, 20);
+            this.TB_DateCreation.TabIndex = 3;
             // 
             // button1
             // 
@@ -95,8 +95,8 @@
             this.ClientSize = new System.Drawing.Size(269, 104);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TB_DateCreation);
+            this.Controls.Add(this.TB_NomDivision);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDivision_Ajouter";
@@ -110,8 +110,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TB_NomDivision;
+        private System.Windows.Forms.TextBox TB_DateCreation;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

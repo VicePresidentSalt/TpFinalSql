@@ -48,8 +48,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             FormDivision_Ajouter Ajouter = new FormDivision_Ajouter();
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            { 
+            {
+                string sqlAjout = "insert into Division (NomDivision,DateCreation)" +
+                    " VALUES(:NomDivision,:DateCreation)";
+                try 
+                {
+                    OracleParameter OraParaNomDiv = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamDateCreation = new OracleParameter(":DateCreation", OracleDbType.Date);
+
+                    OraParaNomDiv.Value = Ajouter.nomDivision;
+                    OraParamDateCreation.Value = Ajouter.dateCreation;
                 
+                }
             }
           
 
