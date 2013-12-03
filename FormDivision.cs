@@ -68,6 +68,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     //DGV_Disivon.DataSource = dIVISIONSBindingSource;
                     //dIVISIONSBindingSource.ResetBindings(true);
                     DGV_Division.DataSource = dIVISIONSBindingSource;
+
+                    MessageBox.Show("La division a été ajouté");
                 }
 
                 catch (Exception ex)
@@ -106,6 +108,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     oraUpdate.ExecuteNonQuery();
 
+                    MessageBox.Show("La division a été modifié");
+
                     
                 }
                 catch (Exception ex)
@@ -122,7 +126,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
             string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
             OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+
+            oraDelete.Parameters.Add(paramNomDivision);
             oraDelete.ExecuteNonQuery();
+            MessageBox.Show("La division a été supprimé");
         }
     }
 }
