@@ -123,6 +123,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion à Hockey Plus";
             ((System.ComponentModel.ISupportInitialize)(this.PB_Login)).EndInit();
             this.ResumeLayout(false);
