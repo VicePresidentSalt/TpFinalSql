@@ -37,12 +37,13 @@
             this.TB_Password = new System.Windows.Forms.TextBox();
             this.LB_MDP = new System.Windows.Forms.Label();
             this.LB_Error = new System.Windows.Forms.Label();
+            this.BTN_About = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Login)).BeginInit();
             this.SuspendLayout();
             // 
             // BTN_Connect
             // 
-            this.BTN_Connect.Location = new System.Drawing.Point(325, 104);
+            this.BTN_Connect.Location = new System.Drawing.Point(315, 104);
             this.BTN_Connect.Name = "BTN_Connect";
             this.BTN_Connect.Size = new System.Drawing.Size(75, 23);
             this.BTN_Connect.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // BTN_Quitter
             // 
-            this.BTN_Quitter.Location = new System.Drawing.Point(241, 104);
+            this.BTN_Quitter.Location = new System.Drawing.Point(234, 104);
             this.BTN_Quitter.Name = "BTN_Quitter";
             this.BTN_Quitter.Size = new System.Drawing.Size(75, 23);
             this.BTN_Quitter.TabIndex = 0;
@@ -73,7 +74,7 @@
             // LB_Username
             // 
             this.LB_Username.AutoSize = true;
-            this.LB_Username.Location = new System.Drawing.Point(235, 9);
+            this.LB_Username.Location = new System.Drawing.Point(246, 8);
             this.LB_Username.Name = "LB_Username";
             this.LB_Username.Size = new System.Drawing.Size(41, 13);
             this.LB_Username.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             // TB_Username
             // 
-            this.TB_Username.Location = new System.Drawing.Point(238, 26);
+            this.TB_Username.Location = new System.Drawing.Point(249, 25);
             this.TB_Username.Name = "TB_Username";
             this.TB_Username.Size = new System.Drawing.Size(100, 20);
             this.TB_Username.TabIndex = 3;
@@ -89,7 +90,7 @@
             // 
             // TB_Password
             // 
-            this.TB_Password.Location = new System.Drawing.Point(238, 66);
+            this.TB_Password.Location = new System.Drawing.Point(249, 65);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.Size = new System.Drawing.Size(100, 20);
             this.TB_Password.TabIndex = 5;
@@ -100,7 +101,7 @@
             // LB_MDP
             // 
             this.LB_MDP.AutoSize = true;
-            this.LB_MDP.Location = new System.Drawing.Point(235, 49);
+            this.LB_MDP.Location = new System.Drawing.Point(246, 48);
             this.LB_MDP.Name = "LB_MDP";
             this.LB_MDP.Size = new System.Drawing.Size(71, 13);
             this.LB_MDP.TabIndex = 4;
@@ -110,16 +111,26 @@
             // 
             this.LB_Error.AutoSize = true;
             this.LB_Error.ForeColor = System.Drawing.Color.Red;
-            this.LB_Error.Location = new System.Drawing.Point(238, 88);
+            this.LB_Error.Location = new System.Drawing.Point(249, 87);
             this.LB_Error.Name = "LB_Error";
             this.LB_Error.Size = new System.Drawing.Size(0, 13);
             this.LB_Error.TabIndex = 6;
+            // 
+            // BTN_About
+            // 
+            this.BTN_About.Location = new System.Drawing.Point(369, 2);
+            this.BTN_About.Name = "BTN_About";
+            this.BTN_About.Size = new System.Drawing.Size(30, 24);
+            this.BTN_About.TabIndex = 7;
+            this.BTN_About.Text = "?";
+            this.BTN_About.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 139);
+            this.ClientSize = new System.Drawing.Size(402, 134);
+            this.Controls.Add(this.BTN_About);
             this.Controls.Add(this.LB_Error);
             this.Controls.Add(this.TB_Password);
             this.Controls.Add(this.LB_MDP);
@@ -152,6 +163,7 @@
         private System.Windows.Forms.TextBox TB_Password;
         private System.Windows.Forms.Label LB_MDP;
         private System.Windows.Forms.Label LB_Error;
+        private System.Windows.Forms.Button BTN_About;
     }
 }
 
