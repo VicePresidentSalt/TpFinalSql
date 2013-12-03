@@ -28,7 +28,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public FormDivision()
         {
             InitializeComponent();
-            LoadSettings();
         }
         private void SaveSettings()
         {
@@ -66,6 +65,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void FormDivision_Load(object sender, EventArgs e)
         {
             ReloadDGV();
+            LoadSettings();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
