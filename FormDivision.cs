@@ -145,9 +145,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     ReloadDGV();
 
-               
-
-                    
                 }
                 catch (Exception ex)
                 {
