@@ -104,7 +104,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     ReloadDGV();
 
-                    MessageBox.Show("La division a été ajouté");
+                 
                 }
 
                 catch (Exception ex)
@@ -145,7 +145,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     ReloadDGV();
 
-                    MessageBox.Show("La division a été modifié");
+               
 
                     
                 }
@@ -167,7 +167,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             oraDelete.Parameters.Add(paramNomDivision);
             oraDelete.ExecuteNonQuery();
             ReloadDGV();
-            MessageBox.Show("La division a été supprimé");
+
         }
 
         private void FormDivision_FormClosing(object sender, FormClosingEventArgs e)
