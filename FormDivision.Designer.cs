@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDivision));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Disivon = new System.Windows.Forms.DataGridView();
             this.dS_Division = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_Division();
             this.dIVISIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dIVISIONSTableAdapter = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_DivisionTableAdapters.DIVISIONSTableAdapter();
@@ -45,7 +45,7 @@
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
             this.nOMDIVISIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATECREATIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Disivon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Division)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dIVISIONSBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -53,17 +53,20 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Disivon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Disivon.AutoGenerateColumns = false;
+            this.DGV_Disivon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Disivon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nOMDIVISIONDataGridViewTextBoxColumn,
             this.dATECREATIONDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dIVISIONSBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(245, 126);
-            this.dataGridView1.TabIndex = 0;
+            this.DGV_Disivon.DataSource = this.dIVISIONSBindingSource;
+            this.DGV_Disivon.Location = new System.Drawing.Point(12, 44);
+            this.DGV_Disivon.Name = "dataGridView1";
+            this.DGV_Disivon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Disivon.Size = new System.Drawing.Size(245, 126);
+            this.DGV_Disivon.TabIndex = 0;
             // 
             // dS_Division
             // 
@@ -122,6 +125,7 @@
             // 
             // BTN_Ajouter
             // 
+            this.BTN_Ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Ajouter.Location = new System.Drawing.Point(301, 44);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(75, 23);
@@ -132,6 +136,7 @@
             // 
             // BTN_Modifier
             // 
+            this.BTN_Modifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Modifier.Location = new System.Drawing.Point(301, 98);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(75, 23);
@@ -142,6 +147,7 @@
             // 
             // BTN_Delete
             // 
+            this.BTN_Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Delete.Location = new System.Drawing.Point(301, 147);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +158,7 @@
             // 
             // BTN_Deconnexion
             // 
+            this.BTN_Deconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BTN_Deconnexion.Location = new System.Drawing.Point(76, 185);
             this.BTN_Deconnexion.Name = "BTN_Deconnexion";
             this.BTN_Deconnexion.Size = new System.Drawing.Size(96, 23);
@@ -181,7 +188,7 @@
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Disivon);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -189,7 +196,7 @@
             this.Text = "FormDivision";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDivision_FormClosed);
             this.Load += new System.EventHandler(this.FormDivision_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Disivon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Division)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dIVISIONSBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -201,7 +208,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Disivon;
         private DS_Division dS_Division;
         private System.Windows.Forms.BindingSource dIVISIONSBindingSource;
         private DS_DivisionTableAdapters.DIVISIONSTableAdapter dIVISIONSTableAdapter;
