@@ -11,7 +11,7 @@
       <Value Profile="(Default)">DATA SOURCE=clg;PASSWORD=oracle1;PERSIST SECURITY INFO=True;USER ID=COTEFRAN</Value>
     </Setting>
     <Setting Name="MainFormSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">0, 0</Value>
+      <Value Profile="(Default)">408, 267</Value>
     </Setting>
     <Setting Name="MainFormLocation" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>
