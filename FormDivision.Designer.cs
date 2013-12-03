@@ -194,6 +194,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormDivision";
             this.Text = "FormDivision";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDivision_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDivision_FormClosed);
             this.Load += new System.EventHandler(this.FormDivision_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).EndInit();

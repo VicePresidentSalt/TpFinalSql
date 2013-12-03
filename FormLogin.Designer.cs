@@ -77,6 +77,7 @@
             this.TB_Username.Size = new System.Drawing.Size(100, 20);
             this.TB_Username.TabIndex = 3;
             this.TB_Username.Text = "cotefran";
+            this.TB_Username.TextChanged += new System.EventHandler(this.TB_TextChanged);
             // 
             // TB_Password
             // 
@@ -86,6 +87,7 @@
             this.TB_Password.TabIndex = 5;
             this.TB_Password.Text = "oracle1";
             this.TB_Password.UseSystemPasswordChar = true;
+            this.TB_Password.TextChanged += new System.EventHandler(this.TB_TextChanged);
             this.TB_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Password_KeyDown);
             // 
             // LB_MDP

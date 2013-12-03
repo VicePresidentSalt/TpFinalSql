@@ -17,6 +17,33 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public FormDivision()
         {
             InitializeComponent();
+            LoadSettings();
+        }
+        private void SaveSettings()
+        {
+            try
+            {
+                Properties.Settings.Default.MainFormLocation = this.Location;
+                Properties.Settings.Default.MainFormSize = this.Size;
+                Properties.Settings.Default.Save();
+            }
+            catch
+            {
+                Properties.Settings.Default.Reset();
+                Properties.Settings.Default.Save();
+            }
+        }
+        private void LoadSettings()
+        {
+            try
+            {
+                this.Location = Properties.Settings.Default.MainFormLocation;
+                this.Size = Properties.Settings.Default.MainFormSize;
+            }
+            catch
+            {
+                Properties.Settings.Default.Reset();
+            }
         }
 
         private void FormDivision_FormClosed(object sender, FormClosedEventArgs e)
@@ -130,6 +157,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             oraDelete.Parameters.Add(paramNomDivision);
             oraDelete.ExecuteNonQuery();
             MessageBox.Show("La division a été supprimé");
+        }
+
+        private void FormDivision_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
     }
 }

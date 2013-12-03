@@ -18,6 +18,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Login()
         {
             InitializeComponent();
+            UpdateControls();
         }
 
 
@@ -91,6 +92,22 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             About about = new About();
             about.Show();
+        }
+        private void UpdateControls()
+        {
+            if (TB_Username.Text == "" || TB_Password.Text == "")
+            {
+                BTN_Connect.Enabled = false;
+            }
+            else
+            {
+                BTN_Connect.Enabled = true;
+            }
+        }
+
+        private void TB_TextChanged(object sender, EventArgs e)
+        {
+            UpdateControls();
         }
     }
 }
