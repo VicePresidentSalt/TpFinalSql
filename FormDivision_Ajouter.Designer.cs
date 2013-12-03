@@ -60,7 +60,6 @@
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
             this.TB_NomDivision.TabIndex = 2;
-            
             // 
             // TB_DateCreation
             // 
@@ -68,7 +67,6 @@
             this.TB_DateCreation.Name = "TB_DateCreation";
             this.TB_DateCreation.Size = new System.Drawing.Size(129, 20);
             this.TB_DateCreation.TabIndex = 3;
-            
             // 
             // button1
             // 
@@ -102,7 +100,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormDivision_Ajouter";
-            this.Text = "FormDivision_Ajouter";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 
