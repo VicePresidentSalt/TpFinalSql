@@ -18,11 +18,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Login()
         {
             InitializeComponent();
+            UpdateControls();
         }
+
 
         private void BTN_Quitter_Click(object sender, EventArgs e)
         {
-            if(conn != null)
+            if (conn != null)
                 conn.Close();
             this.Close();
         }
@@ -44,22 +46,22 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                 conn.Open();
 
-                 if(conn.State.ToString() == "Open")
-                 {
-                     Cursor = Cursors.Default;
-                     FormDivision fd = new FormDivision();
-                     fd.conn = conn;
+                if (conn.State.ToString() == "Open")
+                {
+                    Cursor = Cursors.Default;
+                    FormDivision fd = new FormDivision();
+                    fd.conn = conn;
 
-                     this.Hide();
-                     fd.callBackForm = this;
-                     fd.Show();
-                     LB_Error.Text = "";
-                     LB_MDP.ForeColor = Color.Black;
-                     LB_Username.ForeColor = Color.Black;
-                 }
+                    this.Hide();
+                    fd.callBackForm = this;
+                    fd.Show();
+                    LB_Error.Text = "";
+                    LB_MDP.ForeColor = Color.Black;
+                    LB_Username.ForeColor = Color.Black;
+                }
 
             }
-            catch(OracleException ex)
+            catch (OracleException ex)
             {
                 if (ex.Number == 1017)
                 {
@@ -84,6 +86,28 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             {
                 BTN_Connect_Click(sender, e);
             }
+        }
+
+        private void BTN_About_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
+        private void UpdateControls()
+        {
+            if (TB_Username.Text == "" || TB_Password.Text == "")
+            {
+                BTN_Connect.Enabled = false;
+            }
+            else
+            {
+                BTN_Connect.Enabled = true;
+            }
+        }
+
+        private void TB_TextChanged(object sender, EventArgs e)
+        {
+            UpdateControls();
         }
     }
 }
