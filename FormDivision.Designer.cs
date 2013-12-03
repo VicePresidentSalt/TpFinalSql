@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDivision));
             this.DGV_Division = new System.Windows.Forms.DataGridView();
-            this.nOMDIVISIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATECREATIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dIVISIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Division = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_Division();
-            this.dIVISIONSTableAdapter = new TPFinalSQLDEVCoteFrancisStlaurentDarenKen.DS_DivisionTableAdapters.DIVISIONSTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TSMI_Division = new System.Windows.Forms.ToolStripMenuItem();
             this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +40,6 @@
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIVISIONSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Division)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,43 +48,12 @@
             this.DGV_Division.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_Division.AutoGenerateColumns = false;
             this.DGV_Division.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Division.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nOMDIVISIONDataGridViewTextBoxColumn,
-            this.dATECREATIONDataGridViewTextBoxColumn});
-            this.DGV_Division.DataSource = this.dIVISIONSBindingSource;
             this.DGV_Division.Location = new System.Drawing.Point(12, 44);
             this.DGV_Division.Name = "DGV_Division";
             this.DGV_Division.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Division.Size = new System.Drawing.Size(245, 126);
             this.DGV_Division.TabIndex = 0;
-            // 
-            // nOMDIVISIONDataGridViewTextBoxColumn
-            // 
-            this.nOMDIVISIONDataGridViewTextBoxColumn.DataPropertyName = "NOMDIVISION";
-            this.nOMDIVISIONDataGridViewTextBoxColumn.HeaderText = "NOMDIVISION";
-            this.nOMDIVISIONDataGridViewTextBoxColumn.Name = "nOMDIVISIONDataGridViewTextBoxColumn";
-            // 
-            // dATECREATIONDataGridViewTextBoxColumn
-            // 
-            this.dATECREATIONDataGridViewTextBoxColumn.DataPropertyName = "DATECREATION";
-            this.dATECREATIONDataGridViewTextBoxColumn.HeaderText = "DATECREATION";
-            this.dATECREATIONDataGridViewTextBoxColumn.Name = "dATECREATIONDataGridViewTextBoxColumn";
-            // 
-            // dIVISIONSBindingSource
-            // 
-            this.dIVISIONSBindingSource.DataMember = "DIVISIONS";
-            this.dIVISIONSBindingSource.DataSource = this.dS_Division;
-            // 
-            // dS_Division
-            // 
-            this.dS_Division.DataSetName = "DS_Division";
-            this.dS_Division.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dIVISIONSTableAdapter
-            // 
-            this.dIVISIONSTableAdapter.ClearBeforeFill = true;
             // 
             // menuStrip1
             // 
@@ -197,8 +158,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDivision_FormClosed);
             this.Load += new System.EventHandler(this.FormDivision_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIVISIONSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Division)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -209,9 +168,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGV_Division;
-        private DS_Division dS_Division;
-        private System.Windows.Forms.BindingSource dIVISIONSBindingSource;
-        private DS_DivisionTableAdapters.DIVISIONSTableAdapter dIVISIONSTableAdapter;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Division;
         private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
@@ -221,7 +177,5 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.Button BTN_Deconnexion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nOMDIVISIONDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATECREATIONDataGridViewTextBoxColumn;
     }
 }

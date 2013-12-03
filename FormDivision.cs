@@ -14,6 +14,17 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
     {
         public OracleConnection conn = null;
         public Form callBackForm = null;
+
+        private DataSet divisionDataSet = null;
+
+        private void ReloadDGV()
+        {
+            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomDivision, DateCreation FROM Divisions", conn);
+            divisionDataSet = new DataSet();
+            oraAdapter.Fill(divisionDataSet);
+            DGV_Division.DataSource = divisionDataSet.Tables[0];
+        }
+
         public FormDivision()
         {
             InitializeComponent();
@@ -27,8 +38,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void FormDivision_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'dS_Division.DIVISIONS'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-            this.dIVISIONSTableAdapter.Fill(this.dS_Division.DIVISIONS);
+            ReloadDGV();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,9 +75,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     oraAjout.ExecuteNonQuery();
 
-                    //DGV_Disivon.DataSource = dIVISIONSBindingSource;
-                    //dIVISIONSBindingSource.ResetBindings(true);
-                    DGV_Division.DataSource = dIVISIONSBindingSource;
+                    ReloadDGV();
 
                     MessageBox.Show("La division a été ajouté");
                 }
@@ -108,6 +116,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     oraUpdate.ExecuteNonQuery();
 
+                    ReloadDGV();
+
                     MessageBox.Show("La division a été modifié");
 
                     
@@ -129,6 +139,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             oraDelete.Parameters.Add(paramNomDivision);
             oraDelete.ExecuteNonQuery();
+            ReloadDGV();
             MessageBox.Show("La division a été supprimé");
         }
     }
