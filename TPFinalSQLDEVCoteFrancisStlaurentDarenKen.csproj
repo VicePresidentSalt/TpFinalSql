@@ -60,11 +60,6 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="DS_Division.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DS_Division.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormDivision_Ajouter.cs">
       <SubType>Form</SubType>
     </Compile>
