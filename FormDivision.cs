@@ -118,7 +118,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-            string sqlDelete = "Delete from Divisions Where NomDivision = " + "'"DGV_Division.SelectedRows[0].Cells[0].Value.ToString();"'";
+            OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
+            paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
+            string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
             OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
             oraDelete.ExecuteNonQuery();
         }
