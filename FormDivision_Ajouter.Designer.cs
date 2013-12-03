@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TB_NomDivision = new System.Windows.Forms.TextBox();
-            this.TB_DateCreation = new System.Windows.Forms.TextBox();
             this.BTN_Ok = new System.Windows.Forms.Button();
             this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.DTP_Ajout = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -61,13 +61,6 @@
             this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
             this.TB_NomDivision.TabIndex = 2;
             // 
-            // TB_DateCreation
-            // 
-            this.TB_DateCreation.Location = new System.Drawing.Point(106, 41);
-            this.TB_DateCreation.Name = "TB_DateCreation";
-            this.TB_DateCreation.Size = new System.Drawing.Size(129, 20);
-            this.TB_DateCreation.TabIndex = 3;
-            // 
             // BTN_Ok
             // 
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -88,6 +81,13 @@
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
+            // DTP_Ajout
+            // 
+            this.DTP_Ajout.Location = new System.Drawing.Point(106, 41);
+            this.DTP_Ajout.Name = "DTP_Ajout";
+            this.DTP_Ajout.Size = new System.Drawing.Size(129, 20);
+            this.DTP_Ajout.TabIndex = 6;
+            // 
             // FormDivision_Ajouter
             // 
             this.AcceptButton = this.BTN_Ok;
@@ -95,9 +95,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(269, 104);
+            this.Controls.Add(this.DTP_Ajout);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.BTN_Ok);
-            this.Controls.Add(this.TB_DateCreation);
             this.Controls.Add(this.TB_NomDivision);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,8 +117,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TB_NomDivision;
-        private System.Windows.Forms.TextBox TB_DateCreation;
         private System.Windows.Forms.Button BTN_Ok;
         private System.Windows.Forms.Button BTN_Cancel;
+        private System.Windows.Forms.DateTimePicker DTP_Ajout;
     }
 }

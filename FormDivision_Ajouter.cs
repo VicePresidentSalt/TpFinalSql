@@ -26,11 +26,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             get 
             {
-                return TB_DateCreation.Text;
+                return DTP_Ajout.Value.ToShortDateString();
             }
             set
             {
-                TB_DateCreation.Text = value;
+                DTP_Ajout.Value = DateTime.Parse(value);
             }
         }
         public FormDivision_Ajouter()
