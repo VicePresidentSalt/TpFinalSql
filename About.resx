@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Auteur : Francis Côté et Daren Ken St-Laurent 
+Spécial Dédicace à Capitaine William Turner
+
+Cette application HockeyPlus à pour but de faire
+la gestion des divisions , des équipes, des joueurs 
+ainsi que les match de la de Hockey
+</value>
+  </data>
 </root>
