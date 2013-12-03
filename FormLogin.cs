@@ -53,7 +53,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                      this.Hide();
                      fd.callBackForm = this;
                      fd.Show();
-
+                     LB_Error.Text = "";
+                     LB_MDP.ForeColor = Color.Black;
+                     LB_Username.ForeColor = Color.Black;
                  }
 
             }
@@ -66,6 +68,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     LB_MDP.ForeColor = Color.Red;
                     TB_Password.Clear();
                     TB_Password.Focus();
+                    LB_Error.Text = "*Erreur Usager/Mot de passe";
                 }
                 else
                 {
