@@ -67,7 +67,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     //DGV_Disivon.DataSource = dIVISIONSBindingSource;
                     //dIVISIONSBindingSource.ResetBindings(true);
-                    DGV_Disivon.DataSource = dIVISIONSBindingSource;
+                    DGV_Division.DataSource = dIVISIONSBindingSource;
                 }
 
                 catch (Exception ex)
@@ -80,8 +80,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
             FormDivision_Ajouter Modifier = new FormDivision_Ajouter();
-            Modifier.nomDivision = DGV_Disivon.SelectedRows[0].Cells[0].Value.ToString();
-            Modifier.dateCreation = DGV_Disivon.SelectedRows[0].Cells[1].Value.ToString();
+            Modifier.nomDivision = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
+            Modifier.dateCreation = DGV_Division.SelectedRows[0].Cells[1].Value.ToString();
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 try
@@ -97,7 +97,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     paramNomDivision.Value = Modifier.nomDivision;
                     paramDateCreation.Value = DateTime.Parse(Modifier.dateCreation);
-                    paramNomDivision2.Value = DGV_Disivon.SelectedRows[0].Cells[0].Value.ToString();
+                    paramNomDivision2.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
 
 
                     oraUpdate.Parameters.Add(paramNomDivision);
@@ -106,7 +106,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     oraUpdate.ExecuteNonQuery();
 
-                    dIVISIONSTableAdapter.Update(dS_Division);
                     
                 }
                 catch (Exception ex)
@@ -119,7 +118,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-
+            string sqlDelete = "Delete from Divisions Where NomDivision = " + "'"DGV_Division.SelectedRows[0].Cells[0].Value.ToString();"'";
+            OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+            oraDelete.ExecuteNonQuery();
         }
     }
 }
