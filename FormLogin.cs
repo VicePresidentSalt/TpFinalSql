@@ -85,5 +85,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 BTN_Connect_Click(sender, e);
             }
         }
+
+        private void BTN_About_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

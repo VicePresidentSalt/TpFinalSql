@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.BTN_Connect = new System.Windows.Forms.Button();
             this.BTN_Quitter = new System.Windows.Forms.Button();
-            this.PB_Login = new System.Windows.Forms.PictureBox();
             this.LB_Username = new System.Windows.Forms.Label();
             this.TB_Username = new System.Windows.Forms.TextBox();
             this.TB_Password = new System.Windows.Forms.TextBox();
             this.LB_MDP = new System.Windows.Forms.Label();
             this.LB_Error = new System.Windows.Forms.Label();
             this.BTN_About = new System.Windows.Forms.Button();
+            this.PB_Login = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Login)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,16 +60,6 @@
             this.BTN_Quitter.Text = "Quitter";
             this.BTN_Quitter.UseVisualStyleBackColor = true;
             this.BTN_Quitter.Click += new System.EventHandler(this.BTN_Quitter_Click);
-            // 
-            // PB_Login
-            // 
-            this.PB_Login.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Hockey_Plus_logo1;
-            this.PB_Login.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_Login.InitialImage")));
-            this.PB_Login.Location = new System.Drawing.Point(12, 12);
-            this.PB_Login.Name = "PB_Login";
-            this.PB_Login.Size = new System.Drawing.Size(209, 97);
-            this.PB_Login.TabIndex = 1;
-            this.PB_Login.TabStop = false;
             // 
             // LB_Username
             // 
@@ -124,6 +114,17 @@
             this.BTN_About.TabIndex = 7;
             this.BTN_About.Text = "?";
             this.BTN_About.UseVisualStyleBackColor = true;
+            this.BTN_About.Click += new System.EventHandler(this.BTN_About_Click);
+            // 
+            // PB_Login
+            // 
+            this.PB_Login.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Hockey_Plus_logo1;
+            this.PB_Login.InitialImage = ((System.Drawing.Image)(resources.GetObject("PB_Login.InitialImage")));
+            this.PB_Login.Location = new System.Drawing.Point(12, 12);
+            this.PB_Login.Name = "PB_Login";
+            this.PB_Login.Size = new System.Drawing.Size(209, 97);
+            this.PB_Login.TabIndex = 1;
+            this.PB_Login.TabStop = false;
             // 
             // Login
             // 
