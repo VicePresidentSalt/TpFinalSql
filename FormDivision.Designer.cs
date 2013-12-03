@@ -45,12 +45,15 @@
             // 
             // DGV_Division
             // 
+            this.DGV_Division.AllowUserToAddRows = false;
+            this.DGV_Division.AllowUserToDeleteRows = false;
             this.DGV_Division.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Division.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Division.Location = new System.Drawing.Point(12, 44);
             this.DGV_Division.Name = "DGV_Division";
+            this.DGV_Division.ReadOnly = true;
             this.DGV_Division.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Division.Size = new System.Drawing.Size(245, 126);
             this.DGV_Division.TabIndex = 0;
