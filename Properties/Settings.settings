@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">DATA SOURCE=clg;PASSWORD=oracle1;PERSIST SECURITY INFO=True;USER ID=COTEFRAN</Value>
     </Setting>
+    <Setting Name="Position" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
