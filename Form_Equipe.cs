@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -44,26 +45,41 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             FormEquipe_Ajouter Ajouter = new FormEquipe_Ajouter();
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sqlAjout = "insert into Equipes (NomEquipe,DateIntroLigue,DivisionEquipe,VilleEquipe)" +
-                    " VALUES(:NomEquipe,:DateIntroLigue,:DivisionEquipe,:VilleEquipe)";
+                string sqlAjout = "insert into Equipes (NomEquipe,DateIntroLigue,LogoEquipe,DivisionEquipe,VilleEquipe)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
+                    " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
                 try 
                 {
                     OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
                     OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
 
                     OraParaNomEquipe.Value = Ajouter.nomEquipe;
                     OraParamDateIntroLigue.Value = DateTime.Parse(Ajouter.dateIntroLigue);
+                    OraParamLogoEquipe.Value = Ajouter.nomFichier;
                     OraParaDivEquipe.Value = Ajouter.divisionEquipe;
                     OraParaVilleEquipe.Value = Ajouter.villeEquipe;
 
                     OracleCommand oraAjout = new OracleCommand(sqlAjout, conn);
 
+                    // récuper le fichier nomFichier et le convertir en Byte. 
+                    //le résultat est dans buffer1
+                    // oracle stocke les images sous forme de Bytes.
+                    FileStream Streamp = new FileStream(nomFichier, FileMode.Open, FileAccess.Read);
+                    byte[] buffer1 = new byte[Streamp.Length];
+                    Streamp.Read(buffer1, 0, System.Convert.ToInt32(Streamp.Length));
+                    Streamp.Close();
+                    // ajout de la photo dans la BD.
+
+                    OraParamLogoEquipe.Value = buffer1;
+                    oraAjout.Parameters.Add(OraParamLogoEquipe);
                     oraAjout.Parameters.Add(OraParaNomEquipe);
                     oraAjout.Parameters.Add(OraParamDateIntroLigue);
                     oraAjout.Parameters.Add(OraParaDivEquipe);
                     oraAjout.Parameters.Add(OraParaVilleEquipe);
+
+
 
                     oraAjout.ExecuteNonQuery();
 
@@ -161,8 +177,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             {
                 nomFichier = fImage.FileName;
                 Bitmap bitmap1 = new Bitmap(nomFichier);
-
-
             }
             else
             {
