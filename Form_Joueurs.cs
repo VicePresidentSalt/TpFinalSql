@@ -37,6 +37,31 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             
         }
         /*
+        private void Getinfos()
+        {
+            try
+            {
+                string SQL = "SELECT * FROM DISQUES";
+
+                OracleDataAdapter Oraad = new OracleDataAdapter(SQL, conn);
+
+                if (Data.Tables.Contains("Resultats"))
+                {
+                    Data.Tables["Resultat"].Clear();
+                }
+                Oraad.Fill(Data, "Resultats");
+                Oraad.Dispose();
+
+                BindingSource Source = new BindingSource(Data, "Resultats");
+
+                DataDisques.DataSource = Source;
+            }
+            catch (Exception se)
+            {
+                MessageBox.Show(se.Message.ToString());
+            }
+
+        }
         private void FillForm()
         {
             
@@ -55,7 +80,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             DGV_Disques.DataSource = maSource;
             
             
-            
             TB_NumeroJoueur.DataBindings.Add("Text", joueurDataSet, "TB_N.NoDisque");
             TB_Nom.DataBindings.Add("Text", joueurDataSet, "LB_Lister_Cie.TitreDisque");
             TB_Prenom.DataBindings.Add("Text", joueurDataSet, "LB_Lister_Cie.DureeMinutesDisque");
@@ -65,17 +89,50 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             TB_PositionJoueur.DataBindings.Add("Text", joueurDataSet, "LB_Lister_Cie.Nocie");
             
         }
-
-
-        private void Vider()
+        private void UpdateTextBox()
         {
-            textNoDisque.DataBindings.Clear();
-            textTitre.DataBindings.Clear();
-            textDuree.DataBindings.Clear();
-            textAnnee.DataBindings.Clear();
-            textCie.DataBindings.Clear();
+            TB_NoDisque.DataBindings.Add("text", Data, "Resultats.NoDisque");
+            TB_Titre.DataBindings.Add("text", Data, "Resultats.TitreDisque");
+            TB_Duree.DataBindings.Add("text", Data, "Resultats.DureeMinuteDisque");
+            TB_Annee.DataBindings.Add("text", Data, "Resultats.AnneeDisque");
+            TB_NOCIE.DataBindings.Add("text", Data, "Resultats.Nocie");
         }
-             */
+        private void ClearBindings()
+        {
+            TB_NoDisque.DataBindings.Clear();
+            TB_NoDisque.Clear();
+            TB_Titre.DataBindings.Clear();
+            TB_Titre.Clear();
+            TB_Duree.DataBindings.Clear();
+            TB_Duree.Clear();
+            TB_Annee.DataBindings.Clear();
+            TB_Annee.Clear();
+            TB_NOCIE.DataBindings.Clear();
+            TB_NOCIE.Clear();
+
+        }
+        private void premier_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[Data, "Resultats"].Position = 0;
+        }
+
+        private void dernier_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[Data, "Resultats"].Position =
+            this.BindingContext[Data, "Resultats"].Count - 1;
+
+        }
+        private void suivant_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[Data, "Resultats"].Position++;
+
+        }
+
+        private void precedent_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[Data, "Resultats"].Position--;
+        }
+         */
     }
          
              

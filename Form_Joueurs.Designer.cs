@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Joueurs));
             this.BTN_OK = new System.Windows.Forms.Button();
             this.TB_NumeroJoueur = new System.Windows.Forms.TextBox();
             this.TB_Nom = new System.Windows.Forms.TextBox();
@@ -198,6 +199,8 @@
             this.Controls.Add(this.TB_Nom);
             this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.BTN_OK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
