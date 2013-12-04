@@ -25,7 +25,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             "where DivisionEquipe = '" + division+"'", conn);
             equipeDataSet = new DataSet();
             oraAdapter.Fill(equipeDataSet);
-            DGV_Equipe.DataSource = equipeDataSet.Tables[0];
+            DGV_Equipes.DataSource = equipeDataSet.Tables[0];
         }
         
         public Form_Equipe(string Division)
@@ -102,10 +102,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Modifier = new FormEquipe_Ajouter();
-            Modifier.nomEquipe = DGV_Equipe.SelectedRows[0].Cells[0].Value.ToString();
-            Modifier.dateIntroLigue = DGV_Equipe.SelectedRows[0].Cells[1].Value.ToString();
-            Modifier.divisionEquipe = DGV_Equipe.SelectedRows[0].Cells[2].Value.ToString();
-            Modifier.villeEquipe = DGV_Equipe.SelectedRows[0].Cells[3].Value.ToString();
+            Modifier.nomEquipe = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
+            Modifier.dateIntroLigue = DGV_Equipes.SelectedRows[0].Cells[1].Value.ToString();
+            Modifier.divisionEquipe = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
+            Modifier.villeEquipe = DGV_Equipes.SelectedRows[0].Cells[3].Value.ToString();
 
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -113,7 +113,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 {
                     string sqlModif = "Update Equipes set NomEquipe =:NomEquipe, DateIntroLigue =:DateIntroLigue, " +
                         "DivisionEquipe =:DivisionEquipe, VilleEquipe =:VilleEquipe where NomEquipe =:NomEquipe2";
-                    //Why division2 ?? Updater la row avc l'ancien nom de division
+                    //Why NomEquipe2 ?? Updater la row avc l'ancien nom de l'équipe
                     OracleCommand oraUpdate = new OracleCommand(sqlModif, conn);
 
                     OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
@@ -127,7 +127,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OraParamDateIntroLigue.Value = DateTime.Parse(Modifier.dateIntroLigue);
                     OraParaDivEquipe.Value = Modifier.divisionEquipe;
                     OraParaVilleEquipe.Value = Modifier.villeEquipe;
-                    OraParaNomEquipe2.Value = DGV_Equipe.SelectedRows[0].Cells[0].Value.ToString();
+                    OraParaNomEquipe2.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
 
 
                     oraUpdate.Parameters.Add(OraParaNomEquipe);
@@ -153,7 +153,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
             OracleParameter paramNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-            paramNomEquipe.Value = DGV_Equipe.SelectedRows[0].Cells[0].Value.ToString();
+            paramNomEquipe.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
             string sqlDelete = "Delete from Equipes Where NomEquipe =:paramNomEquipe";
             OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
 
@@ -192,6 +192,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             if (callBackForm != null)
                 callBackForm.Show();
+        }
+
+        private void DGV_Equipe_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(e.RowIndex.ToString());
         }
 
 

@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DGV_Equipe = new System.Windows.Forms.DataGridView();
+            this.DGV_Equipes = new System.Windows.Forms.DataGridView();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.PB_Equipes = new System.Windows.Forms.PictureBox();
             this.BTN_OK = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
             // 
-            // DGV_Equipe
+            // DGV_Equipes
             // 
-            this.DGV_Equipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Equipe.Location = new System.Drawing.Point(12, 12);
-            this.DGV_Equipe.Name = "DGV_Equipe";
-            this.DGV_Equipe.Size = new System.Drawing.Size(451, 268);
-            this.DGV_Equipe.TabIndex = 0;
+            this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Equipes.Location = new System.Drawing.Point(12, 12);
+            this.DGV_Equipes.Name = "DGV_Equipes";
+            this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
+            this.DGV_Equipes.TabIndex = 0;
+            this.DGV_Equipes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Equipe_CellContentDoubleClick);
             // 
             // BTN_Ajouter
             // 
@@ -106,13 +107,13 @@
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
-            this.Controls.Add(this.DGV_Equipe);
+            this.Controls.Add(this.DGV_Equipes);
             this.Name = "Form_Equipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipe_FormClosing);
             this.Load += new System.EventHandler(this.FormEquipe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,7 +122,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DGV_Equipe;
+        private System.Windows.Forms.DataGridView DGV_Equipes;
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
