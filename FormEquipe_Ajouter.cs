@@ -13,7 +13,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
     
     public partial class FormEquipe_Ajouter : Form
     {
-        public string nomFichier =" ";
+        public string nomFichier;
+       
         public string nomEquipe
         {
             get
