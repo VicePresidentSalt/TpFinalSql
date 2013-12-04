@@ -111,13 +111,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             {
                 try
                 {
-                    string sqlModif = "Update Equipes set NomEquipe =:NomEquipe, DateIntroLigue =:DateIntroLigue, " +
+                    nomFichier = Modifier.nomFichier;
+                    string sqlModif = "Update Equipes set NomEquipe =:NomEquipe, DateIntroLigue =:DateIntroLigue, LogoEquipe =:LogoEquipe, " +
                         "DivisionEquipe =:DivisionEquipe, VilleEquipe =:VilleEquipe where NomEquipe =:NomEquipe2";
                     //Why NomEquipe2 ?? Updater la row avc l'ancien nom de l'équipe
                     OracleCommand oraUpdate = new OracleCommand(sqlModif, conn);
 
                     OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
+                    OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
                     OracleParameter OraParaDivEquipe = new OracleParameter(":DivisionEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaNomEquipe2 = new OracleParameter(":NomEquipe2", OracleDbType.Varchar2, 40);
@@ -125,13 +127,26 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     OraParaNomEquipe.Value = Modifier.nomEquipe;
                     OraParamDateIntroLigue.Value = DateTime.Parse(Modifier.dateIntroLigue);
+                    OraParamLogoEquipe.Value = Modifier.nomFichier;
                     OraParaDivEquipe.Value = Modifier.divisionEquipe;
                     OraParaVilleEquipe.Value = Modifier.villeEquipe;
                     OraParaNomEquipe2.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
 
+                    if (nomFichier != null)
+                    {
+                        FileStream Streamp = new FileStream(nomFichier, FileMode.Open, FileAccess.Read);
+                        byte[] buffer1 = new byte[Streamp.Length];
+                        Streamp.Read(buffer1, 0, System.Convert.ToInt32(Streamp.Length));
+                        Streamp.Close();
+
+                        // ajout de la photo dans la BD.
+
+                        OraParamLogoEquipe.Value = buffer1;
+                    }
 
                     oraUpdate.Parameters.Add(OraParaNomEquipe);
                     oraUpdate.Parameters.Add(OraParamDateIntroLigue);
+                    oraUpdate.Parameters.Add(OraParamLogoEquipe);
                     oraUpdate.Parameters.Add(OraParaDivEquipe);
                     oraUpdate.Parameters.Add(OraParaVilleEquipe);
                     oraUpdate.Parameters.Add(OraParaNomEquipe2);
