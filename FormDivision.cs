@@ -171,5 +171,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             SaveSettings();
         }
+
+        private void DGV_Division_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                MessageBox.Show(e.RowIndex.ToString());
+            }
+        }
     }
 }

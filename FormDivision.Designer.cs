@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDivision));
             this.DGV_Division = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -39,8 +40,14 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
+            this.CMS_Division = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.voirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.CMS_Division.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGV_Division
@@ -51,12 +58,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Division.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Division.ContextMenuStrip = this.CMS_Division;
             this.DGV_Division.Location = new System.Drawing.Point(12, 44);
             this.DGV_Division.Name = "DGV_Division";
             this.DGV_Division.ReadOnly = true;
             this.DGV_Division.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Division.Size = new System.Drawing.Size(245, 126);
             this.DGV_Division.TabIndex = 0;
+            this.DGV_Division.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Division_CellMouseDoubleClick);
             // 
             // menuStrip1
             // 
@@ -143,6 +152,45 @@
             this.BTN_Deconnexion.UseVisualStyleBackColor = true;
             this.BTN_Deconnexion.Click += new System.EventHandler(this.BTN_Deconnexion_Click);
             // 
+            // CMS_Division
+            // 
+            this.CMS_Division.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.voirToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.modifierToolStripMenuItem,
+            this.supprimerToolStripMenuItem});
+            this.CMS_Division.Name = "CMS_Division";
+            this.CMS_Division.Size = new System.Drawing.Size(168, 76);
+            // 
+            // voirToolStripMenuItem
+            // 
+            this.voirToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.voirToolStripMenuItem.Name = "voirToolStripMenuItem";
+            this.voirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
+            this.voirToolStripMenuItem.ShowShortcutKeys = false;
+            this.voirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.voirToolStripMenuItem.Text = "&Voir";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 6);
+            // 
+            // modifierToolStripMenuItem
+            // 
+            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.modifierToolStripMenuItem.Text = "&Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.BTN_Modifier_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.BTN_Delete_Click);
+            // 
             // FormDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.CMS_Division.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +230,10 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.Button BTN_Deconnexion;
+        private System.Windows.Forms.ContextMenuStrip CMS_Division;
+        private System.Windows.Forms.ToolStripMenuItem voirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
     }
 }
