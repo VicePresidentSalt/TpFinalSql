@@ -179,14 +179,24 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-            OracleParameter paramNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
-            paramNomEquipe.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
-            string sqlDelete = "Delete from Equipes Where NomEquipe =:paramNomEquipe";
-            OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+            try
+            {
+                OracleParameter paramNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+                paramNomEquipe.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
+                string sqlDelete = "Delete from Equipes Where NomEquipe =:paramNomEquipe";
+                OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
 
-            oraDelete.Parameters.Add(paramNomEquipe);
-            oraDelete.ExecuteNonQuery();
-            ReloadDGV();
+                oraDelete.Parameters.Add(paramNomEquipe);
+                oraDelete.ExecuteNonQuery();
+                ReloadDGV();
+            }
+            catch (OracleException ex)
+            {
+                if (ex.Number == 2292)
+                {
+                    MessageBox.Show("L'équipe ne doit pas contenir de joueurs.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private string RechercherFichier()
