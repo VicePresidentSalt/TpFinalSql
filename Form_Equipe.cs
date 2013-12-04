@@ -35,8 +35,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         }
 
         private void FormEquipe_Load(object sender, EventArgs e)
-        {
+        { 
             ReloadDGV();
+        }
+
+        public static Bitmap ByteToImage(byte[] blob)
+        {
+            MemoryStream mStream = new MemoryStream();
+            byte[] pData = blob;
+            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+            Bitmap bm = new Bitmap(mStream, false);
+            mStream.Dispose();
+            return bm;
         }
 
         
@@ -212,6 +222,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void DGV_Equipe_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show(e.RowIndex.ToString());
+        }
+
+        private void DGV_Equipes_SelectionChanged(object sender, EventArgs e)
+        {
+            OracleDataAdapter oraLogo = new OracleDataAdapter("SELECT LogoEquipe FROM Equipes"+
+            "where DivisionEquipe = '" +DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString()+"'", conn);
+            DataSet LogoequipeDataSet = new DataSet();
+            oraLogo.Fill(LogoequipeDataSet);
+            //PB_Equipes.Image = ByteToImage(oraLogo.
         }
 
 

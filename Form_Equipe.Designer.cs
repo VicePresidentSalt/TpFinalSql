@@ -55,6 +55,7 @@
             this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Equipe_CellContentDoubleClick);
+            this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
             // 
             // BTN_Ajouter
             // 
