@@ -46,16 +46,16 @@
             this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Equipe_CellContentDoubleClick);
-            this.DGV_Equipe.AllowUserToAddRows = false;
-            this.DGV_Equipe.AllowUserToDeleteRows = false;
-            this.DGV_Equipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Equipe.Location = new System.Drawing.Point(12, 12);
-            this.DGV_Equipe.MultiSelect = false;
-            this.DGV_Equipe.Name = "DGV_Equipe";
-            this.DGV_Equipe.ReadOnly = true;
-            this.DGV_Equipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Equipe.Size = new System.Drawing.Size(451, 268);
-            this.DGV_Equipe.TabIndex = 0;
+            this.DGV_Equipes.AllowUserToAddRows = false;
+            this.DGV_Equipes.AllowUserToDeleteRows = false;
+            this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Equipes.Location = new System.Drawing.Point(12, 12);
+            this.DGV_Equipes.MultiSelect = false;
+            this.DGV_Equipes.Name = "DGV_Equipe";
+            this.DGV_Equipes.ReadOnly = true;
+            this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
+            this.DGV_Equipes.TabIndex = 0;
             // 
             // BTN_Ajouter
             // 
