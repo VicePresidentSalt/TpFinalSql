@@ -23,13 +23,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe "+
             "where DivisionEquipe = '" + division+"'", conn);
-            string sql = "SELECT LOGOEQUIPE FROM EQUIPES";
-            OracleDataAdapter oraAdapterLogo= new OracleDataAdapter(sql,conn);
-            oraAdapterLogo.Fill(equipeDataSet, "Logo");
             equipeDataSet = new DataSet();
             oraAdapter.Fill(equipeDataSet);
             DGV_Equipes.DataSource = equipeDataSet.Tables[0];
-            PB_Equipes.DataBindings.Add("Image", equipeDataSet, "Logo.LogoEquipe",true);
         }
         
         public Form_Equipe(string Division)
@@ -41,7 +37,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void FormEquipe_Load(object sender, EventArgs e)
         {
             ReloadDGV();
-
         }
 
         
