@@ -32,7 +32,10 @@
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
+            this.PB_Equipes = new System.Windows.Forms.PictureBox();
+            this.BTN_ChargerImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
             // 
             // DGV_Equipe
@@ -73,11 +76,30 @@
             this.BTN_Delete.UseVisualStyleBackColor = true;
             this.BTN_Delete.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
+            // PB_Equipes
+            // 
+            this.PB_Equipes.Location = new System.Drawing.Point(629, 12);
+            this.PB_Equipes.Name = "PB_Equipes";
+            this.PB_Equipes.Size = new System.Drawing.Size(117, 96);
+            this.PB_Equipes.TabIndex = 4;
+            this.PB_Equipes.TabStop = false;
+            // 
+            // BTN_ChargerImage
+            // 
+            this.BTN_ChargerImage.Location = new System.Drawing.Point(629, 127);
+            this.BTN_ChargerImage.Name = "BTN_ChargerImage";
+            this.BTN_ChargerImage.Size = new System.Drawing.Size(117, 23);
+            this.BTN_ChargerImage.TabIndex = 5;
+            this.BTN_ChargerImage.Text = "Charger Image";
+            this.BTN_ChargerImage.UseVisualStyleBackColor = true;
+            // 
             // Form_Equipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 295);
+            this.ClientSize = new System.Drawing.Size(777, 315);
+            this.Controls.Add(this.BTN_ChargerImage);
+            this.Controls.Add(this.PB_Equipes);
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
@@ -86,6 +108,7 @@
             this.Text = "Form_Equipe";
             this.Load += new System.EventHandler(this.FormEquipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +119,7 @@
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
+        private System.Windows.Forms.PictureBox PB_Equipes;
+        private System.Windows.Forms.Button BTN_ChargerImage;
     }
 }
