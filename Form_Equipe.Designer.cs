@@ -91,9 +91,7 @@
             // 
             // PB_Equipes
             // 
-            this.PB_Equipes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PB_Equipes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Equipes.Location = new System.Drawing.Point(469, 12);
             this.PB_Equipes.Name = "PB_Equipes";
             this.PB_Equipes.Size = new System.Drawing.Size(117, 96);
