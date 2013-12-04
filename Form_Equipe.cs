@@ -244,8 +244,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             //oraLogo.Fill(LogoequipeDataSet);
             ////PB_Equipes.Image = ByteToImage(oraLogo.
         }
-
-
-
+        
     }
 }
