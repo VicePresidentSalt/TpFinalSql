@@ -66,6 +66,10 @@
     <Compile Include="FormDivision_Ajouter.Designer.cs">
       <DependentUpon>FormDivision_Ajouter.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEquipe_Ajouter.cs" />
+    <Compile Include="FormEquipe_Ajouter.Designer.cs">
+      <DependentUpon>FormEquipe_Ajouter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDivision_Ajouter.resx">
       <DependentUpon>FormDivision_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEquipe_Ajouter.resx">
+      <DependentUpon>FormEquipe_Ajouter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
