@@ -19,15 +19,21 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void ReloadDGV()
         {
-            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes", conn);
+            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes E innerjoin Divisions D on D.NomDivision = E.DivisionEquipe "+
+            "where DivisionEquipe = " + callBackForm.DGV_Division.selected", conn);
             equipeDataSet = new DataSet();
             oraAdapter.Fill(equipeDataSet);
             DGV_Equipe.DataSource = equipeDataSet.Tables[0];
         }
         
-        public Form_Equipe()
+        public Form_Equipe(string division)
         {
             InitializeComponent();
+        }
+
+        private void FormEquipe_Load(object sender, EventArgs e)
+        {
+            ReloadDGV();
         }
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)

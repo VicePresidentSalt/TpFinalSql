@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.BTN_OK = new System.Windows.Forms.Button();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DTP_DateCreationEquipe
@@ -102,11 +104,35 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Ville de l\'équipe";
             // 
+            // BTN_OK
+            // 
+            this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_OK.Location = new System.Drawing.Point(24, 152);
+            this.BTN_OK.Name = "BTN_OK";
+            this.BTN_OK.Size = new System.Drawing.Size(75, 23);
+            this.BTN_OK.TabIndex = 8;
+            this.BTN_OK.Text = "Ok";
+            this.BTN_OK.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Cancel.Location = new System.Drawing.Point(167, 152);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Cancel.TabIndex = 9;
+            this.BTN_Cancel.Text = "Cancel";
+            this.BTN_Cancel.UseVisualStyleBackColor = true;
+            // 
             // FormEquipe_Ajouter
             // 
+            this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 148);
+            this.CancelButton = this.BTN_Cancel;
+            this.ClientSize = new System.Drawing.Size(276, 187);
+            this.Controls.Add(this.BTN_Cancel);
+            this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -115,8 +141,13 @@
             this.Controls.Add(this.TB_VilleEquipe);
             this.Controls.Add(this.TB_NomEquipe);
             this.Controls.Add(this.DTP_DateCreationEquipe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormEquipe_Ajouter";
-            this.Text = "FormEquipe_Ajouter";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +163,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BTN_OK;
+        private System.Windows.Forms.Button BTN_Cancel;
     }
 }
