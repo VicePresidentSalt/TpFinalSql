@@ -16,6 +16,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Form callBackForm = null;
         public string division = null;
         private DataSet equipeDataSet = null;
+        string nomFichier;
 
         private void ReloadDGV()
         {
@@ -37,6 +38,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             ReloadDGV();
         }
 
+        
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Ajouter = new FormEquipe_Ajouter();
@@ -140,5 +142,36 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             oraDelete.ExecuteNonQuery();
             ReloadDGV();
         }
+
+        private string RechercherFichier()
+        {
+
+            OpenFileDialog fImage = new OpenFileDialog();
+
+            fImage.Title = "selectionner une image";
+            fImage.CheckFileExists = true;
+            fImage.InitialDirectory = @":C\";
+
+            //fImage.InitialDirectory = Application.StartupPath;
+            fImage.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+            fImage.FilterIndex = 1;
+            fImage.RestoreDirectory = true;
+
+            if (fImage.ShowDialog() == DialogResult.OK)
+            {
+                nomFichier = fImage.FileName;
+                Bitmap bitmap1 = new Bitmap(nomFichier);
+
+
+            }
+            else
+            {
+                nomFichier = null;
+            }
+            return nomFichier;
+        }
+
+
+
     }
 }
