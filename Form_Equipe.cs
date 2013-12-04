@@ -53,6 +53,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Ajouter = new FormEquipe_Ajouter();
+            Ajouter.Text = "Ajout";
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 nomFichier = Ajouter.nomFichier;
@@ -112,6 +113,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Modifier = new FormEquipe_Ajouter();
+            Modifier.Text = "Modification";
             Modifier.nomEquipe = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
             Modifier.dateIntroLigue = DGV_Equipes.SelectedRows[0].Cells[1].Value.ToString();
             Modifier.divisionEquipe = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
@@ -226,11 +228,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void DGV_Equipes_SelectionChanged(object sender, EventArgs e)
         {
-            OracleDataAdapter oraLogo = new OracleDataAdapter("SELECT LogoEquipe FROM Equipes"+
-            "where DivisionEquipe = '" +DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString()+"'", conn);
-            DataSet LogoequipeDataSet = new DataSet();
-            oraLogo.Fill(LogoequipeDataSet);
-            //PB_Equipes.Image = ByteToImage(oraLogo.
+            //OracleDataAdapter oraLogo = new OracleDataAdapter("SELECT LogoEquipe FROM Equipes"+
+            //"where DivisionEquipe = '" +DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString()+"'", conn);
+            //DataSet LogoequipeDataSet = new DataSet();
+            //oraLogo.Fill(LogoequipeDataSet);
+            ////PB_Equipes.Image = ByteToImage(oraLogo.
         }
 
 
