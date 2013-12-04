@@ -84,6 +84,7 @@
             this.Controls.Add(this.DGV_Equipe);
             this.Name = "Form_Equipe";
             this.Text = "Form_Equipe";
+            this.Load += new System.EventHandler(this.FormEquipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).EndInit();
             this.ResumeLayout(false);
 
