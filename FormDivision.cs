@@ -176,7 +176,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             if (e.RowIndex > -1)
             {
-                MessageBox.Show(e.RowIndex.ToString());
+                Form_Equipe fe = new Form_Equipe();
+                fe.conn = conn;
+
+                this.Hide();
+                fe.callBackForm = this;
+                fe.ShowDialog();
+
             }
         }
     }
