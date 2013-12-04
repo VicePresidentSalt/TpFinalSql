@@ -34,7 +34,6 @@
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.PB_Equipes = new System.Windows.Forms.PictureBox();
             this.BTN_OK = new System.Windows.Forms.Button();
-            this.BTN_Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +48,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(496, 127);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(493, 129);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ajouter.TabIndex = 1;
@@ -59,7 +58,7 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(496, 190);
+            this.BTN_Modifier.Location = new System.Drawing.Point(493, 193);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(75, 23);
             this.BTN_Modifier.TabIndex = 2;
@@ -69,7 +68,7 @@
             // 
             // BTN_Delete
             // 
-            this.BTN_Delete.Location = new System.Drawing.Point(496, 257);
+            this.BTN_Delete.Location = new System.Drawing.Point(493, 257);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(75, 23);
             this.BTN_Delete.TabIndex = 3;
@@ -89,31 +88,19 @@
             // BTN_OK
             // 
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(49, 294);
+            this.BTN_OK.Location = new System.Drawing.Point(509, 294);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 5;
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
-            // BTN_Cancel
-            // 
-            this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(244, 294);
-            this.BTN_Cancel.Name = "BTN_Cancel";
-            this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Cancel.TabIndex = 6;
-            this.BTN_Cancel.Text = "Cancel";
-            this.BTN_Cancel.UseVisualStyleBackColor = true;
-            // 
             // Form_Equipe
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(596, 329);
-            this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.PB_Equipes);
             this.Controls.Add(this.BTN_Delete);
@@ -138,6 +125,5 @@
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.PictureBox PB_Equipes;
         private System.Windows.Forms.Button BTN_OK;
-        private System.Windows.Forms.Button BTN_Cancel;
     }
 }
