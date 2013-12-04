@@ -176,14 +176,23 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             if (e.RowIndex > -1)
             {
-                Form_Equipe fe = new Form_Equipe(DGV_Division.SelectedRows[0].Cells[0].Value.ToString());
-                fe.conn = conn;
-
-                this.Hide();
-                fe.callBackForm = this;
-                fe.ShowDialog();
-
+                Callformequipes();
             }
         }
+
+        private void voirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Callformequipes();
+        }
+        private void Callformequipes()
+        {
+            Form_Equipe fe = new Form_Equipe(DGV_Division.SelectedRows[0].Cells[0].Value.ToString());
+            fe.conn = conn;
+
+            this.Hide();
+            fe.callBackForm = this;
+            fe.ShowDialog();
+        }
+
     }
 }
