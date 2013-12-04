@@ -108,6 +108,7 @@
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.DGV_Equipe);
             this.Name = "Form_Equipe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Equipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipe_FormClosing);
             this.Load += new System.EventHandler(this.FormEquipe_Load);
