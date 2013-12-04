@@ -124,7 +124,14 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
+            OracleParameter paramNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
+            paramNomEquipe.Value = DGV_Equipe.SelectedRows[0].Cells[0].Value.ToString();
+            string sqlDelete = "Delete from Equipes Where NomEquipe =:paramNomEquipe";
+            OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
 
+            oraDelete.Parameters.Add(paramNomEquipe);
+            oraDelete.ExecuteNonQuery();
+            ReloadDGV();
         }
     }
 }
