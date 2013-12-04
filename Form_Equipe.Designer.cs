@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Equipe));
             this.DGV_Equipes = new System.Windows.Forms.DataGridView();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Modifier = new System.Windows.Forms.Button();
@@ -40,22 +41,17 @@
             // 
             // DGV_Equipes
             // 
-            this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Equipes.Location = new System.Drawing.Point(12, 12);
-            this.DGV_Equipes.Name = "DGV_Equipes";
-            this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
-            this.DGV_Equipes.TabIndex = 0;
-            this.DGV_Equipes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Equipe_CellContentDoubleClick);
             this.DGV_Equipes.AllowUserToAddRows = false;
             this.DGV_Equipes.AllowUserToDeleteRows = false;
             this.DGV_Equipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Equipes.Location = new System.Drawing.Point(12, 12);
             this.DGV_Equipes.MultiSelect = false;
-            this.DGV_Equipes.Name = "DGV_Equipe";
+            this.DGV_Equipes.Name = "DGV_Equipes";
             this.DGV_Equipes.ReadOnly = true;
             this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Equipes.Size = new System.Drawing.Size(451, 268);
             this.DGV_Equipes.TabIndex = 0;
+            this.DGV_Equipes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Equipe_CellContentDoubleClick);
             // 
             // BTN_Ajouter
             // 
@@ -118,9 +114,10 @@
             this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.DGV_Equipes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Equipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form_Equipe";
+            this.Text = "Équipe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipe_FormClosing);
             this.Load += new System.EventHandler(this.FormEquipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
