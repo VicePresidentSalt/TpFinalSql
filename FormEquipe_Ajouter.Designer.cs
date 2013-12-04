@@ -38,6 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BTN_OK = new System.Windows.Forms.Button();
             this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.BTN_ChargerImage = new System.Windows.Forms.Button();
+            this.PB_Equipes = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
             // 
             // DTP_DateCreationEquipe
@@ -124,13 +127,33 @@
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
+            // BTN_ChargerImage
+            // 
+            this.BTN_ChargerImage.Location = new System.Drawing.Point(273, 110);
+            this.BTN_ChargerImage.Name = "BTN_ChargerImage";
+            this.BTN_ChargerImage.Size = new System.Drawing.Size(100, 23);
+            this.BTN_ChargerImage.TabIndex = 10;
+            this.BTN_ChargerImage.Text = "Charger Image";
+            this.BTN_ChargerImage.UseVisualStyleBackColor = true;
+            this.BTN_ChargerImage.Click += new System.EventHandler(this.BTN_ChargerImage_Click);
+            // 
+            // PB_Equipes
+            // 
+            this.PB_Equipes.Location = new System.Drawing.Point(273, 12);
+            this.PB_Equipes.Name = "PB_Equipes";
+            this.PB_Equipes.Size = new System.Drawing.Size(100, 85);
+            this.PB_Equipes.TabIndex = 11;
+            this.PB_Equipes.TabStop = false;
+            // 
             // FormEquipe_Ajouter
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(276, 187);
+            this.ClientSize = new System.Drawing.Size(403, 187);
+            this.Controls.Add(this.PB_Equipes);
+            this.Controls.Add(this.BTN_ChargerImage);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.label4);
@@ -148,6 +171,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +189,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BTN_OK;
         private System.Windows.Forms.Button BTN_Cancel;
+        private System.Windows.Forms.Button BTN_ChargerImage;
+        private System.Windows.Forms.PictureBox PB_Equipes;
     }
 }

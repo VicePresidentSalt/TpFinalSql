@@ -33,7 +33,6 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.PB_Equipes = new System.Windows.Forms.PictureBox();
-            this.BTN_ChargerImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +47,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(496, 12);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(496, 127);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ajouter.TabIndex = 1;
@@ -58,7 +57,7 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(496, 85);
+            this.BTN_Modifier.Location = new System.Drawing.Point(496, 190);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(75, 23);
             this.BTN_Modifier.TabIndex = 2;
@@ -68,7 +67,7 @@
             // 
             // BTN_Delete
             // 
-            this.BTN_Delete.Location = new System.Drawing.Point(496, 162);
+            this.BTN_Delete.Location = new System.Drawing.Point(496, 257);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(75, 23);
             this.BTN_Delete.TabIndex = 3;
@@ -78,27 +77,17 @@
             // 
             // PB_Equipes
             // 
-            this.PB_Equipes.Location = new System.Drawing.Point(629, 12);
+            this.PB_Equipes.Location = new System.Drawing.Point(469, 12);
             this.PB_Equipes.Name = "PB_Equipes";
             this.PB_Equipes.Size = new System.Drawing.Size(117, 96);
             this.PB_Equipes.TabIndex = 4;
             this.PB_Equipes.TabStop = false;
-            // 
-            // BTN_ChargerImage
-            // 
-            this.BTN_ChargerImage.Location = new System.Drawing.Point(629, 127);
-            this.BTN_ChargerImage.Name = "BTN_ChargerImage";
-            this.BTN_ChargerImage.Size = new System.Drawing.Size(117, 23);
-            this.BTN_ChargerImage.TabIndex = 5;
-            this.BTN_ChargerImage.Text = "Charger Image";
-            this.BTN_ChargerImage.UseVisualStyleBackColor = true;
             // 
             // Form_Equipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 315);
-            this.Controls.Add(this.BTN_ChargerImage);
             this.Controls.Add(this.PB_Equipes);
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
@@ -120,6 +109,5 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.PictureBox PB_Equipes;
-        private System.Windows.Forms.Button BTN_ChargerImage;
     }
 }
