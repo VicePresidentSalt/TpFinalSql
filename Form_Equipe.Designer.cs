@@ -55,6 +55,7 @@
             // 
             // BTN_Ajouter
             // 
+            this.BTN_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BTN_Ajouter.Location = new System.Drawing.Point(494, 132);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(75, 23);
@@ -65,6 +66,7 @@
             // 
             // BTN_Modifier
             // 
+            this.BTN_Modifier.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BTN_Modifier.Location = new System.Drawing.Point(494, 161);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(75, 23);
@@ -75,6 +77,7 @@
             // 
             // BTN_Delete
             // 
+            this.BTN_Delete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BTN_Delete.Location = new System.Drawing.Point(494, 190);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(75, 23);
@@ -94,6 +97,7 @@
             // 
             // BTN_OK
             // 
+            this.BTN_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_OK.Location = new System.Drawing.Point(509, 294);
             this.BTN_OK.Name = "BTN_OK";
