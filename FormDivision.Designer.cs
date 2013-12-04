@@ -45,6 +45,7 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
+            this.BTN_QUITTER = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).BeginInit();
             this.CMS_Division.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -60,6 +61,7 @@
             this.DGV_Division.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Division.ContextMenuStrip = this.CMS_Division;
             this.DGV_Division.Location = new System.Drawing.Point(12, 44);
+            this.DGV_Division.MultiSelect = false;
             this.DGV_Division.Name = "DGV_Division";
             this.DGV_Division.ReadOnly = true;
             this.DGV_Division.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -75,7 +77,7 @@
             this.modifierToolStripMenuItem,
             this.supprimerToolStripMenuItem});
             this.CMS_Division.Name = "CMS_Division";
-            this.CMS_Division.Size = new System.Drawing.Size(168, 98);
+            this.CMS_Division.Size = new System.Drawing.Size(168, 76);
             // 
             // voirToolStripMenuItem
             // 
@@ -95,6 +97,8 @@
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
+            this.modifierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
+            this.modifierToolStripMenuItem.ShowShortcutKeys = false;
             this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.modifierToolStripMenuItem.Text = "&Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.BTN_Modifier_Click);
@@ -183,8 +187,8 @@
             // 
             // BTN_Deconnexion
             // 
-            this.BTN_Deconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Deconnexion.Location = new System.Drawing.Point(76, 185);
+            this.BTN_Deconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Deconnexion.Location = new System.Drawing.Point(182, 194);
             this.BTN_Deconnexion.Name = "BTN_Deconnexion";
             this.BTN_Deconnexion.Size = new System.Drawing.Size(96, 23);
             this.BTN_Deconnexion.TabIndex = 5;
@@ -192,11 +196,23 @@
             this.BTN_Deconnexion.UseVisualStyleBackColor = true;
             this.BTN_Deconnexion.Click += new System.EventHandler(this.BTN_Deconnexion_Click);
             // 
+            // BTN_QUITTER
+            // 
+            this.BTN_QUITTER.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_QUITTER.Location = new System.Drawing.Point(284, 194);
+            this.BTN_QUITTER.Name = "BTN_QUITTER";
+            this.BTN_QUITTER.Size = new System.Drawing.Size(96, 23);
+            this.BTN_QUITTER.TabIndex = 5;
+            this.BTN_QUITTER.Text = "Quitter";
+            this.BTN_QUITTER.UseVisualStyleBackColor = true;
+            this.BTN_QUITTER.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
             // FormDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 229);
+            this.Controls.Add(this.BTN_QUITTER);
             this.Controls.Add(this.BTN_Deconnexion);
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
@@ -236,5 +252,6 @@
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         public System.Windows.Forms.DataGridView DGV_Division;
+        private System.Windows.Forms.Button BTN_QUITTER;
     }
 }
