@@ -79,13 +79,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     oraAjout.Parameters.Add(OraParaDivEquipe);
                     oraAjout.Parameters.Add(OraParaVilleEquipe);
 
-
-
                     oraAjout.ExecuteNonQuery();
 
                     ReloadDGV();
-
-                 
                 }
 
                 catch (Exception ex)
