@@ -48,7 +48,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(493, 129);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(494, 132);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ajouter.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(493, 193);
+            this.BTN_Modifier.Location = new System.Drawing.Point(494, 161);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(75, 23);
             this.BTN_Modifier.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // BTN_Delete
             // 
-            this.BTN_Delete.Location = new System.Drawing.Point(493, 257);
+            this.BTN_Delete.Location = new System.Drawing.Point(494, 190);
             this.BTN_Delete.Name = "BTN_Delete";
             this.BTN_Delete.Size = new System.Drawing.Size(75, 23);
             this.BTN_Delete.TabIndex = 3;
