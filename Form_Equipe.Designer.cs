@@ -117,7 +117,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Equipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Équipe";
+            this.Text = "Équipes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Equipe_FormClosing);
             this.Load += new System.EventHandler(this.FormEquipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).EndInit();
