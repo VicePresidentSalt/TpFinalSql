@@ -200,6 +200,8 @@
             this.Controls.Add(this.BTN_OK);
             this.Name = "Form_Joueurs";
             this.Text = "Form_Joueurs";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Joueurs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
