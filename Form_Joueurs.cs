@@ -36,10 +36,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             
         }
-
+        /*
         private void FillForm()
         {
-            /*
+            
             string sql = "SELECT * FROM Joueurs ";
             OracleDataAdapter oraAdapter = new OracleDataAdapter(sql, conn);
             
