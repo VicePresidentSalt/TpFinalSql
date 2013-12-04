@@ -57,7 +57,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     OraParaNomEquipe.Value = Ajouter.nomEquipe;
                     OraParamDateIntroLigue.Value = DateTime.Parse(Ajouter.dateIntroLigue);
-                    OraParamLogoEquipe.Value = Ajouter.nomFichier;
+                    //OraParamLogoEquipe.Value = Ajouter.nomFichier;
                     OraParaDivEquipe.Value = Ajouter.divisionEquipe;
                     OraParaVilleEquipe.Value = Ajouter.villeEquipe;
 
@@ -179,6 +179,12 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 nomFichier = null;
             }
             return nomFichier;
+        }
+
+        private void Form_Equipe_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
         }
 
 
