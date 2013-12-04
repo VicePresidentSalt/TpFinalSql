@@ -37,5 +37,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             InitializeComponent();
         }
+
+        private void FormDivision_Ajouter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
