@@ -142,6 +142,7 @@
             this.PB_Equipes.Location = new System.Drawing.Point(273, 12);
             this.PB_Equipes.Name = "PB_Equipes";
             this.PB_Equipes.Size = new System.Drawing.Size(100, 85);
+            this.PB_Equipes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Equipes.TabIndex = 11;
             this.PB_Equipes.TabStop = false;
             // 

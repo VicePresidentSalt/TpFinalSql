@@ -33,6 +33,8 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.PB_Equipes = new System.Windows.Forms.PictureBox();
+            this.BTN_OK = new System.Windows.Forms.Button();
+            this.BTN_Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).BeginInit();
             this.SuspendLayout();
@@ -80,14 +82,39 @@
             this.PB_Equipes.Location = new System.Drawing.Point(469, 12);
             this.PB_Equipes.Name = "PB_Equipes";
             this.PB_Equipes.Size = new System.Drawing.Size(117, 96);
+            this.PB_Equipes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PB_Equipes.TabIndex = 4;
             this.PB_Equipes.TabStop = false;
             // 
+            // BTN_OK
+            // 
+            this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_OK.Location = new System.Drawing.Point(49, 294);
+            this.BTN_OK.Name = "BTN_OK";
+            this.BTN_OK.Size = new System.Drawing.Size(75, 23);
+            this.BTN_OK.TabIndex = 5;
+            this.BTN_OK.Text = "Ok";
+            this.BTN_OK.UseVisualStyleBackColor = true;
+            // 
+            // BTN_Cancel
+            // 
+            this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Cancel.Location = new System.Drawing.Point(244, 294);
+            this.BTN_Cancel.Name = "BTN_Cancel";
+            this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Cancel.TabIndex = 6;
+            this.BTN_Cancel.Text = "Cancel";
+            this.BTN_Cancel.UseVisualStyleBackColor = true;
+            // 
             // Form_Equipe
             // 
+            this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 315);
+            this.CancelButton = this.BTN_Cancel;
+            this.ClientSize = new System.Drawing.Size(596, 329);
+            this.Controls.Add(this.BTN_Cancel);
+            this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.PB_Equipes);
             this.Controls.Add(this.BTN_Delete);
             this.Controls.Add(this.BTN_Modifier);
@@ -99,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Equipes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +137,7 @@
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_Delete;
         private System.Windows.Forms.PictureBox PB_Equipes;
+        private System.Windows.Forms.Button BTN_OK;
+        private System.Windows.Forms.Button BTN_Cancel;
     }
 }
