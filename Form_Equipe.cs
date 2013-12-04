@@ -14,21 +14,22 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
     {
         public OracleConnection conn = null;
         public Form callBackForm = null;
-
+        public string division = null;
         private DataSet equipeDataSet = null;
 
         private void ReloadDGV()
         {
-            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes E innerjoin Divisions D on D.NomDivision = E.DivisionEquipe "+
-            "where DivisionEquipe = " + division", conn);
+            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe "+
+            "where DivisionEquipe = '" + division+"'", conn);
             equipeDataSet = new DataSet();
             oraAdapter.Fill(equipeDataSet);
             DGV_Equipe.DataSource = equipeDataSet.Tables[0];
         }
         
-        public Form_Equipe(string division)
+        public Form_Equipe(string Division)
         {
             InitializeComponent();
+            division = Division;
         }
 
         private void FormEquipe_Load(object sender, EventArgs e)
