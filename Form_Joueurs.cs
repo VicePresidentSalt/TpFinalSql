@@ -36,30 +36,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void ReloadForm()
         {
-            
+            FillForm();
         }
         
-        private void Getinfos()
-        {
-            try
-            {
-                string SQL = "SELECT * FROM JOUEURS";
-
-                OracleDataAdapter Oraad = new OracleDataAdapter(SQL, conn);
-
-                if (joueurDataSet.Tables.Contains("Joueur"))
-                {
-                    joueurDataSet.Tables["Joueur"].Clear();
-                }
-                Oraad.Fill(joueurDataSet, "Joueur");
-                Oraad.Dispose();
-            }
-            catch (Exception se)
-            {
-                MessageBox.Show(se.Message.ToString());
-            }
-
-        }
         private void FillForm()
         {
             
@@ -83,7 +62,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             TB_NumeroJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NumeroJoueurs");
             TB_NomJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NomJoueurs");
             TB_PrenomJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.PrenomJoueur");
-            DTP_DateNaissanceJoueur.DataBindings.Add("Calendrier", joueurDataSet, "Joueur.DateNaissance");
+            DTP_DateNaissanceJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.DateNaissance");
             TB_NumeroMaillotJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NumeroMaillot");
             TB_EquipeJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.EquipeJoueur");
             TB_PositionJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.PositionJoueur");
