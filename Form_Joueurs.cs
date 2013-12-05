@@ -15,10 +15,12 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public OracleConnection conn = null;
         public Form callBackForm = null;
         private DataSet joueurDataSet = new DataSet();
+        private string Equipe;
         
-        public Form_Joueurs()
+        public Form_Joueurs(string equipe)
         {
             InitializeComponent();
+            Equipe = equipe;
         }
 
         private void Form_Joueurs_FormClosed(object sender, FormClosedEventArgs e)

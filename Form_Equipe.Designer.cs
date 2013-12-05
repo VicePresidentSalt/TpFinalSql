@@ -137,6 +137,7 @@
             this.voirToolStripMenuItem.ShowShortcutKeys = false;
             this.voirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.voirToolStripMenuItem.Text = "&Voir";
+            this.voirToolStripMenuItem.Click += new System.EventHandler(this.voirToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 

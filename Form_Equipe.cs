@@ -233,7 +233,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void DGV_Equipe_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(e.RowIndex.ToString());
+            Callformjoueurs();
         }
 
         private void DGV_Equipes_SelectionChanged(object sender, EventArgs e)
@@ -243,6 +243,20 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             //DataSet LogoequipeDataSet = new DataSet();
             //oraLogo.Fill(LogoequipeDataSet);
             ////PB_Equipes.Image = ByteToImage(oraLogo.
+        }
+        private void Callformjoueurs()
+        {
+            Form_Joueurs fj = new Form_Joueurs(DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString());
+            fj.conn = conn;
+
+            this.Hide();
+            fj.callBackForm = this;
+            fj.ShowDialog();
+        }
+
+        private void voirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Callformjoueurs();
         }
         
     }
