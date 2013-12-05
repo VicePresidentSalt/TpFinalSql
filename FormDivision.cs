@@ -156,24 +156,14 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-            try
-            {
-                OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
-                paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
-                string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
-                OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+            OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
+            paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
+            string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
+            OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
 
-                oraDelete.Parameters.Add(paramNomDivision);
-                oraDelete.ExecuteNonQuery();
-                ReloadDGV();
-            }
-            catch (OracleException ex)
-            {
-                if (ex.Number == 2292)
-                {
-                    MessageBox.Show("La division doit etre vide.","Erreur 2292",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
-            }
+            oraDelete.Parameters.Add(paramNomDivision);
+            oraDelete.ExecuteNonQuery();
+            ReloadDGV();
 
         }
 

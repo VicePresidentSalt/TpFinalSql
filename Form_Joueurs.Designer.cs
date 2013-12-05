@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Joueurs));
             this.BTN_OK = new System.Windows.Forms.Button();
             this.TB_NumeroJoueur = new System.Windows.Forms.TextBox();
-            this.TB_Nom = new System.Windows.Forms.TextBox();
-            this.TB_Prenom = new System.Windows.Forms.TextBox();
-            this.TB_NumeroMaillot = new System.Windows.Forms.TextBox();
+            this.TB_NomJoueur = new System.Windows.Forms.TextBox();
+            this.TB_PrenomJoueur = new System.Windows.Forms.TextBox();
+            this.TB_NumeroMaillotJoueur = new System.Windows.Forms.TextBox();
             this.TB_EquipeJoueur = new System.Windows.Forms.TextBox();
             this.TB_PositionJoueur = new System.Windows.Forms.TextBox();
-            this.DTP_DateNaissance = new System.Windows.Forms.DateTimePicker();
+            this.DTP_DateNaissanceJoueur = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,26 +63,26 @@
             this.TB_NumeroJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_NumeroJoueur.TabIndex = 1;
             // 
-            // TB_Nom
+            // TB_NomJoueur
             // 
-            this.TB_Nom.Location = new System.Drawing.Point(162, 68);
-            this.TB_Nom.Name = "TB_Nom";
-            this.TB_Nom.Size = new System.Drawing.Size(129, 20);
-            this.TB_Nom.TabIndex = 2;
+            this.TB_NomJoueur.Location = new System.Drawing.Point(162, 68);
+            this.TB_NomJoueur.Name = "TB_NomJoueur";
+            this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);
+            this.TB_NomJoueur.TabIndex = 2;
             // 
-            // TB_Prenom
+            // TB_PrenomJoueur
             // 
-            this.TB_Prenom.Location = new System.Drawing.Point(162, 107);
-            this.TB_Prenom.Name = "TB_Prenom";
-            this.TB_Prenom.Size = new System.Drawing.Size(129, 20);
-            this.TB_Prenom.TabIndex = 3;
+            this.TB_PrenomJoueur.Location = new System.Drawing.Point(162, 107);
+            this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
+            this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
+            this.TB_PrenomJoueur.TabIndex = 3;
             // 
-            // TB_NumeroMaillot
+            // TB_NumeroMaillotJoueur
             // 
-            this.TB_NumeroMaillot.Location = new System.Drawing.Point(162, 181);
-            this.TB_NumeroMaillot.Name = "TB_NumeroMaillot";
-            this.TB_NumeroMaillot.Size = new System.Drawing.Size(129, 20);
-            this.TB_NumeroMaillot.TabIndex = 4;
+            this.TB_NumeroMaillotJoueur.Location = new System.Drawing.Point(162, 181);
+            this.TB_NumeroMaillotJoueur.Name = "TB_NumeroMaillotJoueur";
+            this.TB_NumeroMaillotJoueur.Size = new System.Drawing.Size(129, 20);
+            this.TB_NumeroMaillotJoueur.TabIndex = 4;
             // 
             // TB_EquipeJoueur
             // 
@@ -98,12 +98,12 @@
             this.TB_PositionJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_PositionJoueur.TabIndex = 6;
             // 
-            // DTP_DateNaissance
+            // DTP_DateNaissanceJoueur
             // 
-            this.DTP_DateNaissance.Location = new System.Drawing.Point(162, 143);
-            this.DTP_DateNaissance.Name = "DTP_DateNaissance";
-            this.DTP_DateNaissance.Size = new System.Drawing.Size(129, 20);
-            this.DTP_DateNaissance.TabIndex = 7;
+            this.DTP_DateNaissanceJoueur.Location = new System.Drawing.Point(162, 143);
+            this.DTP_DateNaissanceJoueur.Name = "DTP_DateNaissanceJoueur";
+            this.DTP_DateNaissanceJoueur.Size = new System.Drawing.Size(129, 20);
+            this.DTP_DateNaissanceJoueur.TabIndex = 7;
             // 
             // label1
             // 
@@ -191,12 +191,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DTP_DateNaissance);
+            this.Controls.Add(this.DTP_DateNaissanceJoueur);
             this.Controls.Add(this.TB_PositionJoueur);
             this.Controls.Add(this.TB_EquipeJoueur);
-            this.Controls.Add(this.TB_NumeroMaillot);
-            this.Controls.Add(this.TB_Prenom);
-            this.Controls.Add(this.TB_Nom);
+            this.Controls.Add(this.TB_NumeroMaillotJoueur);
+            this.Controls.Add(this.TB_PrenomJoueur);
+            this.Controls.Add(this.TB_NomJoueur);
             this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.BTN_OK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -214,12 +214,12 @@
 
         private System.Windows.Forms.Button BTN_OK;
         private System.Windows.Forms.TextBox TB_NumeroJoueur;
-        private System.Windows.Forms.TextBox TB_Nom;
-        private System.Windows.Forms.TextBox TB_Prenom;
-        private System.Windows.Forms.TextBox TB_NumeroMaillot;
+        private System.Windows.Forms.TextBox TB_NomJoueur;
+        private System.Windows.Forms.TextBox TB_PrenomJoueur;
+        private System.Windows.Forms.TextBox TB_NumeroMaillotJoueur;
         private System.Windows.Forms.TextBox TB_EquipeJoueur;
         private System.Windows.Forms.TextBox TB_PositionJoueur;
-        private System.Windows.Forms.DateTimePicker DTP_DateNaissance;
+        private System.Windows.Forms.DateTimePicker DTP_DateNaissanceJoueur;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
