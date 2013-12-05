@@ -45,10 +45,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.BTN_Precedent = new System.Windows.Forms.Button();
+            this.BTN_Suivant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTN_OK
             // 
+            this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_OK.Location = new System.Drawing.Point(105, 333);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(97, 25);
@@ -58,6 +61,7 @@
             // 
             // TB_NumeroJoueur
             // 
+            this.TB_NumeroJoueur.Enabled = false;
             this.TB_NumeroJoueur.Location = new System.Drawing.Point(162, 29);
             this.TB_NumeroJoueur.Name = "TB_NumeroJoueur";
             this.TB_NumeroJoueur.Size = new System.Drawing.Size(129, 20);
@@ -108,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 302);
+            this.label1.Location = new System.Drawing.Point(93, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 13);
             this.label1.TabIndex = 8;
@@ -177,12 +181,34 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Position du joueur";
             // 
+            // BTN_Precedent
+            // 
+            this.BTN_Precedent.Location = new System.Drawing.Point(12, 296);
+            this.BTN_Precedent.Name = "BTN_Precedent";
+            this.BTN_Precedent.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Precedent.TabIndex = 16;
+            this.BTN_Precedent.Text = "Precedent";
+            this.BTN_Precedent.UseVisualStyleBackColor = true;
+            this.BTN_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
+            // 
+            // BTN_Suivant
+            // 
+            this.BTN_Suivant.Location = new System.Drawing.Point(216, 296);
+            this.BTN_Suivant.Name = "BTN_Suivant";
+            this.BTN_Suivant.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Suivant.TabIndex = 17;
+            this.BTN_Suivant.Text = "Suivant";
+            this.BTN_Suivant.UseVisualStyleBackColor = true;
+            this.BTN_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
+            // 
             // Form_Joueurs
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 370);
+            this.Controls.Add(this.BTN_Suivant);
+            this.Controls.Add(this.BTN_Precedent);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -202,7 +228,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form_Joueurs";
-            this.Text = "Form_Joueurs";
+            this.Text = "Fiche des Joueurs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Joueurs_FormClosed);
             this.Load += new System.EventHandler(this.Form_Joueurs_Load);
             this.ResumeLayout(false);
@@ -228,6 +254,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button BTN_Precedent;
+        private System.Windows.Forms.Button BTN_Suivant;
 
     }
 }

@@ -41,8 +41,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         
         private void FillForm()
         {
-            
-            string sql = "SELECT * FROM Joueurs ";
+
+            string sql = "SELECT * FROM Joueurs where EquipeJoueur ='" + Equipe + "'";
             OracleDataAdapter oraAdapter = new OracleDataAdapter(sql, conn);
             
             if (joueurDataSet.Tables.Contains("Joueur"))
@@ -104,6 +104,16 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void precedent_Click(object sender, EventArgs e)
         {
             //this.BindingContext[Data, "Resultats"].Position--;
+        }
+
+        private void BTN_Precedent_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[joueurDataSet, "Joueur"].Position--;
+        }
+
+        private void BTN_Suivant_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[joueurDataSet, "Joueur"].Position++;
         }
     }
          
