@@ -1,9 +1,11 @@
 ﻿using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -27,7 +29,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             if (DGV_Match.SelectedRows.Count > 0) lastIndex = DGV_Match.SelectedRows[0].Index;
 
             OracleCommand oraSelect = conn.CreateCommand();
-            oraSelect.CommandText = "SELECT * FROM Match ";
+            oraSelect.CommandText = "SELECT * FROM Match";
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
             MatchDataSet = new DataSet();
             oraAdapter.Fill(MatchDataSet);
@@ -134,6 +136,47 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 catch (OracleException ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void DGV_Match_SelectionChanged(object sender, EventArgs e)
+        {
+            // Such Will
+            PB_EquipeHomeLogo.Image = null;
+            PB_EquipeVisiteurLogo.Image = null;
+
+            if (DGV_Match.SelectedRows.Count > 0) {
+                OracleCommand oraImage = conn.CreateCommand();
+                oraImage.CommandText = "SELECT (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe1), (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe2) FROM DUAL";
+                oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Match.SelectedRows[0].Cells[1].Value.ToString()));
+                oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Match.SelectedRows[0].Cells[2].Value.ToString()));
+                using (OracleDataReader oraReader = oraImage.ExecuteReader()) {
+                    if (oraReader.Read()) {
+                        OracleBlob oraBlob = oraReader.GetOracleBlob(0);
+                        if (!oraBlob.IsNull) {
+                            using (MemoryStream ms = new MemoryStream()) {
+                                byte[] buffer = new byte[8 * 1024];
+                                int read = 0;
+                                while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0) {
+                                    ms.Write(buffer, 0, read);
+                                }
+                                PB_EquipeHomeLogo.Image = Image.FromStream(ms);
+                            }
+                        }
+
+                        oraBlob = oraReader.GetOracleBlob(1);
+                        if (!oraBlob.IsNull) {
+                            using (MemoryStream ms = new MemoryStream()) {
+                                byte[] buffer = new byte[8 * 1024];
+                                int read = 0;
+                                while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0) {
+                                    ms.Write(buffer, 0, read);
+                                }
+                                PB_EquipeVisiteurLogo.Image = Image.FromStream(ms);
+                            }
+                        }
+                    }
                 }
             }
         }

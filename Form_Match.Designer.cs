@@ -99,10 +99,12 @@
             this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Match.Location = new System.Drawing.Point(17, 180);
             this.DGV_Match.Name = "DGV_Match";
+            this.DGV_Match.ReadOnly = true;
             this.DGV_Match.RowHeadersVisible = false;
             this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Match.Size = new System.Drawing.Size(438, 79);
             this.DGV_Match.TabIndex = 6;
+            this.DGV_Match.SelectionChanged += new System.EventHandler(this.DGV_Match_SelectionChanged);
             // 
             // label5
             // 
@@ -157,6 +159,7 @@
             this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(319, 22);
             this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
             this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
+            this.PB_EquipeVisiteurLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_EquipeVisiteurLogo.TabIndex = 14;
             this.PB_EquipeVisiteurLogo.TabStop = false;
             // 
@@ -165,6 +168,7 @@
             this.PB_EquipeHomeLogo.Location = new System.Drawing.Point(40, 22);
             this.PB_EquipeHomeLogo.Name = "PB_EquipeHomeLogo";
             this.PB_EquipeHomeLogo.Size = new System.Drawing.Size(121, 95);
+            this.PB_EquipeHomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_EquipeHomeLogo.TabIndex = 13;
             this.PB_EquipeHomeLogo.TabStop = false;
             // 
