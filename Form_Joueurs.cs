@@ -25,6 +25,14 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void Form_Joueurs_FormClosed(object sender, FormClosedEventArgs e)
         {
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT * FROM Joueurs WHERE EquipeJoueur=:NomEquipe";
+            oraSelect.Parameters.Add(new OracleParameter(":NomEquipe", Equipe));
+            using (OracleDataAdapter oraAdapter = new OracleDataAdapter()) {
+                joueurDataSet.AcceptChanges();
+                oraAdapter.Update(joueurDataSet, "Joueur");
+            }
+            
             if (callBackForm != null)
                 callBackForm.Show();
         }
@@ -51,18 +59,17 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         
         private void FillForm()
         {
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT * FROM Joueurs WHERE EquipeJoueur=:NomEquipe";
+            oraSelect.Parameters.Add(new OracleParameter(":NomEquipe", Equipe));
+            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect)) {
+                if (joueurDataSet.Tables.Contains("Joueur")) {
+                    joueurDataSet.Tables["Joueur"].Clear();
 
-            string sql = "SELECT * FROM Joueurs where EquipeJoueur ='" + Equipe + "'";
-            OracleDataAdapter oraAdapter = new OracleDataAdapter(sql, conn);
-            
-            if (joueurDataSet.Tables.Contains("Joueur"))
-            {
-                joueurDataSet.Tables["Joueur"].Clear();
-                
+                }
+
+                oraAdapter.Fill(joueurDataSet, "Joueur");
             }
-
-            oraAdapter.Fill(joueurDataSet, "Joueur");
-            oraAdapter.Dispose();
 
             UpdateTextBox();
             
@@ -86,7 +93,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             TB_PrenomJoueur.DataBindings.Clear();
             TB_PrenomJoueur.Clear();
             DTP_DateNaissanceJoueur.DataBindings.Clear();
-            DTP_DateNaissanceJoueur.Value = new DateTime();
+            DTP_DateNaissanceJoueur.Value = DateTime.Now;
             TB_NumeroMaillotJoueur.DataBindings.Clear();
             TB_NumeroMaillotJoueur.Clear();
             CB_EquipeJoueur.DataBindings.Clear();
