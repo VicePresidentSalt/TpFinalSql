@@ -30,16 +30,17 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TB_EquipeVisiteur = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_EquipeHome = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Match = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,14 +62,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Equipe Home";
             // 
-            // label2
+            // TB_EquipeVisiteur
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(340, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Equipe Visiteur";
+            this.TB_EquipeVisiteur.AutoSize = true;
+            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(340, 55);
+            this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
+            this.TB_EquipeVisiteur.Size = new System.Drawing.Size(77, 13);
+            this.TB_EquipeVisiteur.TabIndex = 2;
+            this.TB_EquipeVisiteur.Text = "Equipe Visiteur";
             // 
             // label3
             // 
@@ -79,12 +80,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Score Final";
             // 
-            // textBox1
+            // TB_EquipeHome
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 4;
+            this.TB_EquipeHome.Location = new System.Drawing.Point(40, 144);
+            this.TB_EquipeHome.Name = "TB_EquipeHome";
+            this.TB_EquipeHome.Size = new System.Drawing.Size(121, 20);
+            this.TB_EquipeHome.TabIndex = 4;
             // 
             // textBox2
             // 
@@ -93,13 +94,13 @@
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // dataGridView1
+            // DGV_Match
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(353, 33);
-            this.dataGridView1.TabIndex = 6;
+            this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Match.Location = new System.Drawing.Point(64, 204);
+            this.DGV_Match.Name = "DGV_Match";
+            this.DGV_Match.Size = new System.Drawing.Size(353, 33);
+            this.DGV_Match.TabIndex = 6;
             // 
             // label4
             // 
@@ -128,25 +129,35 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Flashbuton Suivant";
             // 
+            // BTN_Ajouter
+            // 
+            this.BTN_Ajouter.Location = new System.Drawing.Point(40, 305);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
+            this.BTN_Ajouter.TabIndex = 10;
+            this.BTN_Ajouter.Text = "Ajouter Rencontre";
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            // 
             // Form_Match
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 296);
+            this.ClientSize = new System.Drawing.Size(467, 349);
+            this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Match);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TB_EquipeHome);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TB_EquipeVisiteur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form_Match";
             this.Text = "Form_Match";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,13 +167,14 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TB_EquipeVisiteur;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_EquipeHome;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Match;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BTN_Ajouter;
     }
 }
