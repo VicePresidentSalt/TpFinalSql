@@ -136,4 +136,11 @@ create table Statistiques
 -INSERT INTO Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu) Values ('Canadiens','Bruins','12-dec-2013','Centre Bell');
 -INSERT INTO Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu) Values ('Bruins','Canadiens','12-dec-2013','TD Garden');
 
+CREATE PUBLIC SYNONYM CoteJoueurs FOR cotefran.joueurs;
+grant all on CoteJoueurs to stlauren with grant option;
+grant select on cotejoueurs to public;
 
+select nomjoueurs,prenomjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points
+from joueurs j 
+inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by nomjoueurs,prenomjoueur,equipejoueur
+order by points desc; 
