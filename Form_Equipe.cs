@@ -223,6 +223,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 }
             }
         }
+
         private void Callformjoueurs()
         {
             Form_Joueurs fj = new Form_Joueurs(DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString());
