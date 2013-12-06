@@ -35,7 +35,6 @@
             this.TB_PrenomJoueur = new System.Windows.Forms.TextBox();
             this.TB_NumeroMaillotJoueur = new System.Windows.Forms.TextBox();
             this.DTP_DateNaissanceJoueur = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,18 +42,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BTN_Precedent = new System.Windows.Forms.Button();
-            this.BTN_Suivant = new System.Windows.Forms.Button();
             this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
             this.CB_PositionJoueur = new System.Windows.Forms.ComboBox();
+            this.BF_Dernier = new BoutonFlèche.BoutonFlèche();
+            this.BF_Debut = new BoutonFlèche.BoutonFlèche();
+            this.BF_Suivant = new BoutonFlèche.BoutonFlèche();
+            this.BF_Precedent = new BoutonFlèche.BoutonFlèche();
             this.SuspendLayout();
             // 
             // BTN_OK
             // 
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(105, 333);
+            this.BTN_OK.Location = new System.Drawing.Point(120, 302);
             this.BTN_OK.Name = "BTN_OK";
-            this.BTN_OK.Size = new System.Drawing.Size(97, 25);
+            this.BTN_OK.Size = new System.Drawing.Size(75, 25);
             this.BTN_OK.TabIndex = 17;
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
@@ -94,15 +95,6 @@
             this.DTP_DateNaissanceJoueur.Name = "DTP_DateNaissanceJoueur";
             this.DTP_DateNaissanceJoueur.Size = new System.Drawing.Size(129, 20);
             this.DTP_DateNaissanceJoueur.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Fleche Flash button here";
             // 
             // label2
             // 
@@ -167,26 +159,6 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Position du joueur";
             // 
-            // BTN_Precedent
-            // 
-            this.BTN_Precedent.Location = new System.Drawing.Point(12, 296);
-            this.BTN_Precedent.Name = "BTN_Precedent";
-            this.BTN_Precedent.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Precedent.TabIndex = 14;
-            this.BTN_Precedent.Text = "Precedent";
-            this.BTN_Precedent.UseVisualStyleBackColor = true;
-            this.BTN_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
-            // 
-            // BTN_Suivant
-            // 
-            this.BTN_Suivant.Location = new System.Drawing.Point(216, 296);
-            this.BTN_Suivant.Name = "BTN_Suivant";
-            this.BTN_Suivant.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Suivant.TabIndex = 16;
-            this.BTN_Suivant.Text = "Suivant";
-            this.BTN_Suivant.UseVisualStyleBackColor = true;
-            this.BTN_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
-            // 
             // CB_EquipeJoueur
             // 
             this.CB_EquipeJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -211,16 +183,70 @@
             this.CB_PositionJoueur.Size = new System.Drawing.Size(129, 21);
             this.CB_PositionJoueur.TabIndex = 13;
             // 
+            // BF_Dernier
+            // 
+            this.BF_Dernier.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Triangle;
+            this.BF_Dernier.ClickColor = System.Drawing.Color.White;
+            this.BF_Dernier.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Droit;
+            this.BF_Dernier.EnterColor = System.Drawing.Color.LightGray;
+            this.BF_Dernier.LeaveColor = System.Drawing.Color.Black;
+            this.BF_Dernier.Location = new System.Drawing.Point(253, 296);
+            this.BF_Dernier.Name = "BF_Dernier";
+            this.BF_Dernier.Size = new System.Drawing.Size(37, 31);
+            this.BF_Dernier.TabIndex = 21;
+            this.BF_Dernier.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BF_Dernier_MouseClick);
+            // 
+            // BF_Debut
+            // 
+            this.BF_Debut.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Triangle;
+            this.BF_Debut.ClickColor = System.Drawing.Color.White;
+            this.BF_Debut.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Gauche;
+            this.BF_Debut.EnterColor = System.Drawing.Color.LightGray;
+            this.BF_Debut.LeaveColor = System.Drawing.Color.Black;
+            this.BF_Debut.Location = new System.Drawing.Point(25, 296);
+            this.BF_Debut.Name = "BF_Debut";
+            this.BF_Debut.Size = new System.Drawing.Size(37, 31);
+            this.BF_Debut.TabIndex = 22;
+            this.BF_Debut.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BF_Debut_MouseClick);
+            // 
+            // BF_Suivant
+            // 
+            this.BF_Suivant.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Aigu;
+            this.BF_Suivant.ClickColor = System.Drawing.Color.White;
+            this.BF_Suivant.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Droit;
+            this.BF_Suivant.EnterColor = System.Drawing.Color.LightGray;
+            this.BF_Suivant.LeaveColor = System.Drawing.Color.Black;
+            this.BF_Suivant.Location = new System.Drawing.Point(210, 296);
+            this.BF_Suivant.Name = "BF_Suivant";
+            this.BF_Suivant.Size = new System.Drawing.Size(37, 31);
+            this.BF_Suivant.TabIndex = 23;
+            this.BF_Suivant.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BF_Suivant_MouseClick);
+            // 
+            // BF_Precedent
+            // 
+            this.BF_Precedent.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Aigu;
+            this.BF_Precedent.ClickColor = System.Drawing.Color.White;
+            this.BF_Precedent.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Gauche;
+            this.BF_Precedent.EnterColor = System.Drawing.Color.LightGray;
+            this.BF_Precedent.LeaveColor = System.Drawing.Color.Black;
+            this.BF_Precedent.Location = new System.Drawing.Point(68, 296);
+            this.BF_Precedent.Name = "BF_Precedent";
+            this.BF_Precedent.Size = new System.Drawing.Size(37, 31);
+            this.BF_Precedent.TabIndex = 24;
+            this.BF_Precedent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BF_Precedent_MouseClick);
+            // 
             // Form_Joueurs
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 370);
+            this.ClientSize = new System.Drawing.Size(305, 347);
+            this.Controls.Add(this.BF_Precedent);
+            this.Controls.Add(this.BF_Suivant);
+            this.Controls.Add(this.BF_Debut);
+            this.Controls.Add(this.BF_Dernier);
             this.Controls.Add(this.CB_PositionJoueur);
             this.Controls.Add(this.CB_EquipeJoueur);
-            this.Controls.Add(this.BTN_Suivant);
-            this.Controls.Add(this.BTN_Precedent);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -228,7 +254,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.DTP_DateNaissanceJoueur);
             this.Controls.Add(this.TB_NumeroMaillotJoueur);
             this.Controls.Add(this.TB_PrenomJoueur);
@@ -254,7 +279,6 @@
         private System.Windows.Forms.TextBox TB_PrenomJoueur;
         private System.Windows.Forms.TextBox TB_NumeroMaillotJoueur;
         private System.Windows.Forms.DateTimePicker DTP_DateNaissanceJoueur;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -262,10 +286,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button BTN_Precedent;
-        private System.Windows.Forms.Button BTN_Suivant;
         private System.Windows.Forms.ComboBox CB_EquipeJoueur;
         private System.Windows.Forms.ComboBox CB_PositionJoueur;
+        private BoutonFlèche.BoutonFlèche BF_Dernier;
+        private BoutonFlèche.BoutonFlèche BF_Debut;
+        private BoutonFlèche.BoutonFlèche BF_Suivant;
+        private BoutonFlèche.BoutonFlèche BF_Precedent;
 
     }
 }

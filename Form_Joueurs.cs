@@ -101,36 +101,25 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             CB_PositionJoueur.DataBindings.Clear();
             CB_PositionJoueur.ResetText();
         }
-        private void premier_Click(object sender, EventArgs e)
+        private void BF_Debut_MouseClick(object sender, MouseEventArgs e)
         {
-            //this.BindingContext[Data, "Resultats"].Position = 0;
+            this.BindingContext[joueurDataSet, "Joueur"].Position = 0;
         }
 
-        private void dernier_Click(object sender, EventArgs e)
-        {
-            //this.BindingContext[Data, "Resultats"].Position =
-            //this.BindingContext[Data, "Resultats"].Count - 1;
-
-        }
-        private void suivant_Click(object sender, EventArgs e)
-        {
-            //this.BindingContext[Data, "Resultats"].Position++;
-
-        }
-
-        private void precedent_Click(object sender, EventArgs e)
-        {
-            //this.BindingContext[Data, "Resultats"].Position--;
-        }
-
-        private void BTN_Precedent_Click(object sender, EventArgs e)
+        private void BF_Precedent_MouseClick(object sender, MouseEventArgs e)
         {
             this.BindingContext[joueurDataSet, "Joueur"].Position--;
         }
 
-        private void BTN_Suivant_Click(object sender, EventArgs e)
+        private void BF_Suivant_MouseClick(object sender, MouseEventArgs e)
         {
             this.BindingContext[joueurDataSet, "Joueur"].Position++;
+        }
+
+        private void BF_Dernier_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.BindingContext[joueurDataSet, "Joueur"].Position =
+            this.BindingContext[joueurDataSet, "Joueur"].Count - 1;
         }
     }
          
