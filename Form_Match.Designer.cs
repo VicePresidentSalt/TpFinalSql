@@ -28,36 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_Versus = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TB_EquipeVisiteur = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TB_EquipeHome = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TB_EquipeHomeScore = new System.Windows.Forms.TextBox();
+            this.TB_EquipeVisiteurScore = new System.Windows.Forms.TextBox();
             this.DGV_Match = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BTN_Modifier = new System.Windows.Forms.Button();
+            this.BTN_OK = new System.Windows.Forms.Button();
+            this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
+            this.PB_EquipeVisiteurLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // PB_Versus
             // 
-            this.pictureBox1.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp;
-            this.pictureBox1.Location = new System.Drawing.Point(179, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PB_Versus.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp;
+            this.PB_Versus.Location = new System.Drawing.Point(179, 22);
+            this.PB_Versus.Name = "PB_Versus";
+            this.PB_Versus.Size = new System.Drawing.Size(109, 95);
+            this.PB_Versus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Versus.TabIndex = 0;
+            this.PB_Versus.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 55);
+            this.label1.Location = new System.Drawing.Point(61, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
@@ -66,7 +71,7 @@
             // TB_EquipeVisiteur
             // 
             this.TB_EquipeVisiteur.AutoSize = true;
-            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(340, 55);
+            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(340, 9);
             this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
             this.TB_EquipeVisiteur.Size = new System.Drawing.Size(77, 13);
             this.TB_EquipeVisiteur.TabIndex = 2;
@@ -81,19 +86,19 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Score Final";
             // 
-            // TB_EquipeHome
+            // TB_EquipeHomeScore
             // 
-            this.TB_EquipeHome.Location = new System.Drawing.Point(40, 144);
-            this.TB_EquipeHome.Name = "TB_EquipeHome";
-            this.TB_EquipeHome.Size = new System.Drawing.Size(121, 20);
-            this.TB_EquipeHome.TabIndex = 4;
+            this.TB_EquipeHomeScore.Location = new System.Drawing.Point(40, 144);
+            this.TB_EquipeHomeScore.Name = "TB_EquipeHomeScore";
+            this.TB_EquipeHomeScore.Size = new System.Drawing.Size(121, 20);
+            this.TB_EquipeHomeScore.TabIndex = 4;
             // 
-            // textBox2
+            // TB_EquipeVisiteurScore
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 5;
+            this.TB_EquipeVisiteurScore.Location = new System.Drawing.Point(319, 144);
+            this.TB_EquipeVisiteurScore.Name = "TB_EquipeVisiteurScore";
+            this.TB_EquipeVisiteurScore.Size = new System.Drawing.Size(121, 20);
+            this.TB_EquipeVisiteurScore.TabIndex = 5;
             // 
             // DGV_Match
             // 
@@ -139,36 +144,69 @@
             this.BTN_Ajouter.Text = "Ajouter Rencontre";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BTN_Modifier
             // 
-            this.button1.Location = new System.Drawing.Point(308, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Modifier Rencontre";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_Modifier.Location = new System.Drawing.Point(308, 305);
+            this.BTN_Modifier.Name = "BTN_Modifier";
+            this.BTN_Modifier.Size = new System.Drawing.Size(108, 23);
+            this.BTN_Modifier.TabIndex = 11;
+            this.BTN_Modifier.Text = "Modifier Rencontre";
+            this.BTN_Modifier.UseVisualStyleBackColor = true;
+            // 
+            // BTN_OK
+            // 
+            this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_OK.Location = new System.Drawing.Point(187, 356);
+            this.BTN_OK.Name = "BTN_OK";
+            this.BTN_OK.Size = new System.Drawing.Size(75, 23);
+            this.BTN_OK.TabIndex = 12;
+            this.BTN_OK.Text = "Ok";
+            this.BTN_OK.UseVisualStyleBackColor = true;
+            // 
+            // PB_EquipeHomeLogo
+            // 
+            this.PB_EquipeHomeLogo.Location = new System.Drawing.Point(40, 22);
+            this.PB_EquipeHomeLogo.Name = "PB_EquipeHomeLogo";
+            this.PB_EquipeHomeLogo.Size = new System.Drawing.Size(121, 95);
+            this.PB_EquipeHomeLogo.TabIndex = 13;
+            this.PB_EquipeHomeLogo.TabStop = false;
+            // 
+            // PB_EquipeVisiteurLogo
+            // 
+            this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(319, 22);
+            this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
+            this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
+            this.PB_EquipeVisiteurLogo.TabIndex = 14;
+            this.PB_EquipeVisiteurLogo.TabStop = false;
             // 
             // Form_Match
             // 
+            this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 349);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(467, 391);
+            this.Controls.Add(this.PB_EquipeVisiteurLogo);
+            this.Controls.Add(this.PB_EquipeHomeLogo);
+            this.Controls.Add(this.BTN_OK);
+            this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DGV_Match);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.TB_EquipeHome);
+            this.Controls.Add(this.TB_EquipeVisiteurScore);
+            this.Controls.Add(this.TB_EquipeHomeScore);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TB_EquipeVisiteur);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PB_Versus);
             this.Name = "Form_Match";
-            this.Text = "Form_Match";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Afficheur De Match";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Match_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,17 +214,20 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_Versus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TB_EquipeVisiteur;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TB_EquipeHome;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TB_EquipeHomeScore;
+        private System.Windows.Forms.TextBox TB_EquipeVisiteurScore;
         private System.Windows.Forms.DataGridView DGV_Match;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Ajouter;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_Modifier;
+        private System.Windows.Forms.Button BTN_OK;
+        private System.Windows.Forms.PictureBox PB_EquipeHomeLogo;
+        private System.Windows.Forms.PictureBox PB_EquipeVisiteurLogo;
     }
 }

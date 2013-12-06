@@ -46,6 +46,7 @@
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Deconnexion = new System.Windows.Forms.Button();
             this.BTN_QUITTER = new System.Windows.Forms.Button();
+            this.BTN_AfficheMatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Division)).BeginInit();
             this.CMS_Division.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -208,11 +209,23 @@
             this.BTN_QUITTER.UseVisualStyleBackColor = true;
             this.BTN_QUITTER.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
+            // BTN_AfficheMatch
+            // 
+            this.BTN_AfficheMatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_AfficheMatch.Location = new System.Drawing.Point(13, 193);
+            this.BTN_AfficheMatch.Name = "BTN_AfficheMatch";
+            this.BTN_AfficheMatch.Size = new System.Drawing.Size(112, 23);
+            this.BTN_AfficheMatch.TabIndex = 6;
+            this.BTN_AfficheMatch.Text = "Afficheur De Match";
+            this.BTN_AfficheMatch.UseVisualStyleBackColor = true;
+            this.BTN_AfficheMatch.Click += new System.EventHandler(this.BTN_AfficheMatch_Click);
+            // 
             // FormDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 229);
+            this.Controls.Add(this.BTN_AfficheMatch);
             this.Controls.Add(this.BTN_QUITTER);
             this.Controls.Add(this.BTN_Deconnexion);
             this.Controls.Add(this.BTN_Delete);
@@ -254,5 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         public System.Windows.Forms.DataGridView DGV_Division;
         private System.Windows.Forms.Button BTN_QUITTER;
+        private System.Windows.Forms.Button BTN_AfficheMatch;
     }
 }

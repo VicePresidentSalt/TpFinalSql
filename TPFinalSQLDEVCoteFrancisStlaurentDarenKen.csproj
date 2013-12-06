@@ -135,6 +135,9 @@
     <EmbeddedResource Include="Form_Match.resx">
       <DependentUpon>Form_Match.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stats.resx">
+      <DependentUpon>Form_Stats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

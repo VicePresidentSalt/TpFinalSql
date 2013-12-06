@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,19 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 {
     public partial class Form_Match : Form
     {
+        public OracleConnection conn = null;
+        public Form callBackForm = null;
+        public DataSet MatchDataSet = null;
+
         public Form_Match()
         {
             InitializeComponent();
+        }
+
+        private void Form_Match_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (callBackForm != null)
+                callBackForm.Show();
         }
     }
 }

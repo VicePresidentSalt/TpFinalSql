@@ -206,10 +206,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             Form_Equipe fe = new Form_Equipe(DGV_Division.SelectedRows[0].Cells[0].Value.ToString());
             fe.conn = conn;
-
             this.Hide();
             fe.callBackForm = this;
             fe.ShowDialog();
+        }
+
+        private void BTN_AfficheMatch_Click(object sender, EventArgs e)
+        {
+            Form_Match fm = new Form_Match();
+            fm.conn = conn;
+            this.Hide();
+            fm.callBackForm = this;
+            fm.ShowDialog();
         }
 
     }
