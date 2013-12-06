@@ -102,6 +102,12 @@
     <Compile Include="Form_Match.Designer.cs">
       <DependentUpon>Form_Match.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Match_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Match_Ajouter.Designer.cs">
+      <DependentUpon>Form_Match_Ajouter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Stats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Match.resx">
       <DependentUpon>Form_Match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Match_Ajouter.resx">
+      <DependentUpon>Form_Match_Ajouter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Stats.resx">
       <DependentUpon>Form_Stats.cs</DependentUpon>

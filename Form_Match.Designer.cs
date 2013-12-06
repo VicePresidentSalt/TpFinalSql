@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Match));
             this.PB_Versus = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TB_EquipeVisiteur = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.TB_EquipeHomeScore = new System.Windows.Forms.TextBox();
             this.TB_EquipeVisiteurScore = new System.Windows.Forms.TextBox();
             this.DGV_Match = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
@@ -102,20 +102,17 @@
             // 
             // DGV_Match
             // 
+            this.DGV_Match.AllowUserToAddRows = false;
+            this.DGV_Match.AllowUserToDeleteRows = false;
+            this.DGV_Match.AllowUserToOrderColumns = true;
+            this.DGV_Match.AllowUserToResizeRows = false;
             this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Match.Location = new System.Drawing.Point(40, 204);
+            this.DGV_Match.Location = new System.Drawing.Point(17, 180);
             this.DGV_Match.Name = "DGV_Match";
-            this.DGV_Match.Size = new System.Drawing.Size(400, 33);
+            this.DGV_Match.RowHeadersVisible = false;
+            this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Match.Size = new System.Drawing.Size(438, 79);
             this.DGV_Match.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(322, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "DGV avec les infos personnelle d\'un joueur but/passe/timepunition";
             // 
             // label5
             // 
@@ -143,6 +140,7 @@
             this.BTN_Ajouter.TabIndex = 10;
             this.BTN_Ajouter.Text = "Ajouter Rencontre";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
             // 
             // BTN_Modifier
             // 
@@ -152,6 +150,7 @@
             this.BTN_Modifier.TabIndex = 11;
             this.BTN_Modifier.Text = "Modifier Rencontre";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
+            this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
             // BTN_OK
             // 
@@ -184,7 +183,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 391);
+            this.ClientSize = new System.Drawing.Size(518, 391);
             this.Controls.Add(this.PB_EquipeVisiteurLogo);
             this.Controls.Add(this.PB_EquipeHomeLogo);
             this.Controls.Add(this.BTN_OK);
@@ -192,7 +191,6 @@
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.DGV_Match);
             this.Controls.Add(this.TB_EquipeVisiteurScore);
             this.Controls.Add(this.TB_EquipeHomeScore);
@@ -200,9 +198,11 @@
             this.Controls.Add(this.TB_EquipeVisiteur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB_Versus);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Match";
             this.Text = "Afficheur De Match";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Match_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Match_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Match_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
@@ -221,7 +221,6 @@
         private System.Windows.Forms.TextBox TB_EquipeHomeScore;
         private System.Windows.Forms.TextBox TB_EquipeVisiteurScore;
         private System.Windows.Forms.DataGridView DGV_Match;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Ajouter;
