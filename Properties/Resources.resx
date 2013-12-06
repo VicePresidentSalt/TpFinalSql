@@ -124,10 +124,13 @@
   <data name="Hockey-Plus-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hockey-Plus-logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo_-_Versus_bmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Hockey-Plus-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hockey-Plus-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo_-_Versus_bmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo_-_Versus_bmp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

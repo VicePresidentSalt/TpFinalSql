@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp" />
+    <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.png" />
     <Content Include="Resources\Logo_-_Versus_bmp.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

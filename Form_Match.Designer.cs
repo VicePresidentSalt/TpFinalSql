@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Match));
-            this.PB_Versus = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TB_EquipeVisiteur = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,23 +40,14 @@
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_OK = new System.Windows.Forms.Button();
-            this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
             this.PB_EquipeVisiteurLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).BeginInit();
+            this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
+            this.PB_Versus = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PB_Versus
-            // 
-            this.PB_Versus.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp;
-            this.PB_Versus.Location = new System.Drawing.Point(179, 22);
-            this.PB_Versus.Name = "PB_Versus";
-            this.PB_Versus.Size = new System.Drawing.Size(109, 95);
-            this.PB_Versus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Versus.TabIndex = 0;
-            this.PB_Versus.TabStop = false;
             // 
             // label1
             // 
@@ -162,6 +152,14 @@
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
+            // PB_EquipeVisiteurLogo
+            // 
+            this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(319, 22);
+            this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
+            this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
+            this.PB_EquipeVisiteurLogo.TabIndex = 14;
+            this.PB_EquipeVisiteurLogo.TabStop = false;
+            // 
             // PB_EquipeHomeLogo
             // 
             this.PB_EquipeHomeLogo.Location = new System.Drawing.Point(40, 22);
@@ -170,13 +168,15 @@
             this.PB_EquipeHomeLogo.TabIndex = 13;
             this.PB_EquipeHomeLogo.TabStop = false;
             // 
-            // PB_EquipeVisiteurLogo
+            // PB_Versus
             // 
-            this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(319, 22);
-            this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
-            this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
-            this.PB_EquipeVisiteurLogo.TabIndex = 14;
-            this.PB_EquipeVisiteurLogo.TabStop = false;
+            this.PB_Versus.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp1;
+            this.PB_Versus.Location = new System.Drawing.Point(179, 22);
+            this.PB_Versus.Name = "PB_Versus";
+            this.PB_Versus.Size = new System.Drawing.Size(109, 95);
+            this.PB_Versus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Versus.TabIndex = 0;
+            this.PB_Versus.TabStop = false;
             // 
             // Form_Match
             // 
@@ -203,10 +203,10 @@
             this.Text = "Afficheur De Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Match_FormClosed);
             this.Load += new System.EventHandler(this.Form_Match_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
