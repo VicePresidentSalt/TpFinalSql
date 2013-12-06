@@ -19,10 +19,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void ReloadDGV()
         {
-            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomDivision, DateCreation FROM Divisions", conn);
+            int lastIndex = -1;
+            if (DGV_Division.SelectedRows.Count > 0) lastIndex = DGV_Division.SelectedRows[0].Index;
+
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT NomDivision, DateCreation FROM Divisions";
+
+            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
             divisionDataSet = new DataSet();
             oraAdapter.Fill(divisionDataSet);
             DGV_Division.DataSource = divisionDataSet.Tables[0];
+
+            if (lastIndex > -1 && DGV_Division.Rows.Count > 0) DGV_Division.Rows[Math.Min(lastIndex, DGV_Division.Rows.Count - 1)].Selected = true;
         }
 
         public FormDivision()

@@ -64,6 +64,7 @@
             this.DGV_Division.MultiSelect = false;
             this.DGV_Division.Name = "DGV_Division";
             this.DGV_Division.ReadOnly = true;
+            this.DGV_Division.RowHeadersVisible = false;
             this.DGV_Division.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Division.Size = new System.Drawing.Size(245, 126);
             this.DGV_Division.TabIndex = 0;
