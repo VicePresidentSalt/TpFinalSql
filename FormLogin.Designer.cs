@@ -46,7 +46,7 @@
             this.BTN_Connect.Location = new System.Drawing.Point(315, 104);
             this.BTN_Connect.Name = "BTN_Connect";
             this.BTN_Connect.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Connect.TabIndex = 0;
+            this.BTN_Connect.TabIndex = 5;
             this.BTN_Connect.Text = "Connexion";
             this.BTN_Connect.UseVisualStyleBackColor = true;
             this.BTN_Connect.Click += new System.EventHandler(this.BTN_Connect_Click);
@@ -56,7 +56,7 @@
             this.BTN_Quitter.Location = new System.Drawing.Point(234, 104);
             this.BTN_Quitter.Name = "BTN_Quitter";
             this.BTN_Quitter.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Quitter.TabIndex = 0;
+            this.BTN_Quitter.TabIndex = 6;
             this.BTN_Quitter.Text = "Quitter";
             this.BTN_Quitter.UseVisualStyleBackColor = true;
             this.BTN_Quitter.Click += new System.EventHandler(this.BTN_Quitter_Click);
@@ -67,7 +67,7 @@
             this.LB_Username.Location = new System.Drawing.Point(246, 8);
             this.LB_Username.Name = "LB_Username";
             this.LB_Username.Size = new System.Drawing.Size(41, 13);
-            this.LB_Username.TabIndex = 2;
+            this.LB_Username.TabIndex = 0;
             this.LB_Username.Text = "Usager";
             // 
             // TB_Username
@@ -75,7 +75,7 @@
             this.TB_Username.Location = new System.Drawing.Point(249, 25);
             this.TB_Username.Name = "TB_Username";
             this.TB_Username.Size = new System.Drawing.Size(100, 20);
-            this.TB_Username.TabIndex = 3;
+            this.TB_Username.TabIndex = 1;
             this.TB_Username.Text = "cotefran";
             this.TB_Username.TextChanged += new System.EventHandler(this.TB_TextChanged);
             // 
@@ -84,7 +84,7 @@
             this.TB_Password.Location = new System.Drawing.Point(249, 65);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.Size = new System.Drawing.Size(100, 20);
-            this.TB_Password.TabIndex = 5;
+            this.TB_Password.TabIndex = 3;
             this.TB_Password.Text = "oracle1";
             this.TB_Password.UseSystemPasswordChar = true;
             this.TB_Password.TextChanged += new System.EventHandler(this.TB_TextChanged);
@@ -96,7 +96,7 @@
             this.LB_MDP.Location = new System.Drawing.Point(246, 48);
             this.LB_MDP.Name = "LB_MDP";
             this.LB_MDP.Size = new System.Drawing.Size(71, 13);
-            this.LB_MDP.TabIndex = 4;
+            this.LB_MDP.TabIndex = 2;
             this.LB_MDP.Text = "Mot de passe";
             // 
             // LB_Error
@@ -106,7 +106,7 @@
             this.LB_Error.Location = new System.Drawing.Point(249, 87);
             this.LB_Error.Name = "LB_Error";
             this.LB_Error.Size = new System.Drawing.Size(0, 13);
-            this.LB_Error.TabIndex = 6;
+            this.LB_Error.TabIndex = 4;
             // 
             // BTN_About
             // 

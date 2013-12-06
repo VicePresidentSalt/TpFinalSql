@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Oracle.DataAccess.Types;
 
 namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 {
@@ -17,15 +18,24 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Form callBackForm = null;
         public string division = null;
         private DataSet equipeDataSet = null;
-        string nomFichier;
+        private byte[] image = null;
 
         private void ReloadDGV()
         {
-            OracleDataAdapter oraAdapter = new OracleDataAdapter("SELECT NomEquipe, DateIntroLigue,DivisionEquipe,VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe "+
-            "where DivisionEquipe = '" + division+"'", conn);
+            int lastIndex = -1;
+            if (DGV_Equipes.SelectedRows.Count > 0) lastIndex = DGV_Equipes.SelectedRows[0].Index;
+
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT NomEquipe, DateIntroLigue, DivisionEquipe, VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe " +
+            "where DivisionEquipe=:Divsion";
+            oraSelect.Parameters.Add(new OracleParameter(":Division", division));
+
+            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
             equipeDataSet = new DataSet();
             oraAdapter.Fill(equipeDataSet);
             DGV_Equipes.DataSource = equipeDataSet.Tables[0];
+
+            if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0) DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
         }
         
         public Form_Equipe(string Division)
@@ -38,25 +48,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         { 
             ReloadDGV();
         }
-
-        public static Bitmap ByteToImage(byte[] blob)
-        {
-            MemoryStream mStream = new MemoryStream();
-            byte[] pData = blob;
-            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
-            Bitmap bm = new Bitmap(mStream, false);
-            mStream.Dispose();
-            return bm;
-        }
-
         
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Ajouter = new FormEquipe_Ajouter();
+            Ajouter.conn = conn;
             Ajouter.Text = "Ajout";
+            Ajouter.divisionEquipe = division;
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                nomFichier = Ajouter.nomFichier;
                 string sqlAjout = "insert into Equipes (NomEquipe,DateIntroLigue,LogoEquipe,DivisionEquipe,VilleEquipe)" + // Rajout de LogoEquipe dans la commande ...incomming crashs bitches !
                     " VALUES(:NomEquipe,:DateIntroLigue,:LogoEquipe,:DivisionEquipe,:VilleEquipe)";
                 try 
@@ -72,23 +72,14 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
                     OraParaNomEquipe.Value = Ajouter.nomEquipe;
                     OraParamDateIntroLigue.Value = DateTime.Parse(Ajouter.dateIntroLigue);
-                    OraParamLogoEquipe.Value = Ajouter.nomFichier;
+                    OraParamLogoEquipe.Value = null;
                     OraParaDivEquipe.Value = Ajouter.divisionEquipe;
                     OraParaVilleEquipe.Value = Ajouter.villeEquipe;
 
-                    // récuper le fichier nomFichier et le convertir en Byte. 
-                    //le résultat est dans buffer1
-                    // oracle stocke les images sous forme de Bytes.
-                    if (nomFichier != null)
+                    // petit_wily
+                    if (Ajouter.image != null)
                     {
-                        FileStream Streamp = new FileStream(nomFichier, FileMode.Open, FileAccess.Read);
-                        byte[] buffer1 = new byte[Streamp.Length];
-                        Streamp.Read(buffer1, 0, System.Convert.ToInt32(Streamp.Length));
-                        Streamp.Close();
-
-                        // ajout de la photo dans la BD.
-
-                        OraParamLogoEquipe.Value = buffer1;
+                        OraParamLogoEquipe.Value = Ajouter.image;
                     }
 
                     oraAjout.Parameters.Add(OraParaNomEquipe);
@@ -113,22 +104,23 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void BTN_Modifier_Click(object sender, EventArgs e)
         {
             FormEquipe_Ajouter Modifier = new FormEquipe_Ajouter();
+            Modifier.conn = conn;
             Modifier.Text = "Modification";
             Modifier.nomEquipe = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
             Modifier.dateIntroLigue = DGV_Equipes.SelectedRows[0].Cells[1].Value.ToString();
             Modifier.divisionEquipe = DGV_Equipes.SelectedRows[0].Cells[2].Value.ToString();
             Modifier.villeEquipe = DGV_Equipes.SelectedRows[0].Cells[3].Value.ToString();
+            Modifier.image = image;
 
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                try
-                {
-                    nomFichier = Modifier.nomFichier;
-                    string sqlModif = "Update Equipes set NomEquipe =:NomEquipe, DateIntroLigue =:DateIntroLigue, LogoEquipe =:LogoEquipe, " +
+                string sqlModif = "Update Equipes set NomEquipe =:NomEquipe, DateIntroLigue =:DateIntroLigue, LogoEquipe =:LogoEquipe, " +
                         "DivisionEquipe =:DivisionEquipe, VilleEquipe =:VilleEquipe where NomEquipe =:NomEquipe2";
-                    //Why NomEquipe2 ?? Updater la row avc l'ancien nom de l'équipe
-                    OracleCommand oraUpdate = new OracleCommand(sqlModif, conn);
+                try 
+                {
 
+                    OracleCommand oraModif = new OracleCommand(sqlModif, conn);
+                    
                     OracleParameter OraParaNomEquipe = new OracleParameter(":NomEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamDateIntroLigue = new OracleParameter(":DateIntroLigue", OracleDbType.Date);
                     OracleParameter OraParamLogoEquipe = new OracleParameter(":LogoEquipe", OracleDbType.Blob);  //Ajout
@@ -136,38 +128,30 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OracleParameter OraParaVilleEquipe = new OracleParameter(":VilleEquipe", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaNomEquipe2 = new OracleParameter(":NomEquipe2", OracleDbType.Varchar2, 40);
 
-
                     OraParaNomEquipe.Value = Modifier.nomEquipe;
                     OraParamDateIntroLigue.Value = DateTime.Parse(Modifier.dateIntroLigue);
-                    OraParamLogoEquipe.Value = Modifier.nomFichier;
+                    OraParamLogoEquipe.Value = image;
                     OraParaDivEquipe.Value = Modifier.divisionEquipe;
                     OraParaVilleEquipe.Value = Modifier.villeEquipe;
                     OraParaNomEquipe2.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
 
-                    if (nomFichier != null)
+                    // Willy-kun
+                    if (Modifier.image != null)
                     {
-                        FileStream Streamp = new FileStream(nomFichier, FileMode.Open, FileAccess.Read);
-                        byte[] buffer1 = new byte[Streamp.Length];
-                        Streamp.Read(buffer1, 0, System.Convert.ToInt32(Streamp.Length));
-                        Streamp.Close();
-
-                        // ajout de la photo dans la BD.
-
-                        OraParamLogoEquipe.Value = buffer1;
+                        OraParamLogoEquipe.Value = Modifier.image;
                     }
 
-                    oraUpdate.Parameters.Add(OraParaNomEquipe);
-                    oraUpdate.Parameters.Add(OraParamDateIntroLigue);
-                    oraUpdate.Parameters.Add(OraParamLogoEquipe);
-                    oraUpdate.Parameters.Add(OraParaDivEquipe);
-                    oraUpdate.Parameters.Add(OraParaVilleEquipe);
-                    oraUpdate.Parameters.Add(OraParaNomEquipe2);
+                    oraModif.Parameters.Add(OraParaNomEquipe);
+                    oraModif.Parameters.Add(OraParamDateIntroLigue);
+                    oraModif.Parameters.Add(OraParamLogoEquipe);
+                    oraModif.Parameters.Add(OraParaDivEquipe);
+                    oraModif.Parameters.Add(OraParaVilleEquipe);
+                    oraModif.Parameters.Add(OraParaNomEquipe2);
 
-
-                    oraUpdate.ExecuteNonQuery();
+                    oraModif.ExecuteNonQuery();
 
                     ReloadDGV();
-
+                
                 }
                 catch (Exception ex)
                 {
@@ -185,9 +169,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 paramNomEquipe.Value = DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString();
                 string sqlDelete = "Delete from Equipes Where NomEquipe =:paramNomEquipe";
                 OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
-
                 oraDelete.Parameters.Add(paramNomEquipe);
                 oraDelete.ExecuteNonQuery();
+
                 ReloadDGV();
             }
             catch (OracleException ex)
@@ -199,50 +183,45 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
         }
 
-        private string RechercherFichier()
-        {
-
-            OpenFileDialog fImage = new OpenFileDialog();
-
-            fImage.Title = "selectionner une image";
-            fImage.CheckFileExists = true;
-            fImage.InitialDirectory = @":C\";
-
-            //fImage.InitialDirectory = Application.StartupPath;
-            fImage.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
-            fImage.FilterIndex = 1;
-            fImage.RestoreDirectory = true;
-
-            if (fImage.ShowDialog() == DialogResult.OK)
-            {
-                nomFichier = fImage.FileName;
-                Bitmap bitmap1 = new Bitmap(nomFichier);
-            }
-            else
-            {
-                nomFichier = null;
-            }
-            return nomFichier;
-        }
-
         private void Form_Equipe_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (callBackForm != null)
                 callBackForm.Show();
         }
 
-        private void DGV_Equipe_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Callformjoueurs();
-        }
-
         private void DGV_Equipes_SelectionChanged(object sender, EventArgs e)
         {
-            //OracleDataAdapter oraLogo = new OracleDataAdapter("SELECT LogoEquipe FROM Equipes"+
-            //"where DivisionEquipe = '" +DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString()+"'", conn);
-            //DataSet LogoequipeDataSet = new DataSet();
-            //oraLogo.Fill(LogoequipeDataSet);
-            ////PB_Equipes.Image = ByteToImage(oraLogo.
+            // Such Will
+            image = null;
+            PB_Equipes.Image = null;
+
+            if (DGV_Equipes.SelectedRows.Count > 0)
+            {
+                OracleCommand oraImage = conn.CreateCommand();
+                oraImage.CommandText = "SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe";
+                oraImage.Parameters.Add(new OracleParameter(":NomEquipe", DGV_Equipes.SelectedRows[0].Cells[0].Value.ToString()));
+                using (OracleDataReader oraReader = oraImage.ExecuteReader())
+                {
+                    if (oraReader.Read())
+                    {
+                        OracleBlob oraBlob = oraReader.GetOracleBlob(0);
+                        if (!oraBlob.IsNull)
+                        {
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                byte[] buffer = new byte[8 * 1024];
+                                int read = 0;
+                                while ((read = oraBlob.Read(buffer, 0, 8 * 1024)) > 0)
+                                {
+                                    ms.Write(buffer, 0, read);
+                                }
+                                image = ms.ToArray();
+                                PB_Equipes.Image = Image.FromStream(ms);
+                            }
+                        }
+                    }
+                }
+            }
         }
         private void Callformjoueurs()
         {
@@ -258,6 +237,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             Callformjoueurs();
         }
-        
+
+        private void DGV_Equipes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                Callformjoueurs();
+            }
+        }
     }
 }

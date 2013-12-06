@@ -34,8 +34,6 @@
             this.TB_NomJoueur = new System.Windows.Forms.TextBox();
             this.TB_PrenomJoueur = new System.Windows.Forms.TextBox();
             this.TB_NumeroMaillotJoueur = new System.Windows.Forms.TextBox();
-            this.TB_EquipeJoueur = new System.Windows.Forms.TextBox();
-            this.TB_PositionJoueur = new System.Windows.Forms.TextBox();
             this.DTP_DateNaissanceJoueur = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.BTN_Precedent = new System.Windows.Forms.Button();
             this.BTN_Suivant = new System.Windows.Forms.Button();
+            this.CB_EquipeJoueur = new System.Windows.Forms.ComboBox();
+            this.CB_PositionJoueur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BTN_OK
@@ -55,7 +55,7 @@
             this.BTN_OK.Location = new System.Drawing.Point(105, 333);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(97, 25);
-            this.BTN_OK.TabIndex = 0;
+            this.BTN_OK.TabIndex = 17;
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
@@ -72,35 +72,21 @@
             this.TB_NomJoueur.Location = new System.Drawing.Point(162, 68);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);
-            this.TB_NomJoueur.TabIndex = 2;
+            this.TB_NomJoueur.TabIndex = 3;
             // 
             // TB_PrenomJoueur
             // 
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(162, 107);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
-            this.TB_PrenomJoueur.TabIndex = 3;
+            this.TB_PrenomJoueur.TabIndex = 5;
             // 
             // TB_NumeroMaillotJoueur
             // 
             this.TB_NumeroMaillotJoueur.Location = new System.Drawing.Point(162, 181);
             this.TB_NumeroMaillotJoueur.Name = "TB_NumeroMaillotJoueur";
             this.TB_NumeroMaillotJoueur.Size = new System.Drawing.Size(129, 20);
-            this.TB_NumeroMaillotJoueur.TabIndex = 4;
-            // 
-            // TB_EquipeJoueur
-            // 
-            this.TB_EquipeJoueur.Location = new System.Drawing.Point(162, 218);
-            this.TB_EquipeJoueur.Name = "TB_EquipeJoueur";
-            this.TB_EquipeJoueur.Size = new System.Drawing.Size(129, 20);
-            this.TB_EquipeJoueur.TabIndex = 5;
-            // 
-            // TB_PositionJoueur
-            // 
-            this.TB_PositionJoueur.Location = new System.Drawing.Point(162, 256);
-            this.TB_PositionJoueur.Name = "TB_PositionJoueur";
-            this.TB_PositionJoueur.Size = new System.Drawing.Size(129, 20);
-            this.TB_PositionJoueur.TabIndex = 6;
+            this.TB_NumeroMaillotJoueur.TabIndex = 9;
             // 
             // DTP_DateNaissanceJoueur
             // 
@@ -115,7 +101,7 @@
             this.label1.Location = new System.Drawing.Point(93, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 13);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 15;
             this.label1.Text = "Fleche Flash button here";
             // 
             // label2
@@ -124,7 +110,7 @@
             this.label2.Location = new System.Drawing.Point(26, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 9;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Numero Joueur";
             // 
             // label3
@@ -133,7 +119,7 @@
             this.label3.Location = new System.Drawing.Point(26, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Nom du Joueur";
             // 
             // label4
@@ -142,7 +128,7 @@
             this.label4.Location = new System.Drawing.Point(26, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 11;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Prénom du joueur";
             // 
             // label5
@@ -151,7 +137,7 @@
             this.label5.Location = new System.Drawing.Point(26, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 13);
-            this.label5.TabIndex = 12;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Date de Naissance";
             // 
             // label6
@@ -160,7 +146,7 @@
             this.label6.Location = new System.Drawing.Point(26, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 13;
+            this.label6.TabIndex = 8;
             this.label6.Text = "Numero de maillot";
             // 
             // label7
@@ -169,7 +155,7 @@
             this.label7.Location = new System.Drawing.Point(26, 218);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 13);
-            this.label7.TabIndex = 14;
+            this.label7.TabIndex = 10;
             this.label7.Text = "Équipe du joueur";
             // 
             // label8
@@ -178,7 +164,7 @@
             this.label8.Location = new System.Drawing.Point(26, 259);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 13);
-            this.label8.TabIndex = 15;
+            this.label8.TabIndex = 12;
             this.label8.Text = "Position du joueur";
             // 
             // BTN_Precedent
@@ -186,7 +172,7 @@
             this.BTN_Precedent.Location = new System.Drawing.Point(12, 296);
             this.BTN_Precedent.Name = "BTN_Precedent";
             this.BTN_Precedent.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Precedent.TabIndex = 16;
+            this.BTN_Precedent.TabIndex = 14;
             this.BTN_Precedent.Text = "Precedent";
             this.BTN_Precedent.UseVisualStyleBackColor = true;
             this.BTN_Precedent.Click += new System.EventHandler(this.BTN_Precedent_Click);
@@ -196,10 +182,34 @@
             this.BTN_Suivant.Location = new System.Drawing.Point(216, 296);
             this.BTN_Suivant.Name = "BTN_Suivant";
             this.BTN_Suivant.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Suivant.TabIndex = 17;
+            this.BTN_Suivant.TabIndex = 16;
             this.BTN_Suivant.Text = "Suivant";
             this.BTN_Suivant.UseVisualStyleBackColor = true;
             this.BTN_Suivant.Click += new System.EventHandler(this.BTN_Suivant_Click);
+            // 
+            // CB_EquipeJoueur
+            // 
+            this.CB_EquipeJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CB_EquipeJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CB_EquipeJoueur.FormattingEnabled = true;
+            this.CB_EquipeJoueur.Location = new System.Drawing.Point(162, 215);
+            this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
+            this.CB_EquipeJoueur.Size = new System.Drawing.Size(129, 21);
+            this.CB_EquipeJoueur.TabIndex = 11;
+            // 
+            // CB_PositionJoueur
+            // 
+            this.CB_PositionJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CB_PositionJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CB_PositionJoueur.FormattingEnabled = true;
+            this.CB_PositionJoueur.Items.AddRange(new object[] {
+            "Attaquant",
+            "Defenseur",
+            "Gardien"});
+            this.CB_PositionJoueur.Location = new System.Drawing.Point(162, 256);
+            this.CB_PositionJoueur.Name = "CB_PositionJoueur";
+            this.CB_PositionJoueur.Size = new System.Drawing.Size(129, 21);
+            this.CB_PositionJoueur.TabIndex = 13;
             // 
             // Form_Joueurs
             // 
@@ -207,6 +217,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 370);
+            this.Controls.Add(this.CB_PositionJoueur);
+            this.Controls.Add(this.CB_EquipeJoueur);
             this.Controls.Add(this.BTN_Suivant);
             this.Controls.Add(this.BTN_Precedent);
             this.Controls.Add(this.label8);
@@ -218,8 +230,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DTP_DateNaissanceJoueur);
-            this.Controls.Add(this.TB_PositionJoueur);
-            this.Controls.Add(this.TB_EquipeJoueur);
             this.Controls.Add(this.TB_NumeroMaillotJoueur);
             this.Controls.Add(this.TB_PrenomJoueur);
             this.Controls.Add(this.TB_NomJoueur);
@@ -243,8 +253,6 @@
         private System.Windows.Forms.TextBox TB_NomJoueur;
         private System.Windows.Forms.TextBox TB_PrenomJoueur;
         private System.Windows.Forms.TextBox TB_NumeroMaillotJoueur;
-        private System.Windows.Forms.TextBox TB_EquipeJoueur;
-        private System.Windows.Forms.TextBox TB_PositionJoueur;
         private System.Windows.Forms.DateTimePicker DTP_DateNaissanceJoueur;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -256,6 +264,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BTN_Precedent;
         private System.Windows.Forms.Button BTN_Suivant;
+        private System.Windows.Forms.ComboBox CB_EquipeJoueur;
+        private System.Windows.Forms.ComboBox CB_PositionJoueur;
 
     }
 }

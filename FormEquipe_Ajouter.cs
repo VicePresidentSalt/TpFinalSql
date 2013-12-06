@@ -3,17 +3,36 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
 
 namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 {
-    
-    
     public partial class FormEquipe_Ajouter : Form
     {
-        public string nomFichier;
+        public OracleConnection conn = null;
+
+        private byte[] image_;
+        public byte[] image
+        {
+            get
+            {
+                return image_;
+            }
+            set
+            {
+                image_ = value;
+                if (image_ != null) {
+                    using (MemoryStream ms = new MemoryStream(image_))
+                    {
+                        PB_Equipes.Image = Image.FromStream(ms);
+                    }
+                }
+            }
+        }
        
         public string nomEquipe
         {
@@ -41,11 +60,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             get
             {
-                return TB_DivisionEquipe.Text;
+                return CB_DivisionEquipe.Text;
             }
             set
             {
-                TB_DivisionEquipe.Text = value;
+                CB_DivisionEquipe.Text = value;
             }
         }
         public string villeEquipe
@@ -65,43 +84,38 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             InitializeComponent();
         }
 
-        private string RechercherFichier()
+        private void BTN_ChargerImage_Click(object sender, EventArgs e)
         {
+            // Massive Will
+            image = null;
 
             OpenFileDialog fImage = new OpenFileDialog();
-
             fImage.Title = "selectionner une image";
             fImage.CheckFileExists = true;
             fImage.InitialDirectory = @":C\";
-
             //fImage.InitialDirectory = Application.StartupPath;
-            fImage.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+            fImage.Filter = "Fichiers images (*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
             fImage.FilterIndex = 1;
             fImage.RestoreDirectory = true;
 
             if (fImage.ShowDialog() == DialogResult.OK)
             {
-                nomFichier = fImage.FileName;
-                Bitmap bitmap1 = new Bitmap(nomFichier);
-
-
+                image = File.ReadAllBytes(fImage.FileName);
+                PB_Equipes.Image = Image.FromFile(fImage.FileName);
             }
-            else
-            {
-                nomFichier = null;
-            }
-            return nomFichier;
         }
-        
-        private void BTN_ChargerImage_Click(object sender, EventArgs e)
-        {
 
-            string nomFichier;
-            nomFichier = RechercherFichier();
-            if (nomFichier != null)
+        private void FormEquipe_Ajouter_Load(object sender, EventArgs e)
+        {
+            // Super petit_willy
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT NomDivision FROM Divisions";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
             {
-                PB_Equipes.Image = System.Drawing.Image.FromFile(nomFichier);
-                PB_Equipes.ImageLocation = nomFichier;
+                while (oraReader.Read())
+                {
+                    CB_DivisionEquipe.Items.Add(oraReader.GetString(0));
+                }
             }
         }
 

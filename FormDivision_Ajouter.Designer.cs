@@ -51,7 +51,7 @@
             this.label2.Location = new System.Drawing.Point(13, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Date de création";
             // 
             // TB_NomDivision
@@ -59,7 +59,7 @@
             this.TB_NomDivision.Location = new System.Drawing.Point(106, 10);
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
-            this.TB_NomDivision.TabIndex = 2;
+            this.TB_NomDivision.TabIndex = 1;
             // 
             // BTN_Ok
             // 
@@ -86,7 +86,7 @@
             this.DTP_Ajout.Location = new System.Drawing.Point(106, 41);
             this.DTP_Ajout.Name = "DTP_Ajout";
             this.DTP_Ajout.Size = new System.Drawing.Size(129, 20);
-            this.DTP_Ajout.TabIndex = 6;
+            this.DTP_Ajout.TabIndex = 3;
             // 
             // FormDivision_Ajouter
             // 

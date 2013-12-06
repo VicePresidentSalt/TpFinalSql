@@ -31,6 +31,16 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void Form_Joueurs_Load(object sender, EventArgs e)
         {
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT NomEquipe FROM Equipes";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    CB_EquipeJoueur.Items.Add(oraReader.GetString(0));
+                }
+            }
+
             ReloadForm();
         }
 
@@ -64,8 +74,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             TB_PrenomJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.PrenomJoueur");
             DTP_DateNaissanceJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.DateNaissance");
             TB_NumeroMaillotJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NumeroMaillot");
-            TB_EquipeJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.EquipeJoueur");
-            TB_PositionJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.PositionJoueur");
+            CB_EquipeJoueur.DataBindings.Add("SelectedItem", joueurDataSet, "Joueur.EquipeJoueur");
+            CB_PositionJoueur.DataBindings.Add("SelectedItem", joueurDataSet, "Joueur.PositionJoueur");
         }
         private void ClearBindings()
         {
@@ -79,10 +89,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             DTP_DateNaissanceJoueur.Value = new DateTime();
             TB_NumeroMaillotJoueur.DataBindings.Clear();
             TB_NumeroMaillotJoueur.Clear();
-            TB_EquipeJoueur.DataBindings.Clear();
-            TB_EquipeJoueur.Clear();
-            TB_PositionJoueur.DataBindings.Clear();
-            TB_PositionJoueur.Clear();
+            CB_EquipeJoueur.DataBindings.Clear();
+            CB_EquipeJoueur.ResetText();
+            CB_PositionJoueur.DataBindings.Clear();
+            CB_PositionJoueur.ResetText();
         }
         private void premier_Click(object sender, EventArgs e)
         {
