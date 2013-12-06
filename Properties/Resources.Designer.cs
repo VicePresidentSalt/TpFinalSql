@@ -93,9 +93,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logo___Versus1 {
+        internal static System.Drawing.Bitmap Logo___Versus_bmp {
             get {
-                object obj = ResourceManager.GetObject("Logo_-_Versus1", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_-_Versus_bmp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

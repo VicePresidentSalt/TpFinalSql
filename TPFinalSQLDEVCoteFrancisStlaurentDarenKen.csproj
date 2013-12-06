@@ -159,10 +159,8 @@
     <None Include="Resources\Hockey-Plus-logo1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus.bmp" />
+    <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp" />
+    <Content Include="Resources\Logo_-_Versus_bmp.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
