@@ -63,6 +63,46 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5star {
+            get {
+                object obj = ResourceManager.GetObject("5star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5star_Click {
+            get {
+                object obj = ResourceManager.GetObject("5star_Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5star_Over {
+            get {
+                object obj = ResourceManager.GetObject("5star_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5star_WESLEY {
+            get {
+                object obj = ResourceManager.GetObject("5star_WESLEY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hockey_Plus_logo {
             get {
                 object obj = ResourceManager.GetObject("Hockey-Plus-logo", resourceCulture);

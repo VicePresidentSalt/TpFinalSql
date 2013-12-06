@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FlashButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FlashButton.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
     <Reference Include="Oracle.ManagedDataAccessDTC, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342" />
@@ -179,6 +183,10 @@
   <ItemGroup>
     <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp" />
     <None Include="AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.png" />
+    <None Include="AutreShits\PhotoTPFinal\5star.png" />
+    <None Include="AutreShits\PhotoTPFinal\5star_Click.png" />
+    <None Include="AutreShits\PhotoTPFinal\5star_Over.png" />
+    <None Include="AutreShits\PhotoTPFinal\5star_WESLEY.png" />
     <Content Include="Resources\Logo_-_Versus_bmp.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
