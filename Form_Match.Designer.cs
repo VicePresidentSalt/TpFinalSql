@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
             this.SuspendLayout();
@@ -97,9 +98,9 @@
             // DGV_Match
             // 
             this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Match.Location = new System.Drawing.Point(64, 204);
+            this.DGV_Match.Location = new System.Drawing.Point(40, 204);
             this.DGV_Match.Name = "DGV_Match";
-            this.DGV_Match.Size = new System.Drawing.Size(353, 33);
+            this.DGV_Match.Size = new System.Drawing.Size(400, 33);
             this.DGV_Match.TabIndex = 6;
             // 
             // label4
@@ -131,18 +132,28 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(40, 305);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(64, 305);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
             this.BTN_Ajouter.TabIndex = 10;
             this.BTN_Ajouter.Text = "Ajouter Rencontre";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(308, 305);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Modifier Rencontre";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form_Match
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 349);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -176,5 +187,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Ajouter;
+        private System.Windows.Forms.Button button1;
     }
 }
