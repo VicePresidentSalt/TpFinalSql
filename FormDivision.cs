@@ -115,7 +115,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                  
                 }
 
-                catch (Exception ex)
+                catch (OracleException ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
@@ -154,7 +154,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     ReloadDGV();
 
                 }
-                catch (Exception ex)
+                catch (OracleException ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
@@ -164,14 +164,24 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-            OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
-            paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
-            string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
-            OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+            try
+            {
+                OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
+                paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
+                string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
+                OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
 
-            oraDelete.Parameters.Add(paramNomDivision);
-            oraDelete.ExecuteNonQuery();
-            ReloadDGV();
+                oraDelete.Parameters.Add(paramNomDivision);
+                oraDelete.ExecuteNonQuery();
+                ReloadDGV();
+            }
+            catch(OracleException ex)
+            {
+                if (ex.Number == 2292)
+                {
+                    MessageBox.Show("La division ne doit pas contenir d'équipe.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
 
@@ -196,10 +206,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             Form_Equipe fe = new Form_Equipe(DGV_Division.SelectedRows[0].Cells[0].Value.ToString());
             fe.conn = conn;
-
             this.Hide();
             fe.callBackForm = this;
             fe.ShowDialog();
+        }
+
+        private void BTN_AfficheMatch_Click(object sender, EventArgs e)
+        {
+            Form_Match fm = new Form_Match();
+            fm.conn = conn;
+            this.Hide();
+            fm.callBackForm = this;
+            fm.ShowDialog();
         }
 
     }

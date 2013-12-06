@@ -27,7 +27,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             OracleCommand oraSelect = conn.CreateCommand();
             oraSelect.CommandText = "SELECT NomEquipe, DateIntroLigue, DivisionEquipe, VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe " +
-            "where DivisionEquipe=:Divsion";
+            "where DivisionEquipe=:Division";
             oraSelect.Parameters.Add(new OracleParameter(":Division", division));
 
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
@@ -153,7 +153,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     ReloadDGV();
                 
                 }
-                catch (Exception ex)
+                catch (OracleException ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
