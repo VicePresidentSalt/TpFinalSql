@@ -182,7 +182,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 }
             }
         }
-
         private void Form_Equipe_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (callBackForm != null)

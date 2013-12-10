@@ -59,7 +59,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 OracleDataReader oraRead = oraCMD.ExecuteReader();
                 while (oraRead.Read())
                 {
-                    Ajouter.numeroMatch = oraRead.GetInt32(0) + 1.ToString();
+                    Ajouter.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
 
                 }
                 oraRead.Close();

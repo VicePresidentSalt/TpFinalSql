@@ -156,7 +156,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 }
                 catch (OracleException ex)
                 {
-                    MessageBox.Show(ex.Message.ToString());
+                    if (ex.Number == 2292)
+                    {
+                        MessageBox.Show("Le nom de la division ne peut etre modifié si elle contient des équipes.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }
