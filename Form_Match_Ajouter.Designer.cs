@@ -202,11 +202,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_Ok);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Match_Ajouter";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Match_Ajouter_FormClosed);
             this.ResumeLayout(false);

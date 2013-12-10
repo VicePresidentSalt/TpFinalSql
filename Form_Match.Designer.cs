@@ -205,7 +205,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB_Versus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(492, 429);
             this.Name = "Form_Match";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Afficheur De Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Match_FormClosed);
             this.Load += new System.EventHandler(this.Form_Match_Load);

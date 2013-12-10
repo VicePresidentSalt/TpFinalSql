@@ -75,7 +75,7 @@
             this.modifierToolStripMenuItem,
             this.sToolStripMenuItem});
             this.CMS_Equipe.Name = "CMS_Equipe";
-            this.CMS_Equipe.Size = new System.Drawing.Size(154, 76);
+            this.CMS_Equipe.Size = new System.Drawing.Size(168, 76);
             // 
             // voirToolStripMenuItem
             // 
@@ -83,21 +83,21 @@
             this.voirToolStripMenuItem.Name = "voirToolStripMenuItem";
             this.voirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
             this.voirToolStripMenuItem.ShowShortcutKeys = false;
-            this.voirToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.voirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.voirToolStripMenuItem.Text = "&Voir";
             this.voirToolStripMenuItem.Click += new System.EventHandler(this.voirToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 6);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.modifierToolStripMenuItem.ShowShortcutKeys = false;
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.modifierToolStripMenuItem.Text = "&Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.sToolStripMenuItem.Text = "Supprimer";
             this.sToolStripMenuItem.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
@@ -155,6 +155,7 @@
             // 
             // FB_Top5
             // 
+            this.FB_Top5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Top5.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star;
             this.FB_Top5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Top5.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star_Click;
@@ -191,6 +192,7 @@
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.DGV_Equipes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(612, 411);
             this.Name = "Form_Equipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Équipes";
