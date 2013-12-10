@@ -36,14 +36,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TB_NumeroMatch = new System.Windows.Forms.TextBox();
-            this.TB_EquipeHome = new System.Windows.Forms.TextBox();
-            this.TB_EquipeVisiteur = new System.Windows.Forms.TextBox();
             this.TB_Lieu = new System.Windows.Forms.TextBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.TB_ScoreHome = new System.Windows.Forms.TextBox();
             this.TB_ScoreVisiteur = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.CB_Visiteur = new System.Windows.Forms.ComboBox();
+            this.CB_HOME = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BTN_Ok
@@ -116,20 +116,6 @@
             this.TB_NumeroMatch.Size = new System.Drawing.Size(132, 20);
             this.TB_NumeroMatch.TabIndex = 7;
             // 
-            // TB_EquipeHome
-            // 
-            this.TB_EquipeHome.Location = new System.Drawing.Point(114, 66);
-            this.TB_EquipeHome.Name = "TB_EquipeHome";
-            this.TB_EquipeHome.Size = new System.Drawing.Size(132, 20);
-            this.TB_EquipeHome.TabIndex = 8;
-            // 
-            // TB_EquipeVisiteur
-            // 
-            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(114, 109);
-            this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
-            this.TB_EquipeVisiteur.Size = new System.Drawing.Size(132, 20);
-            this.TB_EquipeVisiteur.TabIndex = 9;
-            // 
             // TB_Lieu
             // 
             this.TB_Lieu.Location = new System.Drawing.Point(114, 179);
@@ -179,6 +165,22 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Score Visiteur";
             // 
+            // CB_Visiteur
+            // 
+            this.CB_Visiteur.FormattingEnabled = true;
+            this.CB_Visiteur.Location = new System.Drawing.Point(114, 106);
+            this.CB_Visiteur.Name = "CB_Visiteur";
+            this.CB_Visiteur.Size = new System.Drawing.Size(132, 21);
+            this.CB_Visiteur.TabIndex = 16;
+            // 
+            // CB_HOME
+            // 
+            this.CB_HOME.FormattingEnabled = true;
+            this.CB_HOME.Location = new System.Drawing.Point(114, 63);
+            this.CB_HOME.Name = "CB_HOME";
+            this.CB_HOME.Size = new System.Drawing.Size(132, 21);
+            this.CB_HOME.TabIndex = 16;
+            // 
             // Form_Match_Ajouter
             // 
             this.AcceptButton = this.BTN_Ok;
@@ -186,14 +188,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(261, 323);
+            this.Controls.Add(this.CB_HOME);
+            this.Controls.Add(this.CB_Visiteur);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TB_ScoreVisiteur);
             this.Controls.Add(this.TB_ScoreHome);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.TB_Lieu);
-            this.Controls.Add(this.TB_EquipeVisiteur);
-            this.Controls.Add(this.TB_EquipeHome);
             this.Controls.Add(this.TB_NumeroMatch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -211,6 +213,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion Match";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Match_Ajouter_FormClosed);
+            this.Load += new System.EventHandler(this.Form_Match_Ajouter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,13 +229,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TB_NumeroMatch;
-        private System.Windows.Forms.TextBox TB_EquipeHome;
-        private System.Windows.Forms.TextBox TB_EquipeVisiteur;
         private System.Windows.Forms.TextBox TB_Lieu;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.TextBox TB_ScoreHome;
         private System.Windows.Forms.TextBox TB_ScoreVisiteur;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox CB_Visiteur;
+        private System.Windows.Forms.ComboBox CB_HOME;
     }
 }

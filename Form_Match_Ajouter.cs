@@ -43,22 +43,22 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             get
             {
-                return TB_EquipeHome.Text;
+                return CB_HOME.Text;
             }
             set
             {
-                TB_EquipeHome.Text = value;
+                CB_HOME.Text = value;
             }
         }
         public string equipeVisiteur
         {
             get
             {
-                return TB_EquipeVisiteur.Text;
+                return CB_Visiteur.Text;
             }
             set
             {
-                TB_EquipeVisiteur.Text = value;
+                CB_Visiteur.Text = value;
             }
         }
         public string dateRencontre
@@ -104,6 +104,21 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             {
                 TB_ScoreVisiteur.Text = value;
 
+            }
+        }
+
+        private void Form_Match_Ajouter_Load(object sender, EventArgs e)
+        {
+            OracleCommand oraSelect = conn.CreateCommand();
+            oraSelect.CommandText = "SELECT nomequipe FROM equipes";
+            using (OracleDataReader oraReader = oraSelect.ExecuteReader())
+            {
+                while (oraReader.Read())
+                {
+                    string items = oraReader.GetString(0);
+                    CB_HOME.Items.Add(items);
+                    CB_Visiteur.Items.Add(items);
+                }
             }
         }
         
