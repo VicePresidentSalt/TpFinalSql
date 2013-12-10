@@ -146,9 +146,10 @@
             // DGV_Top5
             // 
             this.DGV_Top5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Top5.Location = new System.Drawing.Point(235, 182);
+            this.DGV_Top5.Location = new System.Drawing.Point(185, 174);
             this.DGV_Top5.Name = "DGV_Top5";
-            this.DGV_Top5.Size = new System.Drawing.Size(10, 11);
+            this.DGV_Top5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Top5.Size = new System.Drawing.Size(10, 10);
             this.DGV_Top5.TabIndex = 11;
             this.DGV_Top5.Visible = false;
             // 
@@ -157,7 +158,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(247, 196);
+            this.ClientSize = new System.Drawing.Size(246, 202);
             this.Controls.Add(this.DGV_Top5);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.LB_5emePos);
@@ -170,6 +171,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(262, 241);
             this.Name = "Form_Top5";
             this.Text = "Top 5 de la saison";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top5_FormClosing);

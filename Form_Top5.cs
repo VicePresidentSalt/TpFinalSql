@@ -92,17 +92,16 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             OracleCommand oraSelect = conn.CreateCommand();
             oraSelect.CommandText = "Select * from FICHES where RowNum <=5 ";
-            
-            LB_1erePos.Text = DGV_Top5.SelectedRows[0].Cells[0].ToString();
-            LB_2emePos.Text = DGV_Top5.SelectedRows[0].Cells[1].Value.ToString();
-            LB_3emePos.Text = DGV_Top5.SelectedRows[0].Cells[2].Value.ToString();
-            LB_4emePos.Text = DGV_Top5.SelectedRows[0].Cells[3].Value.ToString();
-            LB_5emePos.Text = DGV_Top5.SelectedRows[0].Cells[4].Value.ToString();
-
             OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
             Top5DataSet = new DataSet();
             oraAdapter.Fill(Top5DataSet);
             DGV_Top5.DataSource = Top5DataSet.Tables[0];
+
+            LB_1erePos.Text = DGV_Top5.Rows[0].Cells[1].Value.ToString() +" "+ DGV_Top5.Rows[0].Cells[0].Value.ToString();
+            LB_2emePos.Text = DGV_Top5.Rows[1].Cells[1].Value.ToString() +" "+ DGV_Top5.Rows[1].Cells[0].Value.ToString();
+            LB_3emePos.Text = DGV_Top5.Rows[2].Cells[1].Value.ToString() +" "+ DGV_Top5.Rows[2].Cells[0].Value.ToString();
+            LB_4emePos.Text = DGV_Top5.Rows[3].Cells[1].Value.ToString() +" "+ DGV_Top5.Rows[3].Cells[0].Value.ToString();
+            LB_5emePos.Text = DGV_Top5.Rows[4].Cells[1].Value.ToString() +" "+ DGV_Top5.Rows[4].Cells[0].Value.ToString();
         }
     }
 }
