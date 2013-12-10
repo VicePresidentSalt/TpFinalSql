@@ -155,6 +155,7 @@
             // 
             // FB_Top5
             // 
+            this.FB_Top5.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star;
             this.FB_Top5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Top5.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star_Click;
             this.FB_Top5.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star_WESLEY;
@@ -164,6 +165,7 @@
             this.FB_Top5.Name = "FB_Top5";
             this.FB_Top5.Size = new System.Drawing.Size(62, 56);
             this.FB_Top5.TabIndex = 5;
+            this.FB_Top5.Click += new System.EventHandler(this.FB_Top5_Click);
             // 
             // PB_Equipes
             // 

@@ -246,5 +246,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 Callformjoueurs();
             }
         }
+
+        private void FB_Top5_Click(object sender, EventArgs e)
+        {
+            Form_Top5 Top5 = new Form_Top5();
+            Top5.conn = conn;
+
+            Top5.ShowDialog();
+        }
     }
 }

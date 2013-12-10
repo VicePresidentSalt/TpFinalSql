@@ -34,10 +34,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LB_1erePos = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LB_2emePos = new System.Windows.Forms.Label();
+            this.LB_3emePos = new System.Windows.Forms.Label();
+            this.LB_4emePos = new System.Windows.Forms.Label();
+            this.LB_5emePos = new System.Windows.Forms.Label();
+            this.BTN_OK = new System.Windows.Forms.Button();
+            this.DGV_Top5 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Top5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,51 +97,73 @@
             this.LB_1erePos.TabIndex = 5;
             this.LB_1erePos.Text = "-Nom 1ere pos-";
             // 
-            // label6
+            // LB_2emePos
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(111, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "-Nom 2eme pos-";
+            this.LB_2emePos.AutoSize = true;
+            this.LB_2emePos.Location = new System.Drawing.Point(111, 43);
+            this.LB_2emePos.Name = "LB_2emePos";
+            this.LB_2emePos.Size = new System.Drawing.Size(84, 13);
+            this.LB_2emePos.TabIndex = 6;
+            this.LB_2emePos.Text = "-Nom 2eme pos-";
             // 
-            // label7
+            // LB_3emePos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "-Nom 3eme pos-";
+            this.LB_3emePos.AutoSize = true;
+            this.LB_3emePos.Location = new System.Drawing.Point(111, 73);
+            this.LB_3emePos.Name = "LB_3emePos";
+            this.LB_3emePos.Size = new System.Drawing.Size(84, 13);
+            this.LB_3emePos.TabIndex = 7;
+            this.LB_3emePos.Text = "-Nom 3eme pos-";
             // 
-            // label8
+            // LB_4emePos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(111, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "-Nom 4eme pos-";
+            this.LB_4emePos.AutoSize = true;
+            this.LB_4emePos.Location = new System.Drawing.Point(111, 104);
+            this.LB_4emePos.Name = "LB_4emePos";
+            this.LB_4emePos.Size = new System.Drawing.Size(84, 13);
+            this.LB_4emePos.TabIndex = 8;
+            this.LB_4emePos.Text = "-Nom 4eme pos-";
             // 
-            // label9
+            // LB_5emePos
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(111, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "-Nom 5eme pos-";
+            this.LB_5emePos.AutoSize = true;
+            this.LB_5emePos.Location = new System.Drawing.Point(111, 135);
+            this.LB_5emePos.Name = "LB_5emePos";
+            this.LB_5emePos.Size = new System.Drawing.Size(84, 13);
+            this.LB_5emePos.TabIndex = 9;
+            this.LB_5emePos.Text = "-Nom 5eme pos-";
+            // 
+            // BTN_OK
+            // 
+            this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_OK.Location = new System.Drawing.Point(78, 161);
+            this.BTN_OK.Name = "BTN_OK";
+            this.BTN_OK.Size = new System.Drawing.Size(75, 23);
+            this.BTN_OK.TabIndex = 10;
+            this.BTN_OK.Text = "Ok";
+            this.BTN_OK.UseVisualStyleBackColor = true;
+            // 
+            // DGV_Top5
+            // 
+            this.DGV_Top5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Top5.Location = new System.Drawing.Point(235, 182);
+            this.DGV_Top5.Name = "DGV_Top5";
+            this.DGV_Top5.Size = new System.Drawing.Size(10, 11);
+            this.DGV_Top5.TabIndex = 11;
+            this.DGV_Top5.Visible = false;
             // 
             // Form_Top5
             // 
+            this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 162);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(247, 196);
+            this.Controls.Add(this.DGV_Top5);
+            this.Controls.Add(this.BTN_OK);
+            this.Controls.Add(this.LB_5emePos);
+            this.Controls.Add(this.LB_4emePos);
+            this.Controls.Add(this.LB_3emePos);
+            this.Controls.Add(this.LB_2emePos);
             this.Controls.Add(this.LB_1erePos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -147,6 +172,9 @@
             this.Controls.Add(this.label1);
             this.Name = "Form_Top5";
             this.Text = "Top 5 de la saison";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top5_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Top5_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Top5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,9 +188,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label LB_1erePos;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LB_2emePos;
+        private System.Windows.Forms.Label LB_3emePos;
+        private System.Windows.Forms.Label LB_4emePos;
+        private System.Windows.Forms.Label LB_5emePos;
+        private System.Windows.Forms.Button BTN_OK;
+        private System.Windows.Forms.DataGridView DGV_Top5;
     }
 }
