@@ -171,8 +171,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(262, 241);
             this.Name = "Form_Top5";
+            this.ShowIcon = false;
             this.Text = "Top 5 de la saison";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top5_FormClosing);
             this.Load += new System.EventHandler(this.Form_Top5_Load);

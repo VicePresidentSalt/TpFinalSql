@@ -35,8 +35,6 @@
             this.TB_EquipeHomeScore = new System.Windows.Forms.TextBox();
             this.TB_EquipeVisiteurScore = new System.Windows.Forms.TextBox();
             this.DGV_Match = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_OK = new System.Windows.Forms.Button();
@@ -60,6 +58,7 @@
             // 
             // TB_EquipeVisiteur
             // 
+            this.TB_EquipeVisiteur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_EquipeVisiteur.AutoSize = true;
             this.TB_EquipeVisiteur.Location = new System.Drawing.Point(398, 9);
             this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
@@ -69,6 +68,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(248, 129);
             this.label3.Name = "label3";
@@ -86,6 +86,7 @@
             // 
             // TB_EquipeVisiteurScore
             // 
+            this.TB_EquipeVisiteurScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_EquipeVisiteurScore.Enabled = false;
             this.TB_EquipeVisiteurScore.Location = new System.Drawing.Point(384, 144);
             this.TB_EquipeVisiteurScore.Name = "TB_EquipeVisiteurScore";
@@ -98,37 +99,23 @@
             this.DGV_Match.AllowUserToDeleteRows = false;
             this.DGV_Match.AllowUserToOrderColumns = true;
             this.DGV_Match.AllowUserToResizeRows = false;
+            this.DGV_Match.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Match.Location = new System.Drawing.Point(41, 180);
             this.DGV_Match.Name = "DGV_Match";
             this.DGV_Match.ReadOnly = true;
             this.DGV_Match.RowHeadersVisible = false;
             this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Match.Size = new System.Drawing.Size(512, 79);
+            this.DGV_Match.Size = new System.Drawing.Size(512, 119);
             this.DGV_Match.TabIndex = 6;
             this.DGV_Match.SelectionChanged += new System.EventHandler(this.DGV_Match_SelectionChanged);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(113, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Flashbuton Precedent";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(398, 262);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Flashbuton Suivant";
-            // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(116, 305);
+            this.BTN_Ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Ajouter.Location = new System.Drawing.Point(64, 305);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
             this.BTN_Ajouter.TabIndex = 10;
@@ -138,7 +125,8 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(388, 305);
+            this.BTN_Modifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Modifier.Location = new System.Drawing.Point(397, 305);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(108, 23);
             this.BTN_Modifier.TabIndex = 11;
@@ -148,8 +136,9 @@
             // 
             // BTN_OK
             // 
+            this.BTN_OK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(263, 356);
+            this.BTN_OK.Location = new System.Drawing.Point(233, 356);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 12;
@@ -158,6 +147,7 @@
             // 
             // PB_EquipeVisiteurLogo
             // 
+            this.PB_EquipeVisiteurLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(384, 22);
             this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
             this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
@@ -176,6 +166,7 @@
             // 
             // PB_Versus
             // 
+            this.PB_Versus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PB_Versus.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp1;
             this.PB_Versus.Location = new System.Drawing.Point(229, 22);
             this.PB_Versus.Name = "PB_Versus";
@@ -195,8 +186,6 @@
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.BTN_Modifier);
             this.Controls.Add(this.BTN_Ajouter);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.DGV_Match);
             this.Controls.Add(this.TB_EquipeVisiteurScore);
             this.Controls.Add(this.TB_EquipeHomeScore);
@@ -229,8 +218,6 @@
         private System.Windows.Forms.TextBox TB_EquipeHomeScore;
         private System.Windows.Forms.TextBox TB_EquipeVisiteurScore;
         private System.Windows.Forms.DataGridView DGV_Match;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_Modifier;
         private System.Windows.Forms.Button BTN_OK;
