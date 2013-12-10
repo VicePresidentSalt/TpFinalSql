@@ -103,20 +103,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Top5DataSet = new DataSet();
             oraAdapter.Fill(Top5DataSet);
             DGV_Top5.DataSource = Top5DataSet.Tables[0];
-            /*
-             int lastIndex = -1;
-            if (DGV_Equipes.SelectedRows.Count > 0) lastIndex = DGV_Equipes.SelectedRows[0].Index;
-
-            OracleCommand oraSelect = conn.CreateCommand();
-            oraSelect.CommandText = "SELECT NomEquipe, DateIntroLigue, DivisionEquipe, VilleEquipe FROM Equipes E inner join Divisions D on D.NomDivision = E.DivisionEquipe " +
-            "where DivisionEquipe=:Division";
-            oraSelect.Parameters.Add(new OracleParameter(":Division", division));
-
-            OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-            equipeDataSet = new DataSet();
-            oraAdapter.Fill(equipeDataSet);
-            DGV_Equipes.DataSource = equipeDataSet.Tables[0];
-             * */
         }
     }
 }

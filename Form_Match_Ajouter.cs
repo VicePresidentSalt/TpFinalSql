@@ -83,6 +83,29 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 TB_Lieu.Text = value;
             }
         }
+        public string scoreHome
+        {
+            get
+            {
+                return TB_ScoreHome.Text;
+            }
+            set
+            {
+                TB_ScoreHome.Text = value;
+            }
+        }
+        public string scoreVisiteur
+        {
+            get
+            {
+                return TB_ScoreVisiteur.Text;
+            }
+            set
+            {
+                TB_ScoreVisiteur.Text = value;
+
+            }
+        }
         
 
     }

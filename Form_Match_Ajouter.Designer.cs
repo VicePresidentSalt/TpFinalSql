@@ -40,12 +40,16 @@
             this.TB_EquipeVisiteur = new System.Windows.Forms.TextBox();
             this.TB_Lieu = new System.Windows.Forms.TextBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
+            this.TB_ScoreHome = new System.Windows.Forms.TextBox();
+            this.TB_ScoreVisiteur = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BTN_Ok
             // 
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ok.Location = new System.Drawing.Point(32, 221);
+            this.BTN_Ok.Location = new System.Drawing.Point(32, 288);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ok.TabIndex = 0;
@@ -136,12 +140,44 @@
             // BTN_Cancel
             // 
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(145, 221);
+            this.BTN_Cancel.Location = new System.Drawing.Point(162, 288);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
             this.BTN_Cancel.TabIndex = 11;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // TB_ScoreHome
+            // 
+            this.TB_ScoreHome.Location = new System.Drawing.Point(114, 218);
+            this.TB_ScoreHome.Name = "TB_ScoreHome";
+            this.TB_ScoreHome.Size = new System.Drawing.Size(132, 20);
+            this.TB_ScoreHome.TabIndex = 12;
+            // 
+            // TB_ScoreVisiteur
+            // 
+            this.TB_ScoreVisiteur.Location = new System.Drawing.Point(114, 256);
+            this.TB_ScoreVisiteur.Name = "TB_ScoreVisiteur";
+            this.TB_ScoreVisiteur.Size = new System.Drawing.Size(132, 20);
+            this.TB_ScoreVisiteur.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Score Home";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 259);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Score Visiteur";
             // 
             // Form_Match_Ajouter
             // 
@@ -149,7 +185,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(261, 256);
+            this.ClientSize = new System.Drawing.Size(261, 323);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TB_ScoreVisiteur);
+            this.Controls.Add(this.TB_ScoreHome);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.TB_Lieu);
             this.Controls.Add(this.TB_EquipeVisiteur);
@@ -188,5 +228,9 @@
         private System.Windows.Forms.TextBox TB_EquipeVisiteur;
         private System.Windows.Forms.TextBox TB_Lieu;
         private System.Windows.Forms.Button BTN_Cancel;
+        private System.Windows.Forms.TextBox TB_ScoreHome;
+        private System.Windows.Forms.TextBox TB_ScoreVisiteur;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

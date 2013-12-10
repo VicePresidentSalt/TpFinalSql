@@ -70,7 +70,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sqlMatchAjout = "insert into Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu)" +
+                string sqlMatchAjout = "insert into Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu,ScoreHome,ScoreVisiteur)" +
                     " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu)";
 
                 try
@@ -82,16 +82,22 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
                     OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
 
                     OraParaEquipeHome.Value = Ajouter.equipeHome;
                     OraParaEquipeVisiteur.Value = Ajouter.equipeVisiteur;
                     OraParaDateRencontre.Value = DateTime.Parse(Ajouter.dateRencontre);
                     OraParaLieu.Value = Ajouter.lieuRencontre;
+                    OraParaScoreHome.Value = Ajouter.scoreHome;
+                    OraParaScoreVisiteur.Value = Ajouter.scoreVisiteur;
 
                     oraMatchAjout.Parameters.Add(OraParaEquipeHome);
                     oraMatchAjout.Parameters.Add(OraParaEquipeVisiteur);
                     oraMatchAjout.Parameters.Add(OraParaDateRencontre);
                     oraMatchAjout.Parameters.Add(OraParaLieu);
+                    oraMatchAjout.Parameters.Add(OraParaScoreHome);
+                    oraMatchAjout.Parameters.Add(OraParaScoreVisiteur);
 
                     oraMatchAjout.ExecuteNonQuery();
 
@@ -119,11 +125,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Modifier.equipeVisiteur = DGV_Match.SelectedRows[0].Cells[2].Value.ToString();
             Modifier.dateRencontre = DGV_Match.SelectedRows[0].Cells[3].Value.ToString();
             Modifier.lieuRencontre = DGV_Match.SelectedRows[0].Cells[4].Value.ToString();
+            Modifier.scoreHome = DGV_Match.SelectedRows[0].Cells[5].Value.ToString();
+            Modifier.scoreVisiteur = DGV_Match.SelectedRows[0].Cells[6].Value.ToString();
 
             if (Modifier.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sqlModif = "Update Match set EquipeHome =:EquipeHome, EquipeVisiteur =:EquipeVisiteur, DateRencontre =:DateRencontre, " +
-                    "Lieu =:Lieu where NumeroMatch =:NumeroMatch";
+                    "Lieu =:Lieu, ScoreHome =:ScoreHome, ScoreVisiteur =:ScoreVisiteur where NumeroMatch =:NumeroMatch";
 
                 try
                 {
@@ -134,6 +142,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OracleParameter OraParaEquipeVisiteur = new OracleParameter(":EquipeVisiteur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParaDateRencontre = new OracleParameter(":DateRencontre", OracleDbType.Date);
                     OracleParameter OraParaLieu = new OracleParameter(":Lieu", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaScoreHome = new OracleParameter(":ScoreHome", OracleDbType.Int32);
+                    OracleParameter OraParaScoreVisiteur = new OracleParameter(":ScoreVisiteur", OracleDbType.Int32);
 
                     
                     OraParaEquipeHome.Value = Modifier.equipeHome;
@@ -141,6 +151,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OraParaDateRencontre.Value = DateTime.Parse(Modifier.dateRencontre);
                     OraParaLieu.Value = Modifier.lieuRencontre;
                     OraParaNumMatch.Value = Modifier.numeroMatch;
+                    OraParaScoreHome.Value = Modifier.scoreHome;
+                    OraParaScoreVisiteur.Value = Modifier.scoreVisiteur;
 
                     
                     oraMatchModif.Parameters.Add(OraParaEquipeHome);
@@ -148,6 +160,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     oraMatchModif.Parameters.Add(OraParaDateRencontre);
                     oraMatchModif.Parameters.Add(OraParaLieu);
                     oraMatchModif.Parameters.Add(OraParaNumMatch);
+                    oraMatchModif.Parameters.Add(OraParaScoreHome);
+                    oraMatchModif.Parameters.Add(OraParaScoreVisiteur);
 
                     oraMatchModif.ExecuteNonQuery();
 
