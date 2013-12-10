@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 9);
+            this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +61,7 @@
             // TB_EquipeVisiteur
             // 
             this.TB_EquipeVisiteur.AutoSize = true;
-            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(340, 9);
+            this.TB_EquipeVisiteur.Location = new System.Drawing.Point(398, 9);
             this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
             this.TB_EquipeVisiteur.Size = new System.Drawing.Size(77, 13);
             this.TB_EquipeVisiteur.TabIndex = 2;
@@ -70,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 129);
+            this.label3.Location = new System.Drawing.Point(248, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 3;
@@ -78,14 +78,16 @@
             // 
             // TB_EquipeHomeScore
             // 
-            this.TB_EquipeHomeScore.Location = new System.Drawing.Point(40, 144);
+            this.TB_EquipeHomeScore.Enabled = false;
+            this.TB_EquipeHomeScore.Location = new System.Drawing.Point(64, 144);
             this.TB_EquipeHomeScore.Name = "TB_EquipeHomeScore";
             this.TB_EquipeHomeScore.Size = new System.Drawing.Size(121, 20);
             this.TB_EquipeHomeScore.TabIndex = 4;
             // 
             // TB_EquipeVisiteurScore
             // 
-            this.TB_EquipeVisiteurScore.Location = new System.Drawing.Point(319, 144);
+            this.TB_EquipeVisiteurScore.Enabled = false;
+            this.TB_EquipeVisiteurScore.Location = new System.Drawing.Point(384, 144);
             this.TB_EquipeVisiteurScore.Name = "TB_EquipeVisiteurScore";
             this.TB_EquipeVisiteurScore.Size = new System.Drawing.Size(121, 20);
             this.TB_EquipeVisiteurScore.TabIndex = 5;
@@ -97,19 +99,19 @@
             this.DGV_Match.AllowUserToOrderColumns = true;
             this.DGV_Match.AllowUserToResizeRows = false;
             this.DGV_Match.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Match.Location = new System.Drawing.Point(17, 180);
+            this.DGV_Match.Location = new System.Drawing.Point(41, 180);
             this.DGV_Match.Name = "DGV_Match";
             this.DGV_Match.ReadOnly = true;
             this.DGV_Match.RowHeadersVisible = false;
             this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Match.Size = new System.Drawing.Size(438, 79);
+            this.DGV_Match.Size = new System.Drawing.Size(512, 79);
             this.DGV_Match.TabIndex = 6;
             this.DGV_Match.SelectionChanged += new System.EventHandler(this.DGV_Match_SelectionChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 262);
+            this.label5.Location = new System.Drawing.Point(113, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 13);
             this.label5.TabIndex = 8;
@@ -118,7 +120,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(319, 262);
+            this.label6.Location = new System.Drawing.Point(398, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 13);
             this.label6.TabIndex = 9;
@@ -126,7 +128,7 @@
             // 
             // BTN_Ajouter
             // 
-            this.BTN_Ajouter.Location = new System.Drawing.Point(64, 305);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(116, 305);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
             this.BTN_Ajouter.TabIndex = 10;
@@ -136,7 +138,7 @@
             // 
             // BTN_Modifier
             // 
-            this.BTN_Modifier.Location = new System.Drawing.Point(308, 305);
+            this.BTN_Modifier.Location = new System.Drawing.Point(388, 305);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(108, 23);
             this.BTN_Modifier.TabIndex = 11;
@@ -147,7 +149,7 @@
             // BTN_OK
             // 
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(187, 356);
+            this.BTN_OK.Location = new System.Drawing.Point(263, 356);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 12;
@@ -156,7 +158,7 @@
             // 
             // PB_EquipeVisiteurLogo
             // 
-            this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(319, 22);
+            this.PB_EquipeVisiteurLogo.Location = new System.Drawing.Point(384, 22);
             this.PB_EquipeVisiteurLogo.Name = "PB_EquipeVisiteurLogo";
             this.PB_EquipeVisiteurLogo.Size = new System.Drawing.Size(121, 95);
             this.PB_EquipeVisiteurLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +167,7 @@
             // 
             // PB_EquipeHomeLogo
             // 
-            this.PB_EquipeHomeLogo.Location = new System.Drawing.Point(40, 22);
+            this.PB_EquipeHomeLogo.Location = new System.Drawing.Point(64, 22);
             this.PB_EquipeHomeLogo.Name = "PB_EquipeHomeLogo";
             this.PB_EquipeHomeLogo.Size = new System.Drawing.Size(121, 95);
             this.PB_EquipeHomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,7 +177,7 @@
             // PB_Versus
             // 
             this.PB_Versus.Image = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo___Versus_bmp1;
-            this.PB_Versus.Location = new System.Drawing.Point(179, 22);
+            this.PB_Versus.Location = new System.Drawing.Point(229, 22);
             this.PB_Versus.Name = "PB_Versus";
             this.PB_Versus.Size = new System.Drawing.Size(109, 95);
             this.PB_Versus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +189,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 391);
+            this.ClientSize = new System.Drawing.Size(576, 391);
             this.Controls.Add(this.PB_EquipeVisiteurLogo);
             this.Controls.Add(this.PB_EquipeHomeLogo);
             this.Controls.Add(this.BTN_OK);

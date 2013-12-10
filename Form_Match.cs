@@ -180,12 +180,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             // Such Will
             PB_EquipeHomeLogo.Image = null;
             PB_EquipeVisiteurLogo.Image = null;
+            
 
             if (DGV_Match.SelectedRows.Count > 0) {
                 OracleCommand oraImage = conn.CreateCommand();
                 oraImage.CommandText = "SELECT (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe1), (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe2) FROM DUAL";
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Match.SelectedRows[0].Cells[1].Value.ToString()));
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Match.SelectedRows[0].Cells[2].Value.ToString()));
+                TB_EquipeHomeScore.Text = DGV_Match.SelectedRows[0].Cells[5].Value.ToString();
+                TB_EquipeVisiteurScore.Text = DGV_Match.SelectedRows[0].Cells[6].Value.ToString();
                 using (OracleDataReader oraReader = oraImage.ExecuteReader()) {
                     if (oraReader.Read()) {
                         OracleBlob oraBlob = oraReader.GetOracleBlob(0);
