@@ -158,7 +158,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 202);
+            this.ClientSize = new System.Drawing.Size(246, 203);
             this.Controls.Add(this.DGV_Top5);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.LB_5emePos);
@@ -176,6 +176,7 @@
             this.MinimumSize = new System.Drawing.Size(262, 241);
             this.Name = "Form_Top5";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Top 5 de la saison";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Top5_FormClosing);
             this.Load += new System.EventHandler(this.Form_Top5_Load);
