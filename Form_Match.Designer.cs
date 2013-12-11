@@ -41,10 +41,12 @@
             this.PB_EquipeVisiteurLogo = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
             this.PB_Versus = new System.Windows.Forms.PictureBox();
+            this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,14 +110,14 @@
             this.DGV_Match.ReadOnly = true;
             this.DGV_Match.RowHeadersVisible = false;
             this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Match.Size = new System.Drawing.Size(512, 119);
+            this.DGV_Match.Size = new System.Drawing.Size(512, 130);
             this.DGV_Match.TabIndex = 6;
             this.DGV_Match.SelectionChanged += new System.EventHandler(this.DGV_Match_SelectionChanged);
             // 
             // BTN_Ajouter
             // 
             this.BTN_Ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Ajouter.Location = new System.Drawing.Point(64, 305);
+            this.BTN_Ajouter.Location = new System.Drawing.Point(64, 433);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
             this.BTN_Ajouter.TabIndex = 10;
@@ -126,7 +128,7 @@
             // BTN_Modifier
             // 
             this.BTN_Modifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Modifier.Location = new System.Drawing.Point(397, 305);
+            this.BTN_Modifier.Location = new System.Drawing.Point(397, 433);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(108, 23);
             this.BTN_Modifier.TabIndex = 11;
@@ -138,7 +140,7 @@
             // 
             this.BTN_OK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(233, 356);
+            this.BTN_OK.Location = new System.Drawing.Point(233, 463);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 12;
@@ -175,12 +177,25 @@
             this.PB_Versus.TabIndex = 0;
             this.PB_Versus.TabStop = false;
             // 
+            // DGV_Joueurs
+            // 
+            this.DGV_Joueurs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Joueurs.Location = new System.Drawing.Point(41, 316);
+            this.DGV_Joueurs.Name = "DGV_Joueurs";
+            this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Joueurs.Size = new System.Drawing.Size(512, 111);
+            this.DGV_Joueurs.TabIndex = 15;
+            // 
             // Form_Match
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 391);
+            this.ClientSize = new System.Drawing.Size(576, 498);
+            this.Controls.Add(this.DGV_Joueurs);
             this.Controls.Add(this.PB_EquipeVisiteurLogo);
             this.Controls.Add(this.PB_EquipeHomeLogo);
             this.Controls.Add(this.BTN_OK);
@@ -204,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +239,6 @@
         private System.Windows.Forms.Button BTN_OK;
         private System.Windows.Forms.PictureBox PB_EquipeHomeLogo;
         private System.Windows.Forms.PictureBox PB_EquipeVisiteurLogo;
+        private System.Windows.Forms.DataGridView DGV_Joueurs;
     }
 }

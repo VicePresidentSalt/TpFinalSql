@@ -17,6 +17,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public OracleConnection conn = null;
         public Form callBackForm = null;
         public DataSet MatchDataSet = null;
+        public DataSet JoueursDataSet = null;
 
         public Form_Match()
         {
@@ -188,6 +189,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 oraImage.CommandText = "SELECT (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe1), (SELECT LogoEquipe FROM Equipes WHERE NomEquipe=:NomEquipe2) FROM DUAL";
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe1", DGV_Match.SelectedRows[0].Cells[1].Value.ToString()));
                 oraImage.Parameters.Add(new OracleParameter(":NomEquipe2", DGV_Match.SelectedRows[0].Cells[2].Value.ToString()));
+                
+                OracleCommand oraJoueurs = conn.CreateCommand();
+                oraJoueurs.CommandText = " SELECT * FROM JOUEURS INNER JOIN MATCH ON JOUEURS.EQUIPEJOUEUR = MATCH.EQUIPEHOME " +
+                                         " WHERE EQUIPEHOME='" + DGV_Match.SelectedRows[0].Cells[1].Value.ToString() + "' UNION " +
+                                         " SELECT * FROM JOUEURS INNER JOIN MATCH ON JOUEURS.EQUIPEJOUEUR = MATCH.EQUIPEVISITEUR" +
+                                         "  WHERE EQUIPEVISITEUR= '" + DGV_Match.SelectedRows[0].Cells[2].Value.ToString() + "' ORDER BY 6";
+                OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
+                JoueursDataSet = new DataSet();
+                oraDataJoueurs.Fill(JoueursDataSet,"JoueursDGV");
+                DGV_Joueurs.DataSource = JoueursDataSet.Tables[0];
+
+
                 TB_EquipeHomeScore.Text = DGV_Match.SelectedRows[0].Cells[5].Value.ToString();
                 TB_EquipeVisiteurScore.Text = DGV_Match.SelectedRows[0].Cells[6].Value.ToString();
                 using (OracleDataReader oraReader = oraImage.ExecuteReader()) {
