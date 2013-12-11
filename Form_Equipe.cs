@@ -258,6 +258,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             Form_Classement Classement = new Form_Classement();
             Classement.conn = conn;
+            Classement.divisions = DGV_Equipes.Rows[0].Cells[2].Value.ToString();
 
             Classement.ShowDialog();
         }

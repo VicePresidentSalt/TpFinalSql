@@ -35,16 +35,29 @@
             // 
             // DGV_Classement
             // 
+            this.DGV_Classement.AllowUserToAddRows = false;
+            this.DGV_Classement.AllowUserToDeleteRows = false;
+            this.DGV_Classement.AllowUserToOrderColumns = true;
+            this.DGV_Classement.AllowUserToResizeColumns = false;
+            this.DGV_Classement.AllowUserToResizeRows = false;
+            this.DGV_Classement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Classement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Classement.Location = new System.Drawing.Point(12, 15);
             this.DGV_Classement.Name = "DGV_Classement";
+            this.DGV_Classement.ReadOnly = true;
+            this.DGV_Classement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Classement.Size = new System.Drawing.Size(371, 150);
             this.DGV_Classement.TabIndex = 0;
             // 
             // BTN_Ok
             // 
+            this.BTN_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BTN_Ok.Location = new System.Drawing.Point(159, 181);
+            this.BTN_Ok.MinimumSize = new System.Drawing.Size(75, 23);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
             this.BTN_Ok.TabIndex = 1;
@@ -65,6 +78,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Classement";
+            this.Load += new System.EventHandler(this.Form_Classement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Classement)).EndInit();
             this.ResumeLayout(false);
 
