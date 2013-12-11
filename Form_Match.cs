@@ -49,25 +49,26 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Form_Match_Ajouter Ajouter = new Form_Match_Ajouter();
             Ajouter.Text = "Ajout";
             Ajouter.conn = conn;
-            string sql = "Select seqmatch.currval from dual ";
-            OracleCommand oraCMD = new OracleCommand(sql,conn);
-            oraCMD.CommandType = CommandType.Text;
+            //string sql = "Select seqmatch.currval from dual ";
+            //OracleCommand oraCMD = new OracleCommand(sql, conn);
+            //oraCMD.CommandType = CommandType.Text;
 
-           
-            try
-            {
-                OracleDataReader oraRead = oraCMD.ExecuteReader();
-                while (oraRead.Read())
-                {
-                    Ajouter.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
 
-                }
-                oraRead.Close();
-            }
-            catch (OracleException ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            //try
+            //{
+            //    OracleDataReader oraRead = oraCMD.ExecuteReader();
+            //    while (oraRead.Read())
+            //    {
+            //        Ajouter.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
+
+            //    }
+            //    oraRead.Close();
+            //}
+
+            //catch (OracleException ex)
+            //{
+            //    MessageBox.Show(ex.Message.ToString());
+            //}
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string sqlMatchAjout = "insert into Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu,ScoreHome,ScoreVisiteur)" +
