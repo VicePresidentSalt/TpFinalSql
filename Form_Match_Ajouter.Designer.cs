@@ -52,7 +52,7 @@
             this.BTN_Ok.Location = new System.Drawing.Point(32, 288);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Ok.TabIndex = 0;
+            this.BTN_Ok.TabIndex = 14;
             this.BTN_Ok.Text = "Ok";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             // 
@@ -62,7 +62,7 @@
             this.label1.Location = new System.Drawing.Point(15, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Numero du Match";
             // 
             // label2
@@ -80,7 +80,7 @@
             this.label3.Location = new System.Drawing.Point(15, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Équipe Visiteur";
             // 
             // DTP_DateRencontre
@@ -88,7 +88,7 @@
             this.DTP_DateRencontre.Location = new System.Drawing.Point(114, 144);
             this.DTP_DateRencontre.Name = "DTP_DateRencontre";
             this.DTP_DateRencontre.Size = new System.Drawing.Size(132, 20);
-            this.DTP_DateRencontre.TabIndex = 4;
+            this.DTP_DateRencontre.TabIndex = 7;
             // 
             // label4
             // 
@@ -96,7 +96,7 @@
             this.label4.Location = new System.Drawing.Point(15, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 6;
             this.label4.Text = "Date Rencontre";
             // 
             // label5
@@ -105,7 +105,7 @@
             this.label5.Location = new System.Drawing.Point(15, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 6;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Lieu";
             // 
             // TB_NumeroMatch
@@ -114,14 +114,14 @@
             this.TB_NumeroMatch.Location = new System.Drawing.Point(114, 29);
             this.TB_NumeroMatch.Name = "TB_NumeroMatch";
             this.TB_NumeroMatch.Size = new System.Drawing.Size(132, 20);
-            this.TB_NumeroMatch.TabIndex = 7;
+            this.TB_NumeroMatch.TabIndex = 1;
             // 
             // TB_Lieu
             // 
             this.TB_Lieu.Location = new System.Drawing.Point(114, 179);
             this.TB_Lieu.Name = "TB_Lieu";
             this.TB_Lieu.Size = new System.Drawing.Size(132, 20);
-            this.TB_Lieu.TabIndex = 10;
+            this.TB_Lieu.TabIndex = 9;
             // 
             // BTN_Cancel
             // 
@@ -129,7 +129,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(162, 288);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Cancel.TabIndex = 11;
+            this.BTN_Cancel.TabIndex = 15;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +138,7 @@
             this.TB_ScoreHome.Location = new System.Drawing.Point(114, 218);
             this.TB_ScoreHome.Name = "TB_ScoreHome";
             this.TB_ScoreHome.Size = new System.Drawing.Size(132, 20);
-            this.TB_ScoreHome.TabIndex = 12;
+            this.TB_ScoreHome.TabIndex = 11;
             // 
             // TB_ScoreVisiteur
             // 
@@ -153,7 +153,7 @@
             this.label6.Location = new System.Drawing.Point(15, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 14;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Score Home";
             // 
             // label7
@@ -162,7 +162,7 @@
             this.label7.Location = new System.Drawing.Point(15, 259);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 13);
-            this.label7.TabIndex = 15;
+            this.label7.TabIndex = 12;
             this.label7.Text = "Score Visiteur";
             // 
             // CB_Visiteur
@@ -171,7 +171,7 @@
             this.CB_Visiteur.Location = new System.Drawing.Point(114, 106);
             this.CB_Visiteur.Name = "CB_Visiteur";
             this.CB_Visiteur.Size = new System.Drawing.Size(132, 21);
-            this.CB_Visiteur.TabIndex = 16;
+            this.CB_Visiteur.TabIndex = 5;
             // 
             // CB_HOME
             // 
@@ -179,7 +179,7 @@
             this.CB_HOME.Location = new System.Drawing.Point(114, 63);
             this.CB_HOME.Name = "CB_HOME";
             this.CB_HOME.Size = new System.Drawing.Size(132, 21);
-            this.CB_HOME.TabIndex = 16;
+            this.CB_HOME.TabIndex = 3;
             // 
             // Form_Match_Ajouter
             // 

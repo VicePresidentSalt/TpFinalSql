@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Equipe Home";
             // 
             // TB_EquipeVisiteur
@@ -65,7 +65,7 @@
             this.TB_EquipeVisiteur.Location = new System.Drawing.Point(398, 9);
             this.TB_EquipeVisiteur.Name = "TB_EquipeVisiteur";
             this.TB_EquipeVisiteur.Size = new System.Drawing.Size(77, 13);
-            this.TB_EquipeVisiteur.TabIndex = 2;
+            this.TB_EquipeVisiteur.TabIndex = 1;
             this.TB_EquipeVisiteur.Text = "Equipe Visiteur";
             // 
             // label3
@@ -84,7 +84,7 @@
             this.TB_EquipeHomeScore.Location = new System.Drawing.Point(64, 144);
             this.TB_EquipeHomeScore.Name = "TB_EquipeHomeScore";
             this.TB_EquipeHomeScore.Size = new System.Drawing.Size(121, 20);
-            this.TB_EquipeHomeScore.TabIndex = 4;
+            this.TB_EquipeHomeScore.TabIndex = 2;
             // 
             // TB_EquipeVisiteurScore
             // 
@@ -93,7 +93,7 @@
             this.TB_EquipeVisiteurScore.Location = new System.Drawing.Point(384, 144);
             this.TB_EquipeVisiteurScore.Name = "TB_EquipeVisiteurScore";
             this.TB_EquipeVisiteurScore.Size = new System.Drawing.Size(121, 20);
-            this.TB_EquipeVisiteurScore.TabIndex = 5;
+            this.TB_EquipeVisiteurScore.TabIndex = 4;
             // 
             // DGV_Match
             // 
@@ -111,7 +111,7 @@
             this.DGV_Match.RowHeadersVisible = false;
             this.DGV_Match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Match.Size = new System.Drawing.Size(512, 130);
-            this.DGV_Match.TabIndex = 6;
+            this.DGV_Match.TabIndex = 5;
             this.DGV_Match.SelectionChanged += new System.EventHandler(this.DGV_Match_SelectionChanged);
             // 
             // BTN_Ajouter
@@ -120,7 +120,7 @@
             this.BTN_Ajouter.Location = new System.Drawing.Point(64, 433);
             this.BTN_Ajouter.Name = "BTN_Ajouter";
             this.BTN_Ajouter.Size = new System.Drawing.Size(108, 23);
-            this.BTN_Ajouter.TabIndex = 10;
+            this.BTN_Ajouter.TabIndex = 7;
             this.BTN_Ajouter.Text = "Ajouter Rencontre";
             this.BTN_Ajouter.UseVisualStyleBackColor = true;
             this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
@@ -131,7 +131,7 @@
             this.BTN_Modifier.Location = new System.Drawing.Point(397, 433);
             this.BTN_Modifier.Name = "BTN_Modifier";
             this.BTN_Modifier.Size = new System.Drawing.Size(108, 23);
-            this.BTN_Modifier.TabIndex = 11;
+            this.BTN_Modifier.TabIndex = 8;
             this.BTN_Modifier.Text = "Modifier Rencontre";
             this.BTN_Modifier.UseVisualStyleBackColor = true;
             this.BTN_Modifier.Click += new System.EventHandler(this.BTN_Modifier_Click);
@@ -143,7 +143,7 @@
             this.BTN_OK.Location = new System.Drawing.Point(233, 463);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
-            this.BTN_OK.TabIndex = 12;
+            this.BTN_OK.TabIndex = 9;
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +187,7 @@
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Joueurs.Size = new System.Drawing.Size(512, 111);
-            this.DGV_Joueurs.TabIndex = 15;
+            this.DGV_Joueurs.TabIndex = 6;
             // 
             // Form_Match
             // 
