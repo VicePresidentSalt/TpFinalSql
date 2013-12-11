@@ -143,3 +143,12 @@ grant select on cotejoueurs to public;
 create view Fiches AS select nomjoueurs,prenomjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points
 from joueurs j inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by nomjoueurs,prenomjoueur,equipejoueur
 order by points desc;
+
+create or replace View Classement as 
+select count(EquipeHOME)*2 as NbPoints,EquipeHOME as equipe from match where ScoreHome>scorevisiteur group by EquipeHOME 
+union all select count (equipevisiteur)*2 as NbPoints,equipevisiteur as equipe from match where scorevisiteur>ScoreHome group by equipevisiteur 
+union all select count(EquipeHOME) as NbPoints,EquipeHOME as equipe from match where scorevisiteur = ScoreHome group by EquipeHOME 
+union all select count(equipevisiteur) as NbPoints,equipevisiteur as equipe from match where scorevisiteur = ScoreHome group by equipevisiteur; 
+--select * from classement;
+select * from classement;
+select equipe, sum(Nbpoints)as total from classement group by equipe order by total desc;

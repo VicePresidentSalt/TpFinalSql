@@ -240,7 +240,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 347);
+            this.ClientSize = new System.Drawing.Size(305, 382);
             this.Controls.Add(this.BF_Precedent);
             this.Controls.Add(this.BF_Suivant);
             this.Controls.Add(this.BF_Debut);
