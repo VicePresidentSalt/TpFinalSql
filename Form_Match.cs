@@ -199,7 +199,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 JoueursDataSet = new DataSet();
                 oraDataJoueurs.Fill(JoueursDataSet,"JoueursDGV");
                 DGV_Joueurs.DataSource = JoueursDataSet.Tables[0];
-
+                
 
                 TB_EquipeHomeScore.Text = DGV_Match.SelectedRows[0].Cells[5].Value.ToString();
                 TB_EquipeVisiteurScore.Text = DGV_Match.SelectedRows[0].Cells[6].Value.ToString();

@@ -40,6 +40,7 @@
             this.BTN_Modifier = new System.Windows.Forms.Button();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_OK = new System.Windows.Forms.Button();
+            this.Flash_Classement = new FlashButton.FlashButton();
             this.FB_Top5 = new FlashButton.FlashButton();
             this.PB_Equipes = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Equipes)).BeginInit();
@@ -62,7 +63,7 @@
             this.DGV_Equipes.ReadOnly = true;
             this.DGV_Equipes.RowHeadersVisible = false;
             this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Equipes.Size = new System.Drawing.Size(451, 275);
+            this.DGV_Equipes.Size = new System.Drawing.Size(451, 223);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Equipes_CellMouseDoubleClick);
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
@@ -75,7 +76,7 @@
             this.modifierToolStripMenuItem,
             this.sToolStripMenuItem});
             this.CMS_Equipe.Name = "CMS_Equipe";
-            this.CMS_Equipe.Size = new System.Drawing.Size(168, 76);
+            this.CMS_Equipe.Size = new System.Drawing.Size(154, 76);
             // 
             // voirToolStripMenuItem
             // 
@@ -83,21 +84,21 @@
             this.voirToolStripMenuItem.Name = "voirToolStripMenuItem";
             this.voirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
             this.voirToolStripMenuItem.ShowShortcutKeys = false;
-            this.voirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.voirToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.voirToolStripMenuItem.Text = "&Voir";
             this.voirToolStripMenuItem.Click += new System.EventHandler(this.voirToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(164, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(150, 6);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.modifierToolStripMenuItem.ShowShortcutKeys = false;
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.modifierToolStripMenuItem.Text = "&Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.BTN_Modifier_Click);
             // 
@@ -105,7 +106,7 @@
             // 
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
             this.sToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.sToolStripMenuItem.Text = "Supprimer";
             this.sToolStripMenuItem.Click += new System.EventHandler(this.BTN_Delete_Click);
             // 
@@ -146,12 +147,26 @@
             // 
             this.BTN_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_OK.Location = new System.Drawing.Point(509, 338);
+            this.BTN_OK.Location = new System.Drawing.Point(509, 337);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 23);
             this.BTN_OK.TabIndex = 4;
             this.BTN_OK.Text = "Ok";
             this.BTN_OK.UseVisualStyleBackColor = true;
+            // 
+            // Flash_Classement
+            // 
+            this.Flash_Classement.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Default;
+            this.Flash_Classement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Flash_Classement.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Click;
+            this.Flash_Classement.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_WESLY;
+            this.Flash_Classement.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Default;
+            this.Flash_Classement.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_OVER;
+            this.Flash_Classement.Location = new System.Drawing.Point(279, 304);
+            this.Flash_Classement.Name = "Flash_Classement";
+            this.Flash_Classement.Size = new System.Drawing.Size(52, 57);
+            this.Flash_Classement.TabIndex = 6;
+            this.Flash_Classement.Click += new System.EventHandler(this.Flash_Classement_Click);
             // 
             // FB_Top5
             // 
@@ -162,7 +177,7 @@
             this.FB_Top5.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star_WESLEY;
             this.FB_Top5.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star;
             this.FB_Top5.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources._5star_Over;
-            this.FB_Top5.Location = new System.Drawing.Point(200, 305);
+            this.FB_Top5.Location = new System.Drawing.Point(119, 304);
             this.FB_Top5.Name = "FB_Top5";
             this.FB_Top5.Size = new System.Drawing.Size(62, 56);
             this.FB_Top5.TabIndex = 5;
@@ -183,7 +198,8 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 373);
+            this.ClientSize = new System.Drawing.Size(596, 372);
+            this.Controls.Add(this.Flash_Classement);
             this.Controls.Add(this.FB_Top5);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.PB_Equipes);
@@ -219,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
         private FlashButton.FlashButton FB_Top5;
+        private FlashButton.FlashButton Flash_Classement;
     }
 }

@@ -253,5 +253,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             Top5.ShowDialog();
         }
+
+        private void Flash_Classement_Click(object sender, EventArgs e)
+        {
+            Form_Classement Classement = new Form_Classement();
+            Classement.conn = conn;
+
+            Classement.ShowDialog();
+        }
     }
 }
