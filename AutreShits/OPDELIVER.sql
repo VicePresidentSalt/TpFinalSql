@@ -149,6 +149,7 @@ select count(EquipeHOME)*2 as NbPoints,EquipeHOME as equipe from match where Sco
 union all select count (equipevisiteur)*2 as NbPoints,equipevisiteur as equipe from match where scorevisiteur>ScoreHome group by equipevisiteur 
 union all select count(EquipeHOME) as NbPoints,EquipeHOME as equipe from match where scorevisiteur = ScoreHome group by EquipeHOME 
 union all select count(equipevisiteur) as NbPoints,equipevisiteur as equipe from match where scorevisiteur = ScoreHome group by equipevisiteur; 
---select * from classement;
 select * from classement;
 select equipe, sum(Nbpoints)as total from classement group by equipe order by total desc;
+
+select sum(Nbpoints) as total, equipe from classement group by equipe having equipe in (select nomequipe from Equipes where DivisionEquipe = 'Division Est') order by total desc
