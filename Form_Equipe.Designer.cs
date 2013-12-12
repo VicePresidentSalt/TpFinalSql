@@ -156,12 +156,12 @@
             // 
             // Flash_Classement
             // 
-            this.Flash_Classement.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Default;
+            this.Flash_Classement.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Default;
             this.Flash_Classement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Flash_Classement.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Click;
-            this.Flash_Classement.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_WESLY;
-            this.Flash_Classement.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_Default;
-            this.Flash_Classement.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_classement_OVER;
+            this.Flash_Classement.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Click;
+            this.Flash_Classement.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Wesly;
+            this.Flash_Classement.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Default;
+            this.Flash_Classement.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Over;
             this.Flash_Classement.Location = new System.Drawing.Point(279, 304);
             this.Flash_Classement.Name = "Flash_Classement";
             this.Flash_Classement.Size = new System.Drawing.Size(52, 57);
