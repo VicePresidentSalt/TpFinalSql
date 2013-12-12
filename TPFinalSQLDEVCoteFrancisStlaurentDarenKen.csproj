@@ -110,6 +110,12 @@
     <Compile Include="Form_Joueurs.Designer.cs">
       <DependentUpon>Form_Joueurs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Joueurs_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Joueurs_Ajouter.Designer.cs">
+      <DependentUpon>Form_Joueurs_Ajouter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Match.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Joueurs.resx">
       <DependentUpon>Form_Joueurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Joueurs_Ajouter.resx">
+      <DependentUpon>Form_Joueurs_Ajouter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Match.resx">
       <DependentUpon>Form_Match.cs</DependentUpon>

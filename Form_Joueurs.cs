@@ -121,6 +121,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             this.BindingContext[joueurDataSet, "Joueur"].Position =
             this.BindingContext[joueurDataSet, "Joueur"].Count - 1;
         }
+
+        private void BTN_Ajouter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
          
              

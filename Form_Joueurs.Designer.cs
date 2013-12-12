@@ -48,6 +48,8 @@
             this.BF_Debut = new BoutonFlèche.BoutonFlèche();
             this.BF_Suivant = new BoutonFlèche.BoutonFlèche();
             this.BF_Precedent = new BoutonFlèche.BoutonFlèche();
+            this.BTN_Ajouter = new System.Windows.Forms.Button();
+            this.BTN_modifier = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTN_OK
@@ -57,7 +59,7 @@
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 25);
             this.BTN_OK.TabIndex = 17;
-            this.BTN_OK.Text = "Ok";
+            this.BTN_OK.Text = "Fermer";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
             // TB_NumeroJoueur
@@ -70,6 +72,7 @@
             // 
             // TB_NomJoueur
             // 
+            this.TB_NomJoueur.Enabled = false;
             this.TB_NomJoueur.Location = new System.Drawing.Point(162, 68);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);
@@ -77,6 +80,7 @@
             // 
             // TB_PrenomJoueur
             // 
+            this.TB_PrenomJoueur.Enabled = false;
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(162, 107);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
@@ -84,6 +88,7 @@
             // 
             // TB_NumeroMaillotJoueur
             // 
+            this.TB_NumeroMaillotJoueur.Enabled = false;
             this.TB_NumeroMaillotJoueur.Location = new System.Drawing.Point(162, 181);
             this.TB_NumeroMaillotJoueur.Name = "TB_NumeroMaillotJoueur";
             this.TB_NumeroMaillotJoueur.Size = new System.Drawing.Size(129, 20);
@@ -91,6 +96,7 @@
             // 
             // DTP_DateNaissanceJoueur
             // 
+            this.DTP_DateNaissanceJoueur.Enabled = false;
             this.DTP_DateNaissanceJoueur.Location = new System.Drawing.Point(162, 143);
             this.DTP_DateNaissanceJoueur.Name = "DTP_DateNaissanceJoueur";
             this.DTP_DateNaissanceJoueur.Size = new System.Drawing.Size(129, 20);
@@ -163,6 +169,7 @@
             // 
             this.CB_EquipeJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CB_EquipeJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(162, 215);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
@@ -173,6 +180,7 @@
             // 
             this.CB_PositionJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CB_PositionJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CB_PositionJoueur.Enabled = false;
             this.CB_PositionJoueur.FormattingEnabled = true;
             this.CB_PositionJoueur.Items.AddRange(new object[] {
             "Attaquant",
@@ -235,12 +243,33 @@
             this.BF_Precedent.TabIndex = 24;
             this.BF_Precedent.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BF_Precedent_MouseClick);
             // 
+            // BTN_Ajouter
+            // 
+            this.BTN_Ajouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Ajouter.Location = new System.Drawing.Point(210, 337);
+            this.BTN_Ajouter.Name = "BTN_Ajouter";
+            this.BTN_Ajouter.Size = new System.Drawing.Size(75, 25);
+            this.BTN_Ajouter.TabIndex = 17;
+            this.BTN_Ajouter.Text = "Ajouter";
+            this.BTN_Ajouter.UseVisualStyleBackColor = true;
+            this.BTN_Ajouter.Click += new System.EventHandler(this.BTN_Ajouter_Click);
+            // 
+            // BTN_modifier
+            // 
+            this.BTN_modifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_modifier.Location = new System.Drawing.Point(25, 337);
+            this.BTN_modifier.Name = "BTN_modifier";
+            this.BTN_modifier.Size = new System.Drawing.Size(75, 25);
+            this.BTN_modifier.TabIndex = 17;
+            this.BTN_modifier.Text = "Modifier";
+            this.BTN_modifier.UseVisualStyleBackColor = true;
+            // 
             // Form_Joueurs
             // 
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 382);
+            this.ClientSize = new System.Drawing.Size(308, 374);
             this.Controls.Add(this.BF_Precedent);
             this.Controls.Add(this.BF_Suivant);
             this.Controls.Add(this.BF_Debut);
@@ -259,6 +288,8 @@
             this.Controls.Add(this.TB_PrenomJoueur);
             this.Controls.Add(this.TB_NomJoueur);
             this.Controls.Add(this.TB_NumeroJoueur);
+            this.Controls.Add(this.BTN_modifier);
+            this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.BTN_OK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -293,6 +324,8 @@
         private BoutonFlèche.BoutonFlèche BF_Debut;
         private BoutonFlèche.BoutonFlèche BF_Suivant;
         private BoutonFlèche.BoutonFlèche BF_Precedent;
+        private System.Windows.Forms.Button BTN_Ajouter;
+        private System.Windows.Forms.Button BTN_modifier;
 
     }
 }
