@@ -192,9 +192,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 
                 OracleCommand oraJoueurs = conn.CreateCommand();
                 oraJoueurs.CommandText = " SELECT * FROM JOUEURS INNER JOIN MATCH ON JOUEURS.EQUIPEJOUEUR = MATCH.EQUIPEHOME " +
-                                         " WHERE EQUIPEHOME='" + DGV_Match.SelectedRows[0].Cells[1].Value.ToString() + "' UNION " +
+                                         " WHERE EQUIPEHOME='" + DGV_Match.SelectedRows[0].Cells[1].Value.ToString() + "' and Match.NumeroMatch = "+ DGV_Match.SelectedRows[0].Cells[0].Value.ToString() +"  UNION " +
                                          " SELECT * FROM JOUEURS INNER JOIN MATCH ON JOUEURS.EQUIPEJOUEUR = MATCH.EQUIPEVISITEUR" +
-                                         "  WHERE EQUIPEVISITEUR= '" + DGV_Match.SelectedRows[0].Cells[2].Value.ToString() + "' ORDER BY 6";
+                                         "  WHERE EQUIPEVISITEUR= '" + DGV_Match.SelectedRows[0].Cells[2].Value.ToString() + "' and Match.NumeroMatch = "+DGV_Match.SelectedRows[0].Cells[0].Value.ToString()+" ORDER BY 6 ";
                 OracleDataAdapter oraDataJoueurs = new OracleDataAdapter(oraJoueurs);
                 JoueursDataSet = new DataSet();
                 oraDataJoueurs.Fill(JoueursDataSet,"JoueursDGV");

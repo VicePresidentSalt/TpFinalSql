@@ -63,7 +63,7 @@
             this.DGV_Equipes.ReadOnly = true;
             this.DGV_Equipes.RowHeadersVisible = false;
             this.DGV_Equipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Equipes.Size = new System.Drawing.Size(451, 223);
+            this.DGV_Equipes.Size = new System.Drawing.Size(451, 253);
             this.DGV_Equipes.TabIndex = 0;
             this.DGV_Equipes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Equipes_CellMouseDoubleClick);
             this.DGV_Equipes.SelectionChanged += new System.EventHandler(this.DGV_Equipes_SelectionChanged);
@@ -156,6 +156,7 @@
             // 
             // Flash_Classement
             // 
+            this.Flash_Classement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Flash_Classement.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Default;
             this.Flash_Classement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Flash_Classement.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Podium_Click;
@@ -208,6 +209,8 @@
             this.Controls.Add(this.BTN_Ajouter);
             this.Controls.Add(this.DGV_Equipes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(612, 411);
             this.Name = "Form_Equipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

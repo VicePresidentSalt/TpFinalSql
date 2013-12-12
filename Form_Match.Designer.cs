@@ -179,6 +179,10 @@
             // 
             // DGV_Joueurs
             // 
+            this.DGV_Joueurs.AllowUserToAddRows = false;
+            this.DGV_Joueurs.AllowUserToDeleteRows = false;
+            this.DGV_Joueurs.AllowUserToOrderColumns = true;
+            this.DGV_Joueurs.AllowUserToResizeColumns = false;
             this.DGV_Joueurs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
