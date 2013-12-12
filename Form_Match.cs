@@ -18,6 +18,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Form callBackForm = null;
         public DataSet MatchDataSet = null;
         public DataSet JoueursDataSet = null;
+        private bool Currval = false;
 
         public Form_Match()
         {
@@ -47,31 +48,40 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Ajouter_Click(object sender, EventArgs e)
         {
+            string sqlAjout = null;
             Form_Match_Ajouter Ajouter = new Form_Match_Ajouter();
             Ajouter.Text = "Ajout";
             Ajouter.conn = conn;
-            //string sql = "Select seqmatch.currval from dual ";
-            //OracleCommand oraCMD = new OracleCommand(sql, conn);
-            //oraCMD.CommandType = CommandType.Text;
+            if (!Currval)
+            {
+                sqlAjout = "Select MAX(NumeroMatch) from Match ";
+            }
+            else
+            {
+                sqlAjout = "Select Seqmatch.currval form dual ";
+            }
+            OracleCommand oraCMD = new OracleCommand(sqlAjout, conn);
+            oraCMD.CommandType = CommandType.Text;
 
 
-            //try
-            //{
-            //    OracleDataReader oraRead = oraCMD.ExecuteReader();
-            //    while (oraRead.Read())
-            //    {
-            //        Ajouter.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
+            try
+            {
+                OracleDataReader oraRead = oraCMD.ExecuteReader();
+                while (oraRead.Read())
+                {
+                    Ajouter.numeroMatch = (oraRead.GetInt32(0) + 1).ToString();
 
-            //    }
-            //    oraRead.Close();
-            //}
+                }
+                oraRead.Close();
+            }
 
-            //catch (OracleException ex)
-            //{
-            //    MessageBox.Show(ex.Message.ToString());
-            //}
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
             if (Ajouter.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                Currval = true;
                 string sqlMatchAjout = "insert into Match (EquipeHome,EquipeVisiteur,DateRencontre,Lieu,ScoreHome,ScoreVisiteur)" +
                     " VALUES(:EquipeHome,:EquipeVisiteur,:DateRencontre,:Lieu,:ScoreHome,:ScoreVisiteur)";
 
