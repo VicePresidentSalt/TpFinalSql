@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Match));
             this.label1 = new System.Windows.Forms.Label();
             this.TB_EquipeVisiteur = new System.Windows.Forms.Label();
@@ -42,11 +43,15 @@
             this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
             this.PB_Versus = new System.Windows.Forms.PictureBox();
             this.DGV_Joueurs = new System.Windows.Forms.DataGridView();
+            this.TSM_Stats = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.TSM_Stats_voir = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Match)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeVisiteurLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).BeginInit();
+            this.TSM_Stats.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -187,11 +192,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Joueurs.ContextMenuStrip = this.TSM_Stats;
             this.DGV_Joueurs.Location = new System.Drawing.Point(41, 316);
             this.DGV_Joueurs.Name = "DGV_Joueurs";
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Joueurs.Size = new System.Drawing.Size(512, 111);
             this.DGV_Joueurs.TabIndex = 6;
+            this.DGV_Joueurs.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Joueurs_CellMouseDoubleClick);
+            // 
+            // TSM_Stats
+            // 
+            this.TSM_Stats.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM_Stats_voir,
+            this.toolStripMenuItem1});
+            this.TSM_Stats.Name = "contextMenuStrip1";
+            this.TSM_Stats.Size = new System.Drawing.Size(141, 32);
+            // 
+            // TSM_Stats_voir
+            // 
+            this.TSM_Stats_voir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.TSM_Stats_voir.Name = "TSM_Stats_voir";
+            this.TSM_Stats_voir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.TSM_Stats_voir.Size = new System.Drawing.Size(140, 22);
+            this.TSM_Stats_voir.Text = "&Stats";
+            this.TSM_Stats_voir.Click += new System.EventHandler(this.TSM_Stats_voir_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 6);
             // 
             // Form_Match
             // 
@@ -224,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_EquipeHomeLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Versus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Joueurs)).EndInit();
+            this.TSM_Stats.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +274,8 @@
         private System.Windows.Forms.PictureBox PB_EquipeHomeLogo;
         private System.Windows.Forms.PictureBox PB_EquipeVisiteurLogo;
         private System.Windows.Forms.DataGridView DGV_Joueurs;
+        private System.Windows.Forms.ContextMenuStrip TSM_Stats;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Stats_voir;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }

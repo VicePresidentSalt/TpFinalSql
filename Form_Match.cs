@@ -19,6 +19,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public DataSet MatchDataSet = null;
         public DataSet JoueursDataSet = null;
         private bool Currval = false;
+       
 
         public Form_Match()
         {
@@ -58,7 +59,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
             else
             {
-                sqlAjout = "Select Seqmatch.currval form dual ";
+                sqlAjout = "Select Seqmatch.currval from dual ";
             }
             OracleCommand oraCMD = new OracleCommand(sqlAjout, conn);
             oraCMD.CommandType = CommandType.Text;
@@ -240,6 +241,31 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                         }
                     }
                 }
+            }
+        }
+
+        private void FillStats()
+        {
+            Form_Stats Stats = new Form_Stats();
+            Stats.conn = conn;
+            this.Hide();
+            Stats.callBackForm = this;
+            Stats.numeroJoueurs = DGV_Joueurs.SelectedRows[0].Cells[0].Value.ToString();
+            Stats.ShowDialog();
+
+            
+        }
+
+        private void TSM_Stats_voir_Click(object sender, EventArgs e)
+        {
+            FillStats();
+        }
+
+        private void DGV_Joueurs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                FillStats();
             }
         }
 
