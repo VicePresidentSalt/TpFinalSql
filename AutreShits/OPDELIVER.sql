@@ -140,8 +140,8 @@ CREATE PUBLIC SYNONYM CoteJoueurs FOR cotefran.joueurs;
 grant all on CoteJoueurs to stlauren with grant option;
 grant select on cotejoueurs to public;
 
-create view Fiches AS select nomjoueurs,prenomjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points
-from joueurs j inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by nomjoueurs,prenomjoueur,equipejoueur
+create view Fiches AS select j.numerojoueurs,nomjoueurs,prenomjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points ,sum(tempspunition) as Punition
+from joueurs j inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by j.numerojoueurs,nomjoueurs,prenomjoueur,equipejoueur
 order by points desc;
 
 create or replace View Classement as 
@@ -152,4 +152,4 @@ union all select count(equipevisiteur) as NbPoints,equipevisiteur as equipe from
 select * from classement;
 select equipe, sum(Nbpoints)as total from classement group by equipe order by total desc;
 
-select sum(Nbpoints) as total, equipe from classement group by equipe having equipe in (select nomequipe from Equipes where DivisionEquipe = 'Division Est') order by total desc
+select sum(Nbpoints) as total, equipe from classement group by equipe having equipe in (select nomequipe from Equipes where DivisionEquipe = 'Division Est') order by total desc;
