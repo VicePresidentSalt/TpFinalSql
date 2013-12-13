@@ -146,7 +146,7 @@
             // DGV_Top5
             // 
             this.DGV_Top5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Top5.Location = new System.Drawing.Point(185, 174);
+            this.DGV_Top5.Location = new System.Drawing.Point(224, 189);
             this.DGV_Top5.Name = "DGV_Top5";
             this.DGV_Top5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Top5.Size = new System.Drawing.Size(10, 10);
@@ -158,7 +158,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 203);
+            this.ClientSize = new System.Drawing.Size(246, 202);
             this.Controls.Add(this.DGV_Top5);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.LB_5emePos);
