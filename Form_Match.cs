@@ -269,6 +269,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
         }
 
+        private void FB_Calendrier_Click(object sender, EventArgs e)
+        {
+            Form_Calendrier_Match Calendrier = new Form_Calendrier_Match();
+            Calendrier.conn = conn;
+            this.Hide();
+            Calendrier.callBackForm = this;
+            Calendrier.ShowDialog();
+        }
+
     }
 
 

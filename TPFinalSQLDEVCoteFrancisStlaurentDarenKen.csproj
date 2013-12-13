@@ -92,6 +92,12 @@
     <Compile Include="FormDivision.Designer.cs">
       <DependentUpon>FormDivision.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Calendrier_Match.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Calendrier_Match.Designer.cs">
+      <DependentUpon>Form_Calendrier_Match.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Classement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDivision.resx">
       <DependentUpon>FormDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Calendrier_Match.resx">
+      <DependentUpon>Form_Calendrier_Match.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Classement.resx">
       <DependentUpon>Form_Classement.cs</DependentUpon>
@@ -226,6 +235,9 @@
     <None Include="AutreShits\PhotoTPFinal\Logo_Podium_Wesly.png" />
     <None Include="AutreShits\PhotoTPFinal\Logo_Podium_Default.png" />
     <None Include="AutreShits\PhotoTPFinal\Logo_Podium_Over.png" />
+    <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Click.png" />
+    <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Default.png" />
+    <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Over.png" />
     <Content Include="Resources\Logo_-_Versus_bmp.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
