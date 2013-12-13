@@ -36,12 +36,14 @@
             // 
             // Calendrier_Match
             // 
+            this.Calendrier_Match.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Calendrier_Match.Location = new System.Drawing.Point(105, 18);
             this.Calendrier_Match.Name = "Calendrier_Match";
             this.Calendrier_Match.TabIndex = 0;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 192);
             this.dataGridView1.Name = "dataGridView1";
@@ -69,9 +71,12 @@
             this.Controls.Add(this.Calendrier_Match);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(443, 436);
             this.Name = "Form_Calendrier_Match";
+            this.ShowIcon = false;
             this.Text = "Match Par Calendrier";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Calendrier_Match_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Calendrier_Match_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

@@ -23,6 +23,19 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             if (callBackForm != null)
                 callBackForm.Show();
+            
         }
+
+        private void Form_Calendrier_Match_Load(object sender, EventArgs e)
+        {
+            ReloadDGV();
+        }
+
+        private void ReloadDGV()
+        { 
+           // if(Calendrier_Match.
+        }
+
+        
     }
 }
