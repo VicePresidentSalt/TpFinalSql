@@ -59,6 +59,7 @@
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 25);
             this.BTN_OK.TabIndex = 17;
+            this.BTN_OK.TabStop = false;
             this.BTN_OK.Text = "Fermer";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
@@ -67,6 +68,7 @@
             this.TB_NumeroJoueur.Enabled = false;
             this.TB_NumeroJoueur.Location = new System.Drawing.Point(162, 29);
             this.TB_NumeroJoueur.Name = "TB_NumeroJoueur";
+            this.TB_NumeroJoueur.ReadOnly = true;
             this.TB_NumeroJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_NumeroJoueur.TabIndex = 1;
             // 
@@ -75,6 +77,7 @@
             this.TB_NomJoueur.Enabled = false;
             this.TB_NomJoueur.Location = new System.Drawing.Point(162, 68);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
+            this.TB_NomJoueur.ReadOnly = true;
             this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_NomJoueur.TabIndex = 3;
             // 
@@ -83,6 +86,7 @@
             this.TB_PrenomJoueur.Enabled = false;
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(162, 107);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
+            this.TB_PrenomJoueur.ReadOnly = true;
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_PrenomJoueur.TabIndex = 5;
             // 
@@ -263,6 +267,7 @@
             this.BTN_modifier.TabIndex = 17;
             this.BTN_modifier.Text = "Modifier";
             this.BTN_modifier.UseVisualStyleBackColor = true;
+            this.BTN_modifier.Click += new System.EventHandler(this.BTN_modifier_Click);
             // 
             // Form_Joueurs
             // 
