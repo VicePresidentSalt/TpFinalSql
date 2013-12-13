@@ -15,7 +15,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public OracleConnection conn = null;
         public Form callBackForm = null;
         private DataSet StatsDataSet = null;
-        public string numJoueurs = null;
         public Form_Stats()
         {
             InitializeComponent();
@@ -123,12 +122,13 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void Form_Stats_Load(object sender, EventArgs e)
         {
-            if (numJoueurs != null) ;
+            if (numeroJoueurs != null) ;
             {
+                
                 try
                 {
                     OracleCommand oraStats = conn.CreateCommand();
-                    oraStats.CommandText = " Select * From Fiches where NumeroJoueurs = " + numJoueurs;
+                    oraStats.CommandText = " Select * From Fiches where NumeroJoueurs = " + numeroJoueurs;
                     OracleDataAdapter oraAdapter = new OracleDataAdapter(oraStats);
                     StatsDataSet = new DataSet();
                     oraAdapter.Fill(StatsDataSet);
