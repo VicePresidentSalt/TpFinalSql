@@ -14,6 +14,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
     {
         public Form callBackForm = null;
         public OracleConnection conn = null;
+        private DataSet CalendarMatch = null;
         private DataSet dateMatch = null;
         public Form_Calendrier_Match()
         {
@@ -33,18 +34,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         }
 
         private void ReloadDGV()
-        {
+        {   
  
             try
             {
-                
-                 OracleCommand oraSelect = conn.CreateCommand();
-                 DTP_CalendrierMatch.Value = DateTime.Parse(DTP_CalendrierMatch.Value.ToShortDateString());
-                 oraSelect.CommandText = "Select * From Match where DATERENCONTRE = '" + DateTime.Parse(DTP_CalendrierMatch.Value.ToShortDateString()) +"'";
+
+                OracleCommand oraSelect = conn.CreateCommand();
+                oraSelect.CommandText = "Select * From Match where DATERENCONTRE = '" + DTP_CalendrierMatch.Value.ToShortDateString() + "'";
                  OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
                  dateMatch = new DataSet();
                  oraAdapter.Fill(dateMatch);
-                 DGV_DateMatchCalendar.DataSource = dateMatch.Tables[0];   
+                 DGV_DateMatchCalendar.DataSource = dateMatch.Tables[0];
+                 
                  
             }
             catch (OracleException ex)
@@ -54,5 +55,5 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         }
 
         
-    }
+    } 
 }

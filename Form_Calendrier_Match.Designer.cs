@@ -38,7 +38,7 @@
             // Calendrier_Match
             // 
             this.Calendrier_Match.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Calendrier_Match.Location = new System.Drawing.Point(18, 18);
+            this.Calendrier_Match.Location = new System.Drawing.Point(10, 16);
             this.Calendrier_Match.Name = "Calendrier_Match";
             this.Calendrier_Match.TabIndex = 0;
             // 
@@ -46,7 +46,7 @@
             // 
             this.DGV_DateMatchCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_DateMatchCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_DateMatchCalendar.Location = new System.Drawing.Point(21, 192);
+            this.DGV_DateMatchCalendar.Location = new System.Drawing.Point(21, 206);
             this.DGV_DateMatchCalendar.Name = "DGV_DateMatchCalendar";
             this.DGV_DateMatchCalendar.Size = new System.Drawing.Size(394, 150);
             this.DGV_DateMatchCalendar.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.AcceptButton = this.BTN_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 397);
+            this.ClientSize = new System.Drawing.Size(427, 398);
             this.Controls.Add(this.DTP_CalendrierMatch);
             this.Controls.Add(this.BTN_OK);
             this.Controls.Add(this.DGV_DateMatchCalendar);
