@@ -140,8 +140,8 @@ CREATE PUBLIC SYNONYM CoteJoueurs FOR cotefran.joueurs;
 grant all on CoteJoueurs to stlauren with grant option;
 grant select on cotejoueurs to public;
 
-create view Fiches AS select j.numerojoueurs,nomjoueurs,prenomjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points ,sum(tempspunition) as Punition
-from joueurs j inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by j.numerojoueurs,nomjoueurs,prenomjoueur,equipejoueur
+create or replace view Fiches AS select j.numerojoueurs,nomjoueurs,prenomjoueur,positionjoueur,equipejoueur,sum(nbbuts) as Buts , sum(nbPasses) as Passes, sum(nbbuts)+ sum(nbPasses) as points ,sum(tempspunition) as Punition
+from joueurs j inner join statistiques s on s.numerojoueurs = j.numerojoueurs group by j.numerojoueurs,nomjoueurs,prenomjoueur,equipejoueur,positionjoueur
 order by points desc;
 
 create or replace View Classement as 
