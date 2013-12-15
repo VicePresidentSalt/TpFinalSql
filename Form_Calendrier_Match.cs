@@ -14,8 +14,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
     {
         public Form callBackForm = null;
         public OracleConnection conn = null;
-        private DataSet CalendarMatch = null;
         private DataSet dateMatch = null;
+        private DateTime Date = DateTime.Today;
         public Form_Calendrier_Match()
         {
             InitializeComponent();
@@ -40,11 +40,15 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             {
 
                 OracleCommand oraSelect = conn.CreateCommand();
-                oraSelect.CommandText = "Select * From Match where DATERENCONTRE = '" + DTP_CalendrierMatch.Value.ToShortDateString() + "'";
-                 OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
-                 dateMatch = new DataSet();
-                 oraAdapter.Fill(dateMatch);
-                 DGV_DateMatchCalendar.DataSource = dateMatch.Tables[0];
+                oraSelect.CommandText = "Select * From Match where DATERENCONTRE = :Daterencontre";
+
+                OracleParameter OraParaDateRencontre = new OracleParameter(":Daterencontre", OracleDbType.Date);
+                OraParaDateRencontre.Value = Date;
+                oraSelect.Parameters.Add(OraParaDateRencontre);
+                OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect);
+                dateMatch = new DataSet();
+                oraAdapter.Fill(dateMatch);
+                DGV_DateMatchCalendar.DataSource = dateMatch.Tables[0];
                  
                  
             }
@@ -52,6 +56,12 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
+        }
+
+        private void Calendrier_Match_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            Date = Calendrier_Match.SelectionRange.Start;
+            ReloadDGV();
         }
 
         

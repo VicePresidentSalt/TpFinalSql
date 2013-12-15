@@ -41,6 +41,7 @@
             this.Calendrier_Match.Location = new System.Drawing.Point(10, 16);
             this.Calendrier_Match.Name = "Calendrier_Match";
             this.Calendrier_Match.TabIndex = 0;
+            this.Calendrier_Match.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendrier_Match_DateChanged);
             // 
             // DGV_DateMatchCalendar
             // 
