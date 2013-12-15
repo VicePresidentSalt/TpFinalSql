@@ -138,7 +138,6 @@
             // 
             this.CB_EquipeJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CB_EquipeJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CB_EquipeJoueur.Enabled = false;
             this.CB_EquipeJoueur.FormattingEnabled = true;
             this.CB_EquipeJoueur.Location = new System.Drawing.Point(158, 207);
             this.CB_EquipeJoueur.Name = "CB_EquipeJoueur";
@@ -210,7 +209,6 @@
             // 
             // DTP_DateNaissanceJoueur
             // 
-            this.DTP_DateNaissanceJoueur.Enabled = false;
             this.DTP_DateNaissanceJoueur.Location = new System.Drawing.Point(158, 135);
             this.DTP_DateNaissanceJoueur.Name = "DTP_DateNaissanceJoueur";
             this.DTP_DateNaissanceJoueur.Size = new System.Drawing.Size(129, 20);
@@ -218,7 +216,6 @@
             // 
             // TB_NumeroMaillotJoueur
             // 
-            this.TB_NumeroMaillotJoueur.Enabled = false;
             this.TB_NumeroMaillotJoueur.Location = new System.Drawing.Point(158, 173);
             this.TB_NumeroMaillotJoueur.Name = "TB_NumeroMaillotJoueur";
             this.TB_NumeroMaillotJoueur.Size = new System.Drawing.Size(129, 20);
@@ -226,7 +223,6 @@
             // 
             // TB_PrenomJoueur
             // 
-            this.TB_PrenomJoueur.Enabled = false;
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(158, 99);
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
@@ -234,7 +230,6 @@
             // 
             // TB_NomJoueur
             // 
-            this.TB_NomJoueur.Enabled = false;
             this.TB_NomJoueur.Location = new System.Drawing.Point(158, 60);
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);

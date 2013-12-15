@@ -118,6 +118,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {
             Form_Joueurs_Ajouter fja = new Form_Joueurs_Ajouter();
             fja.callBackForm = this;
+            fja.Location = this.Location;
+            this.Hide();
             fja.Text = "Ajout de joueurs";
 
             if (fja.ShowDialog() == System.Windows.Forms.DialogResult.OK)
