@@ -18,7 +18,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private string Equipe;
         private bool Currval = false;
         private string sqlnum = null;
-        
+
         public Form_Joueurs(string equipe)
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         }
 
         private void Form_Joueurs_FormClosed(object sender, FormClosedEventArgs e)
-        {            
+        {
             if (callBackForm != null)
                 callBackForm.Show();
         }
@@ -40,6 +40,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 BF_Dernier.Enabled = false;
                 BF_Precedent.Enabled = false;
                 BF_Suivant.Enabled = false;
+                BTN_delete.Enabled = false;
             }
             else
             {
@@ -48,6 +49,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 BF_Dernier.Enabled = true;
                 BF_Precedent.Enabled = true;
                 BF_Suivant.Enabled = true;
+                BTN_delete.Enabled = true;
             }
         }
 
@@ -71,14 +73,16 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             FillForm();
             updateControls();
         }
-        
-        private void FillForm()
+
+        public void FillForm()
         {
             OracleCommand oraSelect = conn.CreateCommand();
             oraSelect.CommandText = "SELECT * FROM Joueurs WHERE EquipeJoueur=:NomEquipe";
             oraSelect.Parameters.Add(new OracleParameter(":NomEquipe", Equipe));
-            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect)) {
-                if (joueurDataSet.Tables.Contains("Joueur")) {
+            using (OracleDataAdapter oraAdapter = new OracleDataAdapter(oraSelect))
+            {
+                if (joueurDataSet.Tables.Contains("Joueur"))
+                {
                     joueurDataSet.Tables["Joueur"].Clear();
 
                 }
@@ -87,10 +91,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
 
             UpdateTextBox();
-            
+
         }
         private void UpdateTextBox()
         {
+            ClearBindings();
             TB_NumeroJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NumeroJoueurs");
             TB_NomJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.NomJoueurs");
             TB_PrenomJoueur.DataBindings.Add("Text", joueurDataSet, "Joueur.PrenomJoueur");
@@ -148,11 +153,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             if (!Currval)
             {
-                sqlnum = "Select MAX(NumeroMatch) from Match ";
+                sqlnum = "Select MAX(numerojoueurs) from joueurs ";
             }
             else
             {
-                sqlnum = "Select Seqmatch.currval from dual ";
+                sqlnum = "Select seqjoueurs.currval from dual ";
             }
             OracleCommand oraCMD = new OracleCommand(sqlnum, conn);
             oraCMD.CommandType = CommandType.Text;
@@ -177,8 +182,9 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             if (fja.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                                string sqlAjout = "insert into Joueurs (Nomjoueurs,Prenomjoueur,datenaissance,numeromaillot,equipejoueur,positionjoueur)" +
-                                    " VALUES(:Nomjoueurs,:Prenomjoueur,:datenaissance,:numeromaillot,:equipejoueur,:positionjoueur)";
+                string sqlAjout = "insert into Joueurs (Nomjoueurs,Prenomjoueur,datenaissance,numeromaillot,equipejoueur,positionjoueur)" +
+                    " VALUES(:Nomjoueurs,:Prenomjoueur,:datenaissance,:numeromaillot,:equipejoueur,:positionjoueur)";
+                Currval = true;
                 try
                 {
 
@@ -206,6 +212,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     oraAjout.Parameters.Add(OraParpositionjoueur);
 
                     oraAjout.ExecuteNonQuery();
+                    FillForm();
                 }
                 catch (OracleException ex)
                 {
@@ -265,6 +272,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     oraAjout.Parameters.Add(OraParnumerojoueurs);
 
                     oraAjout.ExecuteNonQuery();
+
+                    FillForm();
                 }
                 catch (OracleException ex)
                 {
@@ -273,7 +282,30 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
             }
         }
+
+        private void BTN_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmation;
+            Confirmation = MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (Confirmation == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    OracleParameter paramNomEquipe = new OracleParameter(":numjoueur", OracleDbType.Int32);
+                    paramNomEquipe.Value = TB_NumeroJoueur.Text;
+                    string sqlDelete = "Delete from joueurs Where numerojoueurs =:numjoueur";
+                    OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+                    oraDelete.Parameters.Add(paramNomEquipe);
+                    oraDelete.ExecuteNonQuery();
+                }
+                catch (OracleException ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
     }
+}
          
              
-}
+

@@ -50,6 +50,7 @@
             this.BF_Precedent = new BoutonFlèche.BoutonFlèche();
             this.BTN_Ajouter = new System.Windows.Forms.Button();
             this.BTN_modifier = new System.Windows.Forms.Button();
+            this.BTN_delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTN_OK
@@ -269,6 +270,18 @@
             this.BTN_modifier.UseVisualStyleBackColor = true;
             this.BTN_modifier.Click += new System.EventHandler(this.BTN_modifier_Click);
             // 
+            // BTN_delete
+            // 
+            this.BTN_delete.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BTN_delete.Location = new System.Drawing.Point(120, 337);
+            this.BTN_delete.Name = "BTN_delete";
+            this.BTN_delete.Size = new System.Drawing.Size(75, 25);
+            this.BTN_delete.TabIndex = 17;
+            this.BTN_delete.TabStop = false;
+            this.BTN_delete.Text = "Effacer";
+            this.BTN_delete.UseVisualStyleBackColor = true;
+            this.BTN_delete.Click += new System.EventHandler(this.BTN_delete_Click);
+            // 
             // Form_Joueurs
             // 
             this.AcceptButton = this.BTN_OK;
@@ -295,6 +308,7 @@
             this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.BTN_modifier);
             this.Controls.Add(this.BTN_Ajouter);
+            this.Controls.Add(this.BTN_delete);
             this.Controls.Add(this.BTN_OK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -331,6 +345,7 @@
         private BoutonFlèche.BoutonFlèche BF_Precedent;
         private System.Windows.Forms.Button BTN_Ajouter;
         private System.Windows.Forms.Button BTN_modifier;
+        private System.Windows.Forms.Button BTN_delete;
 
     }
 }

@@ -167,22 +167,27 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void BTN_Delete_Click(object sender, EventArgs e)
         {
-            try
+                        DialogResult Confirmation;
+            Confirmation = MessageBox.Show("Voulez-vous vraiment effacer cette entrée ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (Confirmation == System.Windows.Forms.DialogResult.OK)
             {
-                OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
-                paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
-                string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
-                OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
-
-                oraDelete.Parameters.Add(paramNomDivision);
-                oraDelete.ExecuteNonQuery();
-                ReloadDGV();
-            }
-            catch(OracleException ex)
-            {
-                if (ex.Number == 2292)
+                try
                 {
-                    MessageBox.Show("La division ne doit pas contenir d'équipe.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    OracleParameter paramNomDivision = new OracleParameter(":NomDivision", OracleDbType.Varchar2, 40);
+                    paramNomDivision.Value = DGV_Division.SelectedRows[0].Cells[0].Value.ToString();
+                    string sqlDelete = "Delete from Divisions Where NomDivision =:paramNomDivision";
+                    OracleCommand oraDelete = new OracleCommand(sqlDelete, conn);
+
+                    oraDelete.Parameters.Add(paramNomDivision);
+                    oraDelete.ExecuteNonQuery();
+                    ReloadDGV();
+                }
+                catch (OracleException ex)
+                {
+                    if (ex.Number == 2292)
+                    {
+                        MessageBox.Show("La division ne doit pas contenir d'équipe.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
 

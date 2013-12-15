@@ -76,6 +76,7 @@
             this.BF_Precedent.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Aigu;
             this.BF_Precedent.ClickColor = System.Drawing.Color.White;
             this.BF_Precedent.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Gauche;
+            this.BF_Precedent.Enabled = false;
             this.BF_Precedent.EnterColor = System.Drawing.Color.LightGray;
             this.BF_Precedent.LeaveColor = System.Drawing.Color.Black;
             this.BF_Precedent.Location = new System.Drawing.Point(64, 288);
@@ -88,6 +89,7 @@
             this.BF_Suivant.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Aigu;
             this.BF_Suivant.ClickColor = System.Drawing.Color.White;
             this.BF_Suivant.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Droit;
+            this.BF_Suivant.Enabled = false;
             this.BF_Suivant.EnterColor = System.Drawing.Color.LightGray;
             this.BF_Suivant.LeaveColor = System.Drawing.Color.Black;
             this.BF_Suivant.Location = new System.Drawing.Point(206, 288);
@@ -100,6 +102,7 @@
             this.BF_Debut.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Triangle;
             this.BF_Debut.ClickColor = System.Drawing.Color.White;
             this.BF_Debut.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Gauche;
+            this.BF_Debut.Enabled = false;
             this.BF_Debut.EnterColor = System.Drawing.Color.LightGray;
             this.BF_Debut.LeaveColor = System.Drawing.Color.Black;
             this.BF_Debut.Location = new System.Drawing.Point(21, 288);
@@ -112,6 +115,7 @@
             this.BF_Dernier.Apparence = BoutonFlèche.BoutonFlèche.ApparenceType.Triangle;
             this.BF_Dernier.ClickColor = System.Drawing.Color.White;
             this.BF_Dernier.Direction = BoutonFlèche.BoutonFlèche.DirectionType.Droit;
+            this.BF_Dernier.Enabled = false;
             this.BF_Dernier.EnterColor = System.Drawing.Color.LightGray;
             this.BF_Dernier.LeaveColor = System.Drawing.Color.Black;
             this.BF_Dernier.Location = new System.Drawing.Point(249, 288);
