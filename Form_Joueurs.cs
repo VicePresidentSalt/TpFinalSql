@@ -16,6 +16,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         public Form callBackForm = null;
         private DataSet joueurDataSet = new DataSet();
         private string Equipe;
+        private bool Currval = false;
+        private string sqlnum = null;
         
         public Form_Joueurs(string equipe)
         {
@@ -27,6 +29,26 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         {            
             if (callBackForm != null)
                 callBackForm.Show();
+        }
+
+        private void updateControls()
+        {
+            if (TB_NumeroJoueur.Text == "")
+            {
+                BTN_modifier.Enabled = false;
+                BF_Debut.Enabled = false;
+                BF_Dernier.Enabled = false;
+                BF_Precedent.Enabled = false;
+                BF_Suivant.Enabled = false;
+            }
+            else
+            {
+                BTN_modifier.Enabled = true;
+                BF_Debut.Enabled = true;
+                BF_Dernier.Enabled = true;
+                BF_Precedent.Enabled = true;
+                BF_Suivant.Enabled = true;
+            }
         }
 
         private void Form_Joueurs_Load(object sender, EventArgs e)
@@ -47,6 +69,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void ReloadForm()
         {
             FillForm();
+            updateControls();
         }
         
         private void FillForm()
@@ -119,13 +142,43 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Form_Joueurs_Ajouter fja = new Form_Joueurs_Ajouter();
             fja.callBackForm = this;
             fja.Location = this.Location;
+            fja.conn = conn;
             this.Hide();
             fja.Text = "Ajout de joueurs";
 
+            if (!Currval)
+            {
+                sqlnum = "Select MAX(NumeroMatch) from Match ";
+            }
+            else
+            {
+                sqlnum = "Select Seqmatch.currval from dual ";
+            }
+            OracleCommand oraCMD = new OracleCommand(sqlnum, conn);
+            oraCMD.CommandType = CommandType.Text;
+
+
+            try
+            {
+                OracleDataReader oraRead = oraCMD.ExecuteReader();
+                while (oraRead.Read())
+                {
+                    fja.numeroJoueurs = (oraRead.GetInt32(0) + 1).ToString();
+
+                }
+                oraRead.Close();
+            }
+
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+
+
             if (fja.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                                string sqlAjout = "insert into Joueurs (Nomjoueurs,Prenomjoueurs,datenaissance,numeromaillot,equipejoueurs,positionjoueur)" +
-                                    " VALUES(:Nomjoueurs,:Prenomjoueurs,:datenaissance,:numeromaillot,:equipejoueurs,:positionjoueur)";
+                                string sqlAjout = "insert into Joueurs (Nomjoueurs,Prenomjoueur,datenaissance,numeromaillot,equipejoueur,positionjoueur)" +
+                                    " VALUES(:Nomjoueurs,:Prenomjoueur,:datenaissance,:numeromaillot,:equipejoueur,:positionjoueur)";
                 try
                 {
 
@@ -135,7 +188,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);  //Ajout
                     OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
-                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueurs", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
 
                     OraParaNomjoueurs.Value = fja.nomJoueurs;
@@ -175,22 +228,23 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             fjm.Equipe = CB_EquipeJoueur.SelectedItem.ToString();
             fjm.Position = CB_PositionJoueur.SelectedItem.ToString();
             fjm.Location = this.Location;
+            fjm.BTN_OK.Text = "Modifier";
             this.Hide();
 
             if (fjm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string sqlModif = "Update joueurs set Nomjoueurs =:Nomjoueurs, Prenomjoueurs =:Prenomjoueurs, datenaissance =:datenaissance, " +
-                                       "numeromaillot =:numeromaillot, equipejoueurs =:equipejoueurs , positionjoueur=:positionjoueur where numerojoueurs =:numerojoueurs";
+                string sqlModif = "Update joueurs set Nomjoueurs =:Nomjoueurs, Prenomjoueur =:Prenomjoueur, datenaissance =:datenaissance, " +
+                                       "numeromaillot =:numeromaillot, equipejoueur =:equipejoueur , positionjoueur=:positionjoueur where numerojoueurs =:numerojoueurs";
                 try
                 {
 
                     OracleCommand oraAjout = new OracleCommand(sqlModif, conn);
 
                     OracleParameter OraParaNomjoueurs = new OracleParameter(":Nomjoueurs", OracleDbType.Varchar2, 40);
-                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueurs", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParamPrenomjoueurs = new OracleParameter(":Prenomjoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParamdatenaissance = new OracleParameter(":datenaissance", OracleDbType.Date);  //Ajout
                     OracleParameter OraParanumeromaillot = new OracleParameter(":numeromaillot", OracleDbType.Int32);
-                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueurs", OracleDbType.Varchar2, 40);
+                    OracleParameter OraParaequipejoueurs = new OracleParameter(":equipejoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParpositionjoueur = new OracleParameter(":positionjoueur", OracleDbType.Varchar2, 40);
                     OracleParameter OraParnumerojoueurs = new OracleParameter(":numerojoueurs", OracleDbType.Int32);
 

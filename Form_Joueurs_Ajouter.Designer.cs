@@ -123,7 +123,6 @@
             // 
             this.CB_PositionJoueur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.CB_PositionJoueur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CB_PositionJoueur.Enabled = false;
             this.CB_PositionJoueur.FormattingEnabled = true;
             this.CB_PositionJoueur.Items.AddRange(new object[] {
             "Attaquant",
@@ -342,8 +341,8 @@
         private System.Windows.Forms.TextBox TB_PrenomJoueur;
         private System.Windows.Forms.TextBox TB_NomJoueur;
         private System.Windows.Forms.TextBox TB_Numjoueur;
-        private System.Windows.Forms.Button BTN_OK;
         private System.Windows.Forms.Button BTN_Annuler;
         private System.Windows.Forms.Button BTN_close;
+        public System.Windows.Forms.Button BTN_OK;
     }
 }
