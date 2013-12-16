@@ -119,81 +119,81 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="stats_WESLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\stats_WESLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\stats_WESLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hockey-Plus-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hockey-Plus-logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Podium_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Podium_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Podium_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_-_Versus_bmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_-_Versus_bmp.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Calendrier_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Calendrier_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Calendrier_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stats_Default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\stats_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\stats_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5star_WESLEY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\5star_WESLEY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\5star_WESLEY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Calendrier_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Calendrier_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Calendrier_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo-classement_WESLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo-classement_WESLY.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo-classement_WESLY.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Calendrier_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Calendrier_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Calendrier_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stats_CLICK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\stats_CLICK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\stats_CLICK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5star_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\5star_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\5star_Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo-classement_OVER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo-classement_OVER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo-classement_OVER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_-_Versus_bmp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus_bmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_-_Versus_bmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stats_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\stats_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\stats_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Calendrier_Default1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Calendrier_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Calendrier_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hockey-Plus-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hockey-Plus-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Podium_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Podium_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Podium_Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo-classement_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo-classement_Click.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo-classement_Click.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5star_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\5star_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\5star_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\5star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\5star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_-_Versus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_-_Versus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_-_Versus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Podium_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Podium_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Podium_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_Podium_Wesly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo_Podium_Wesly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo_Podium_Wesly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo-classement_Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\Logo-classement_Default.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\Logo-classement_Default.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stats_OVER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AutreShits\PhotoTPFinal\stats_OVER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Autretrucs\PhotoTPFinal\stats_OVER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
