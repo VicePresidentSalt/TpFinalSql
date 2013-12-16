@@ -159,15 +159,16 @@
             // 
             this.DGV_Joueurs.AllowUserToAddRows = false;
             this.DGV_Joueurs.AllowUserToDeleteRows = false;
-            this.DGV_Joueurs.AllowUserToOrderColumns = true;
             this.DGV_Joueurs.AllowUserToResizeColumns = false;
-            this.DGV_Joueurs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.DGV_Joueurs.AllowUserToResizeRows = false;
+            this.DGV_Joueurs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Joueurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Joueurs.ContextMenuStrip = this.TSM_Stats;
             this.DGV_Joueurs.Location = new System.Drawing.Point(41, 389);
+            this.DGV_Joueurs.MultiSelect = false;
             this.DGV_Joueurs.Name = "DGV_Joueurs";
+            this.DGV_Joueurs.ReadOnly = true;
             this.DGV_Joueurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_Joueurs.Size = new System.Drawing.Size(672, 128);
             this.DGV_Joueurs.TabIndex = 6;
@@ -197,6 +198,7 @@
             // 
             // FB_Stats
             // 
+            this.FB_Stats.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FB_Stats.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_Default1;
             this.FB_Stats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FB_Stats.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_CLICK;
@@ -211,8 +213,9 @@
             // 
             // FB_Calendrier
             // 
+            this.FB_Calendrier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FB_Calendrier.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default1;
-            this.FB_Calendrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Calendrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FB_Calendrier.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Click;
             this.FB_Calendrier.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default;
             this.FB_Calendrier.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default1;
@@ -255,6 +258,7 @@
             // 
             // BTN_AjoutStatsJoueurs
             // 
+            this.BTN_AjoutStatsJoueurs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BTN_AjoutStatsJoueurs.Location = new System.Drawing.Point(309, 523);
             this.BTN_AjoutStatsJoueurs.Name = "BTN_AjoutStatsJoueurs";
             this.BTN_AjoutStatsJoueurs.Size = new System.Drawing.Size(119, 23);
@@ -286,7 +290,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB_Versus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(592, 430);
+            this.MinimumSize = new System.Drawing.Size(752, 652);
             this.Name = "Form_Match";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Afficheur De Match";

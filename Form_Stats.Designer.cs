@@ -228,10 +228,13 @@
             this.Controls.Add(this.TB_NumeroJoueur);
             this.Controls.Add(this.TB_NomJoueur);
             this.Controls.Add(this.TB_PrenomJoueur);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(293, 406);
             this.Name = "Form_Stats";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Statistiques";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Stats_FormClosing);
             this.Load += new System.EventHandler(this.Form_Stats_Load);
