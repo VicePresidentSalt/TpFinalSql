@@ -215,6 +215,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 }
                 catch (OracleException ex)
                 {
+                    if (ex.Number == 2292)
+                    {
+                        MessageBox.Show("Le joueurs ne doit pas avoir de statistique dans les matchs.", "Erreur 2292", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
