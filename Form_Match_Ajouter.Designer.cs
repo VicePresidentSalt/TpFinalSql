@@ -119,6 +119,7 @@
             // TB_Lieu
             // 
             this.TB_Lieu.Location = new System.Drawing.Point(114, 179);
+            this.TB_Lieu.MaxLength = 40;
             this.TB_Lieu.Name = "TB_Lieu";
             this.TB_Lieu.Size = new System.Drawing.Size(132, 20);
             this.TB_Lieu.TabIndex = 9;
@@ -136,16 +137,20 @@
             // TB_ScoreHome
             // 
             this.TB_ScoreHome.Location = new System.Drawing.Point(114, 218);
+            this.TB_ScoreHome.MaxLength = 40;
             this.TB_ScoreHome.Name = "TB_ScoreHome";
             this.TB_ScoreHome.Size = new System.Drawing.Size(132, 20);
             this.TB_ScoreHome.TabIndex = 11;
+            this.TB_ScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_ScoreHome_KeyPress);
             // 
             // TB_ScoreVisiteur
             // 
             this.TB_ScoreVisiteur.Location = new System.Drawing.Point(114, 256);
+            this.TB_ScoreVisiteur.MaxLength = 40;
             this.TB_ScoreVisiteur.Name = "TB_ScoreVisiteur";
             this.TB_ScoreVisiteur.Size = new System.Drawing.Size(132, 20);
             this.TB_ScoreVisiteur.TabIndex = 13;
+            this.TB_ScoreVisiteur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_ScoreHome_KeyPress);
             // 
             // label6
             // 

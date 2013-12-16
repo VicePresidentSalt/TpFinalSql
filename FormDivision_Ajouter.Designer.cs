@@ -57,6 +57,7 @@
             // TB_NomDivision
             // 
             this.TB_NomDivision.Location = new System.Drawing.Point(106, 10);
+            this.TB_NomDivision.MaxLength = 40;
             this.TB_NomDivision.Name = "TB_NomDivision";
             this.TB_NomDivision.Size = new System.Drawing.Size(129, 20);
             this.TB_NomDivision.TabIndex = 1;

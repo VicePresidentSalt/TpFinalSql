@@ -220,13 +220,16 @@
             // TB_NumeroMaillotJoueur
             // 
             this.TB_NumeroMaillotJoueur.Location = new System.Drawing.Point(158, 173);
+            this.TB_NumeroMaillotJoueur.MaxLength = 40;
             this.TB_NumeroMaillotJoueur.Name = "TB_NumeroMaillotJoueur";
             this.TB_NumeroMaillotJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_NumeroMaillotJoueur.TabIndex = 9;
+            this.TB_NumeroMaillotJoueur.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_NumeroMaillotJoueur_KeyPress);
             // 
             // TB_PrenomJoueur
             // 
             this.TB_PrenomJoueur.Location = new System.Drawing.Point(158, 99);
+            this.TB_PrenomJoueur.MaxLength = 40;
             this.TB_PrenomJoueur.Name = "TB_PrenomJoueur";
             this.TB_PrenomJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_PrenomJoueur.TabIndex = 5;
@@ -234,6 +237,7 @@
             // TB_NomJoueur
             // 
             this.TB_NomJoueur.Location = new System.Drawing.Point(158, 60);
+            this.TB_NomJoueur.MaxLength = 40;
             this.TB_NomJoueur.Name = "TB_NomJoueur";
             this.TB_NomJoueur.Size = new System.Drawing.Size(129, 20);
             this.TB_NomJoueur.TabIndex = 3;

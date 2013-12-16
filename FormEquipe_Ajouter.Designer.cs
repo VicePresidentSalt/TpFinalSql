@@ -53,6 +53,7 @@
             // TB_NomEquipe
             // 
             this.TB_NomEquipe.Location = new System.Drawing.Point(117, 12);
+            this.TB_NomEquipe.MaxLength = 40;
             this.TB_NomEquipe.Name = "TB_NomEquipe";
             this.TB_NomEquipe.Size = new System.Drawing.Size(138, 20);
             this.TB_NomEquipe.TabIndex = 1;
@@ -60,6 +61,7 @@
             // TB_VilleEquipe
             // 
             this.TB_VilleEquipe.Location = new System.Drawing.Point(117, 112);
+            this.TB_VilleEquipe.MaxLength = 40;
             this.TB_VilleEquipe.Name = "TB_VilleEquipe";
             this.TB_VilleEquipe.Size = new System.Drawing.Size(138, 20);
             this.TB_VilleEquipe.TabIndex = 7;
