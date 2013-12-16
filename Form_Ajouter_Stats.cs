@@ -116,12 +116,7 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
             catch (OracleException ex)
             {
-                MessageBox.Show(ex.Message.ToString());
-
-                if (ex.Number == 00001)
-                {
-                    MessageBox.Show("Vous ne pouvez pas rajouter des stats de joueurs qui ont deja eu des stats pour le match en visionnement", "Erreur 00001", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(ex.Message.ToString());  
             }
         }
     }
