@@ -38,7 +38,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
  
             try
             {
-
                 OracleCommand oraSelect = conn.CreateCommand();
                 oraSelect.CommandText = "Select * From Match where DATERENCONTRE = :Daterencontre";
 
