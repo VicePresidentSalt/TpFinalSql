@@ -109,7 +109,10 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                     LB_Error.Text = "*Erreur Usager/Mot de passe";
                     break;
                 case 12170:
-                    MessageBox.Show("Connexion impossible ou la base de données est indisponible,Vérifiez votre connection internet ou réessayer plus tard", "Erreur 12170", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La base de données est indisponible,réessayer plus tard", "Erreur 12170", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case 12543:
+                    MessageBox.Show("Connexion impossible,Vérifiez votre connection internet", "Erreur 12543", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 default: MessageBox.Show(Ex.Message.ToString());
                     break;
