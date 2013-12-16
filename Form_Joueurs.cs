@@ -84,7 +84,6 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
                 if (joueurDataSet.Tables.Contains("Joueur"))
                 {
                     joueurDataSet.Tables["Joueur"].Clear();
-
                 }
 
                 oraAdapter.Fill(joueurDataSet, "Joueur");
