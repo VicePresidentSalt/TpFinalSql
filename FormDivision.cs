@@ -31,6 +31,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             DGV_Division.DataSource = divisionDataSet.Tables[0];
 
             if (lastIndex > -1 && DGV_Division.Rows.Count > 0) DGV_Division.Rows[Math.Min(lastIndex, DGV_Division.Rows.Count - 1)].Selected = true;
+            
+            updateControls();
         }
 
         public FormDivision()
@@ -72,8 +74,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
 
         private void FormDivision_Load(object sender, EventArgs e)
         {
-            ReloadDGV();
             LoadSettings();
+            ReloadDGV();
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -227,6 +229,18 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             fm.callBackForm = this;
             fm.ShowDialog();
         }
-
+        private void updateControls()
+        {
+            if (DGV_Division.RowCount > 0)
+            {
+                BTN_Modifier.Enabled = true;
+                BTN_Delete.Enabled = true;
+            }
+            else
+            {
+                BTN_Modifier.Enabled = false;
+                BTN_Delete.Enabled = false;
+            }
+        }
     }
 }

@@ -36,6 +36,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             DGV_Equipes.DataSource = equipeDataSet.Tables[0];
 
             if (lastIndex > -1 && DGV_Equipes.Rows.Count > 0) DGV_Equipes.Rows[Math.Min(lastIndex, DGV_Equipes.Rows.Count - 1)].Selected = true;
+
+            updateControls();
         }
         
         public Form_Equipe(string Division)
@@ -266,6 +268,19 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Classement.divisions = DGV_Equipes.Rows[0].Cells[2].Value.ToString();
 
             Classement.ShowDialog();
+        }
+        private void updateControls()
+        {
+            if (DGV_Equipes.RowCount > 0)
+            {
+                BTN_Modifier.Enabled = true;
+                BTN_Delete.Enabled = true;
+            }
+            else
+            {
+                BTN_Modifier.Enabled = false;
+                BTN_Delete.Enabled = false;
+            }
         }
     }
 }

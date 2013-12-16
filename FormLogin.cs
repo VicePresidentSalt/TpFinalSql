@@ -63,20 +63,8 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             }
             catch (OracleException ex)
             {
-                if (ex.Number == 1017)
-                {
-                    Cursor = Cursors.Default;
-                    LB_Username.ForeColor = Color.Red;
-                    LB_MDP.ForeColor = Color.Red;
-                    TB_Password.Clear();
-                    TB_Password.Focus();
-                    LB_Error.Text = "*Erreur Usager/Mot de passe";
-                }
-                else
-                {
-                    Cursor = Cursors.Default;
-                    MessageBox.Show(ex.Message.ToString());
-                }
+                ErrorMessage(ex);
+                Cursor = Cursors.Default;
             }
         }
 
@@ -108,6 +96,24 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
         private void TB_TextChanged(object sender, EventArgs e)
         {
             UpdateControls();
+        }
+        private void ErrorMessage(OracleException Ex)
+        {
+            switch (Ex.Number)
+            {
+                case 1017:
+                    LB_Username.ForeColor = Color.Red;
+                    LB_MDP.ForeColor = Color.Red;
+                    TB_Password.Clear();
+                    TB_Password.Focus();
+                    LB_Error.Text = "*Erreur Usager/Mot de passe";
+                    break;
+                case 12170:
+                    MessageBox.Show("Connexion impossible ou la base de données est indisponible,Vérifiez votre connection internet ou réessayer plus tard", "Erreur 12170", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                default: MessageBox.Show(Ex.Message.ToString());
+                    break;
+            }
         }
     }
 }
