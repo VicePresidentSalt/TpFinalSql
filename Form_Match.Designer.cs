@@ -43,6 +43,7 @@
             this.TSM_Stats = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TSM_Stats_voir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.FB_Stats = new FlashButton.FlashButton();
             this.FB_Calendrier = new FlashButton.FlashButton();
             this.PB_EquipeVisiteurLogo = new System.Windows.Forms.PictureBox();
             this.PB_EquipeHomeLogo = new System.Windows.Forms.PictureBox();
@@ -193,6 +194,20 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 6);
             // 
+            // FB_Stats
+            // 
+            this.FB_Stats.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_Default1;
+            this.FB_Stats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FB_Stats.ImageClick = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_CLICK;
+            this.FB_Stats.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_Default;
+            this.FB_Stats.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_Default1;
+            this.FB_Stats.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.stats_OVER;
+            this.FB_Stats.Location = new System.Drawing.Point(291, 435);
+            this.FB_Stats.Name = "FB_Stats";
+            this.FB_Stats.Size = new System.Drawing.Size(48, 42);
+            this.FB_Stats.TabIndex = 16;
+            this.FB_Stats.Click += new System.EventHandler(this.FB_Stats_Click);
+            // 
             // FB_Calendrier
             // 
             this.FB_Calendrier.BackgroundImage = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default1;
@@ -201,7 +216,7 @@
             this.FB_Calendrier.ImageDisable = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default;
             this.FB_Calendrier.ImageNeutral = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Default1;
             this.FB_Calendrier.ImageOver = global::TPFinalSQLDEVCoteFrancisStlaurentDarenKen.Properties.Resources.Logo_Calendrier_Over;
-            this.FB_Calendrier.Location = new System.Drawing.Point(261, 435);
+            this.FB_Calendrier.Location = new System.Drawing.Point(215, 435);
             this.FB_Calendrier.Name = "FB_Calendrier";
             this.FB_Calendrier.Size = new System.Drawing.Size(48, 42);
             this.FB_Calendrier.TabIndex = 15;
@@ -243,6 +258,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(579, 525);
+            this.Controls.Add(this.FB_Stats);
             this.Controls.Add(this.FB_Calendrier);
             this.Controls.Add(this.DGV_Joueurs);
             this.Controls.Add(this.PB_EquipeVisiteurLogo);
@@ -294,5 +310,6 @@
         private System.Windows.Forms.ToolStripMenuItem TSM_Stats_voir;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private FlashButton.FlashButton FB_Calendrier;
+        private FlashButton.FlashButton FB_Stats;
     }
 }

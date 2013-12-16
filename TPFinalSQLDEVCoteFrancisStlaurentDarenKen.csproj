@@ -239,6 +239,10 @@
     <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Click.png" />
     <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Default.png" />
     <None Include="AutreShits\PhotoTPFinal\Logo_Calendrier_Over.png" />
+    <None Include="AutreShits\PhotoTPFinal\stats_CLICK.png" />
+    <None Include="AutreShits\PhotoTPFinal\stats_WESLY.png" />
+    <None Include="AutreShits\PhotoTPFinal\stats_Default.png" />
+    <None Include="AutreShits\PhotoTPFinal\stats_OVER.png" />
     <Content Include="Resources\Logo_-_Versus_bmp.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

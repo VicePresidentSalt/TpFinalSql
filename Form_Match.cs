@@ -278,6 +278,11 @@ namespace TPFinalSQLDEVCoteFrancisStlaurentDarenKen
             Calendrier.ShowDialog();
         }
 
+        private void FB_Stats_Click(object sender, EventArgs e)
+        {
+            FillStats();
+        }
+
     }
 
 
